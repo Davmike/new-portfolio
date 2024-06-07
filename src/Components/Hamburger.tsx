@@ -1,9 +1,11 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { MyContext } from "./Context";
 
 const buttonCategories = ["Home", "About", "Resume", "Work", "Contact"];
 
 const Hamburger = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+  const context = useContext(MyContext);
+  const { menuOpen, setMenuOpen }: any = context;
 
   const handleMenuClick = () => {
     setMenuOpen(!menuOpen);

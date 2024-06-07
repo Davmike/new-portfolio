@@ -1,4 +1,3 @@
-import React from "react";
 import Hamburger from "./Hamburger";
 
 const buttonCategories = ["Home", "About", "Resume", "Work", "Contact"];
