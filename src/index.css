@@ -21,10 +21,6 @@ body {
   background-position: center;
   background-attachment: fixed; /* For a parallax effect */
   min-height: 100vh;
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-  /* text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7); */
 }
 
 /* header {
