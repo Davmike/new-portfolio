@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lilita+One&family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap");
 
 @import "tailwindcss/base";
 @import "tailwindcss/components";
@@ -12,6 +12,7 @@
 
 body {
   background: black;
+  font-family: "Neuton", serif;
 }
 
 #home {
