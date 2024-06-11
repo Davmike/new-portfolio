@@ -9,6 +9,11 @@ function Home() {
       {/* Background overlay */}
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
+      {/* clock section */}
+      <div className="absolute top-5 left-5 text-white text-4xl">
+        <p>19:22</p>
+      </div>
+
       {/* Content container */}
       <div className="relative flex justify-center items-center flex-col text-white">
         <div className="text-left leading-[28px]">
