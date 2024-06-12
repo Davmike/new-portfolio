@@ -26,10 +26,10 @@ function Home() {
 
           {/* Buttons container */}
           <div className="flex gap-[15px] mt-[20px]">
-            <button className="border-[1px] border-[white] text-[white] rounded-[15px] px-[25px] py-[1px]">
+            <button className="border-[1px] border-[white] hover:bg-[white] text-[white] hover:text-[black] rounded-[15px] px-[25px] py-[1px]">
               Resume
             </button>
-            <button className="border-[1px] border-[white] text-[white] rounded-[15px] px-[25px] py-[1px]">
+            <button className="border-[1px] border-[white] hover:bg-[white] text-[white] hover:text-[black] rounded-[15px] px-[25px] py-[1px]">
               Projects
             </button>
           </div>
