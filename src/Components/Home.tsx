@@ -1,6 +1,38 @@
-import React from "react";
+import fb from "../assets/fb.png";
+import insta from "../assets/instagram.png";
+import x from "../assets/x.png";
+import linkedin from "../assets/linkedin.png";
+import github from "../assets/github.png";
+import gmail from "../assets/gmail.png";
 
 function Home() {
+  const categories = [
+    {
+      src: fb,
+      link: "https://www.facebook.com/profile.php?id=61560549462701",
+    },
+    {
+      src: insta,
+      link: "https://www.instagram.com/davmikeladze/",
+    },
+    {
+      src: x,
+      link: "https://x.com/davmikeladze",
+    },
+    {
+      src: linkedin,
+      link: "https://www.linkedin.com/in/davmikeladze/",
+    },
+    {
+      src: gmail,
+      link: "https://mail.google.com/",
+    },
+    {
+      src: github,
+      link: "https://github.com/Davmike",
+    },
+  ];
+
   return (
     <div
       id="home"
@@ -34,6 +66,21 @@ function Home() {
             </button>
           </div>
         </div>
+      </div>
+      {/* social media section */}
+      <div className="absolute bottom-[50px] left-[10px] flex justify-center items-center flex-row w-[140px] gap-[3px]">
+        {categories.map((category, index) => {
+          return (
+            <a
+              href={category.link}
+              target="_blank"
+              className="pointer"
+              key={index}
+            >
+              <img src={category.src} alt="" />
+            </a>
+          );
+        })}
       </div>
     </div>
   );
