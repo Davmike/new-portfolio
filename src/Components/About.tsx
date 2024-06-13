@@ -20,10 +20,13 @@ function About() {
           successful completion.
         </p>
         {/* personal info */}
-        <div>
-          <div></div>
-          <p>Tbilis, Georgia</p>
-          <div></div>
+        <div className="mt-[100px] flex items-center flex-col">
+          <p className="mb-[-8px]">Tbilis, Georgia</p>
+          <div className="flex items-center gap-[10px]">
+            <div className="w-[20px] h-[1px] bg-[#175b4b]"></div>
+            <p>30 Oct, 2001</p>
+            <div className="w-[20px] h-[1px] bg-[#175b4b]"></div>
+          </div>
         </div>
       </div>
       <img src={test} alt="" />
