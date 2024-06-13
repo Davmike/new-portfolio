@@ -4,7 +4,7 @@ const buttonCategories = ["Home", "About", "Resume", "Work", "Contact"];
 
 function Header() {
   return (
-    <header className="bg-[black] px-[20px] py-[10px] flex justify-between">
+    <header className="bg-[black] px-[20px] py-[10px] fixed z-10 w-[100%] flex justify-between">
       <Hamburger />
       {/* logo */}
       <h2 className="text-[white]">davmikeladze</h2>

@@ -36,13 +36,13 @@ function Home() {
   return (
     <div
       id="home"
-      className="relative flex justify-center items-start min-h-screen bg-gray-900"
+      className="relative flex justify-center items-center min-h-screen bg-gray-900"
     >
       {/* Background overlay */}
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
       {/* clock section */}
-      <div className="relative flex justify-center items-center flex-col text-white">
+      <div className="relative flex justify-center items-center flex-col text-white mb-[30px]">
         {/* <div className="absolute top-5 left-5 text-white text-4xl"> */}
         <p className="text-[100px] font-bold">19:22</p>
 
@@ -68,7 +68,7 @@ function Home() {
         </div>
       </div>
       {/* social media section */}
-      <div className="absolute bottom-[50px] left-[10px] flex justify-center items-center flex-row w-[140px] gap-[3px]">
+      <div className="absolute bottom-[10px] left-[10px] flex justify-center items-center flex-row w-[140px] gap-[3px]">
         {categories.map((category, index) => {
           return (
             <a
