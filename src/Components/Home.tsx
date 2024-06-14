@@ -1,9 +1,9 @@
-import fb from "../assets/fb.png";
-import insta from "../assets/instagram.png";
-import x from "../assets/x.png";
-import linkedin from "../assets/linkedin.png";
-import github from "../assets/github.png";
-import gmail from "../assets/gmail.png";
+import fb from "../../public/assets/fb.png";
+import insta from "../../public/assets/instagram.png";
+import x from "../../public/assets/x.png";
+import linkedin from "../../public/assets/linkedin.png";
+import github from "../../public/assets/github.png";
+import gmail from "../../public/assets/gmail.png";
 
 function Home() {
   const categories = [

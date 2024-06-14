@@ -154,3 +154,13 @@ li:nth-child(5) {
   height: 520px;
   transform: translate(-60%, -30%);
 }
+
+/* resume styles */
+
+#resume {
+  background-image: url("../public/assets/bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+}
