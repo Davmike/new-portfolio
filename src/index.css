@@ -164,3 +164,39 @@ li:nth-child(5) {
   background-position: center;
   min-height: 100vh;
 }
+
+/* range slider */
+
+.slider-container {
+  width: 300px; /* Set the fixed width for the container */
+  margin: 0 auto; /* Center the slider */
+}
+
+.slider {
+  width: 100%; /* Make the slider take up the full width of the container */
+  -webkit-appearance: none; /* Remove default appearance */
+  appearance: none;
+  height: 3px; /* Set the height of the slider track */
+  background: #ddd; /* Set the background color of the slider track */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set the opacity */
+  transition: opacity 0.2s; /* Add transition for smoothness */
+}
+
+/* Style for the slider thumb */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Remove default appearance */
+  appearance: none;
+  width: 15px; /* Set the width of the thumb */
+  height: 15px; /* Set the height of the thumb */
+  background: white; /* Set the background color of the thumb */
+  cursor: not-allowed; /* Change cursor to not-allowed */
+  border-radius: 50px;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px; /* Set the width of the thumb */
+  height: 20px; /* Set the height of the thumb */
+  background: #4caf50; /* Set the background color of the thumb */
+  cursor: not-allowed; /* Change cursor to not-allowed */
+}

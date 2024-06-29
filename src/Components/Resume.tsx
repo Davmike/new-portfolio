@@ -1,8 +1,12 @@
+import js from "../../public/assets/js.png";
+import node from "../../public/assets/node.png";
+import react from "../../public/assets/react.png";
+
 function Resume() {
   const softwareSkills = [
-    { title: "JavaScript" },
-    { title: "React" },
-    { title: "Node.js" },
+    { title: "JavaScript", src: js, value: "50" },
+    { title: "React", src: react, value: "70" },
+    { title: "Node.js", src: node, value: "90" },
   ];
   const languages = [
     { title: "English" },
@@ -45,14 +49,27 @@ function Resume() {
         {/* SOFTWARE SKILL container */}
         <div className="relative text-white">
           <h3 className="font-bold">SOFTWARE SKILL</h3>
+          <div className="w-[66px] h-[1px] bg-[#175b4b]"></div>
           {softwareSkills.map((item, index) => (
-            <p key={index}>{item.title}</p>
+            <div key={index}>
+              <img src={item.src} alt={item.title} />
+              <p>{item.title}</p>
+              <input
+                type="range"
+                min="1"
+                max="100"
+                value={item.value}
+                className="slider"
+                disabled
+              />
+            </div>
           ))}
         </div>
 
         {/* LANGUAGE container */}
         <div className="relative text-white">
           <h3 className="font-bold">LANGUAGE</h3>
+          <div className="w-[66px] h-[1px] bg-[#175b4b]"></div>
           {languages.map((item, index) => (
             <p key={index}>{item.title}</p>
           ))}
@@ -61,6 +78,7 @@ function Resume() {
         {/* PERSONAL SKILLS */}
         <div className="relative text-white">
           <h3 className="font-bold">PERSONAL SKILLS</h3>
+          <div className="w-[66px] h-[1px] bg-[#175b4b]"></div>
           {personalSkills.map((item, index) => (
             <p key={index}>{item}</p>
           ))}
@@ -72,6 +90,7 @@ function Resume() {
         {/* EXPERIENCE */}
         <div className="relative text-white">
           <h3 className="font-bold">EXPERIENCE</h3>
+          <div className="w-[66px] h-[1px] bg-[#175b4b]"></div>
           {experiences.map((item, index) => (
             <p key={index}>{item}</p>
           ))}
@@ -80,6 +99,7 @@ function Resume() {
         {/* EDUCATION */}
         <div className="relative text-white">
           <h3 className="font-bold">EDUCATION</h3>
+          <div className="w-[66px] h-[1px] bg-[#175b4b]"></div>
           {education.map((item, index) => (
             <p key={index}>{item}</p>
           ))}
@@ -91,6 +111,7 @@ function Resume() {
         {/* WHAT CAN I DO */}
         <div className="relative text-white">
           <h3 className="font-bold">WHAT CAN I DO</h3>
+          <div className="w-[66px] h-[1px] bg-[#175b4b]"></div>
           {whatCanIDo.map((item, index) => (
             <p key={index}>{item}</p>
           ))}
@@ -99,6 +120,7 @@ function Resume() {
         {/* INTEREST */}
         <div className="relative text-white">
           <h3 className="font-bold">INTEREST</h3>
+          <div className="w-[66px] h-[1px] bg-[#175b4b]"></div>
           {interests.map((item, index) => (
             <p key={index}>{item}</p>
           ))}
@@ -107,6 +129,7 @@ function Resume() {
         {/* HOBBY */}
         <div className="relative text-white">
           <h3 className="font-bold">HOBBY</h3>
+          <div className="w-[66px] h-[1px] bg-[#175b4b]"></div>
           {hobbies.map((item, index) => (
             <p key={index}>{item.title}</p>
           ))}
