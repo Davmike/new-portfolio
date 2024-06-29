@@ -1,7 +1,11 @@
 import React from "react";
 
 function Resume() {
-  const softwareSkills = ["JavaScript", "React", "Node.js"];
+  const softwareSkills = [
+    { title: "JavaScript" },
+    { title: "React" },
+    { title: "Node.js" },
+  ];
   const languages = ["English", "Germany", "Georgian"];
   const personalSkills = ["Communication", "Teamwork", "Problem Solving"];
   const experiences = [
@@ -36,7 +40,7 @@ function Resume() {
         <div className="relative text-white">
           <h3 className="font-bold">SOFTWARE SKILL</h3>
           {softwareSkills.map((item, index) => (
-            <p key={index}>{item}</p>
+            <p key={index}>{item.title}</p>
           ))}
         </div>
 
