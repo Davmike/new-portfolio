@@ -1,12 +1,14 @@
-import React from "react";
-
 function Resume() {
   const softwareSkills = [
     { title: "JavaScript" },
     { title: "React" },
     { title: "Node.js" },
   ];
-  const languages = ["English", "Germany", "Georgian"];
+  const languages = [
+    { title: "English" },
+    { title: "Germany" },
+    { title: "Georgian" },
+  ];
   const personalSkills = ["Communication", "Teamwork", "Problem Solving"];
   const experiences = [
     "Software Developer at XYZ Corp (2018-2021)",
@@ -48,7 +50,7 @@ function Resume() {
         <div className="relative text-white">
           <h3 className="font-bold">LANGUAGE</h3>
           {languages.map((item, index) => (
-            <p key={index}>{item}</p>
+            <p key={index}>{item.title}</p>
           ))}
         </div>
 
