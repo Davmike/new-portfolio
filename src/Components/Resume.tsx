@@ -1,77 +1,105 @@
 import React from "react";
 
 function Resume() {
+  const softwareSkills = ["JavaScript", "React", "Node.js"];
+  const languages = ["English", "Germany", "Georgian"];
+  const personalSkills = ["Communication", "Teamwork", "Problem Solving"];
+  const experiences = [
+    "Software Developer at XYZ Corp (2018-2021)",
+    "Frontend Developer at ABC Inc (2021-Present)",
+    "Intern at DEF Ltd (2017-2018)",
+  ];
+  const education = [
+    "B.S. in Computer Science from University of Example (2014-2018)",
+    "M.S. in Software Engineering from Example Institute (2018-2020)",
+  ];
+  const whatCanIDo = [
+    "Build scalable web applications",
+    "Optimize performance",
+    "Lead a team of developers",
+  ];
+  const interests = [
+    "Artificial Intelligence",
+    "Open Source Contribution",
+    "Tech Blogging",
+  ];
+  const hobbies = ["Hiking", "Photography", "Reading"];
+
   return (
-    <div id="resume" className="relative">
+    <div id="resume" className="relative px-[20px] py-[20px]">
       {/* Background overlay */}
       <div className="absolute inset-0 bg-black opacity-80"></div>
+
       {/* main div for software, language and personal skill */}
       <div>
         {/* SOFTWARE SKILL container */}
         <div className="relative text-white">
           <h3 className="font-bold">SOFTWARE SKILL</h3>
-          <p>item 1</p>
-          <p>item 2</p>
-          <p>item 3</p>
+          {softwareSkills.map((item, index) => (
+            <p key={index}>{item}</p>
+          ))}
         </div>
+
         {/* LANGUAGE container */}
         <div className="relative text-white">
           <h3 className="font-bold">LANGUAGE</h3>
-          <p>item 1</p>
-          <p>item 2</p>
-          <p>item 3</p>
+          {languages.map((item, index) => (
+            <p key={index}>{item}</p>
+          ))}
         </div>
+
         {/* PERSONAL SKILLS */}
         <div className="relative text-white">
           <h3 className="font-bold">PERSONAL SKILLS</h3>
-          <p>item 1</p>
-          <p>item 2</p>
-          <p>item 3</p>
+          {personalSkills.map((item, index) => (
+            <p key={index}>{item}</p>
+          ))}
         </div>
       </div>
-      {/* up is 1 container */}
-      {/* down start new container */}
-      {/* main div for experience and education*/}
+
+      {/* main div for experience and education */}
       <div>
         {/* EXPERIENCE */}
         <div className="relative text-white">
           <h3 className="font-bold">EXPERIENCE</h3>
-          <p>item 1</p>
-          <p>item 2</p>
-          <p>item 3</p>
+          {experiences.map((item, index) => (
+            <p key={index}>{item}</p>
+          ))}
         </div>
+
         {/* EDUCATION */}
         <div className="relative text-white">
           <h3 className="font-bold">EDUCATION</h3>
-          <p>item 1</p>
-          <p>item 2</p>
-          <p>item 3</p>
+          {education.map((item, index) => (
+            <p key={index}>{item}</p>
+          ))}
         </div>
       </div>
-      {/* up is 2 container */}
-      {/* down start new container */}
-      {/* main div for what can i do, interest and hobby*/}
+
+      {/* main div for what can i do, interest and hobby */}
       <div>
         {/* WHAT CAN I DO */}
         <div className="relative text-white">
           <h3 className="font-bold">WHAT CAN I DO</h3>
-          <p>item 1</p>
-          <p>item 2</p>
-          <p>item 3</p>
+          {whatCanIDo.map((item, index) => (
+            <p key={index}>{item}</p>
+          ))}
         </div>
+
         {/* INTEREST */}
         <div className="relative text-white">
           <h3 className="font-bold">INTEREST</h3>
-          <p>item 1</p>
-          <p>item 2</p>
-          <p>item 3</p>
+          {interests.map((item, index) => (
+            <p key={index}>{item}</p>
+          ))}
         </div>
+
         {/* HOBBY */}
         <div className="relative text-white">
           <h3 className="font-bold">HOBBY</h3>
-          <p>item 1</p>
-          <p>item 2</p>
-          <p>item 3</p>
+          {hobbies.map((item, index) => (
+            <p key={index}>{item}</p>
+          ))}
         </div>
       </div>
     </div>
