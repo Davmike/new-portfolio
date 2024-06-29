@@ -29,7 +29,11 @@ function Resume() {
     "Open Source Contribution",
     "Tech Blogging",
   ];
-  const hobbies = ["Hiking", "Photography", "Reading"];
+  const hobbies = [
+    { title: "Hiking" },
+    { title: "Photography" },
+    { title: "Reading" },
+  ];
 
   return (
     <div id="resume" className="relative px-[20px] py-[20px]">
@@ -104,7 +108,7 @@ function Resume() {
         <div className="relative text-white">
           <h3 className="font-bold">HOBBY</h3>
           {hobbies.map((item, index) => (
-            <p key={index}>{item}</p>
+            <p key={index}>{item.title}</p>
           ))}
         </div>
       </div>
