@@ -51,9 +51,14 @@ function Resume() {
           <h3 className="font-bold">SOFTWARE SKILL</h3>
           <div className="w-[66px] h-[1px] bg-[#175b4b]"></div>
           {softwareSkills.map((item, index) => (
-            <div key={index}>
-              <img src={item.src} alt={item.title} />
-              <p>{item.title}</p>
+            <div
+              key={index}
+              className="mt-[20px] flex justify-center items-center gap-[10px]"
+            >
+              <div className="flex w-[170px] gap-[10px]">
+                <img src={item.src} alt={item.title} />
+                <p>{item.title}</p>
+              </div>
               <input
                 type="range"
                 min="1"
