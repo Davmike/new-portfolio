@@ -121,7 +121,18 @@ function Resume() {
           <h3 className="font-bold">EXPERIENCE</h3>
           <div className="w-[66px] h-[1px] bg-[#175b4b]"></div>
           {experiences.map((item, index) => (
-            <p key={index}>{item}</p>
+            // main div
+            <div className="flex gap-[10px]">
+              {/* second div fot circel */}
+              <div className="w-[50px] h-[50px] bg-[blue] rounded-[50px] flex justify-center items-center">
+                <p>some</p>
+              </div>
+              {/* for texts this div */}
+              <div>
+                <p key={index}>{item}</p>
+                <p>Company</p>
+              </div>
+            </div>
           ))}
         </div>
 
