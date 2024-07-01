@@ -51,13 +51,13 @@ function Resume() {
       {/* main div for software, language and personal skill */}
       <div>
         {/* SOFTWARE SKILL container */}
-        <div className="relative text-white">
+        <div className="relative text-white mt-[20px]">
           <h3 className="font-bold">SOFTWARE SKILL</h3>
           <div className="w-[66px] h-[1px] bg-[#175b4b]"></div>
           {softwareSkills.map((item, index) => (
             <div
               key={index}
-              className="mt-[20px] flex justify-center items-center gap-[10px]"
+              className="mt-[25px] flex justify-center items-center gap-[10px]"
             >
               <div className="flex w-[170px] gap-[10px]">
                 <img src={item.src} alt={item.title} />
@@ -76,13 +76,13 @@ function Resume() {
         </div>
 
         {/* LANGUAGE container */}
-        <div className="relative text-white mt-[20px] ">
+        <div className="relative text-white mt-[50px]">
           <h3 className="font-bold">LANGUAGE</h3>
           <div className="w-[66px] h-[1px] bg-[#175b4b]"></div>
           {languages.map((item, index) => (
             <div
               key={index}
-              className="mt-[10px] flex justify-center items-center gap-[10px]"
+              className="mt-[25px] flex justify-center items-center gap-[10px]"
             >
               <div className="flex w-[170px] gap-[10px]">
                 <p>{item.title}</p>
@@ -100,7 +100,7 @@ function Resume() {
         </div>
 
         {/* PERSONAL SKILLS */}
-        <div className="relative text-white mt-[20px] ">
+        <div className="relative text-white mt-[50px] ">
           <h3 className="font-bold">PERSONAL SKILLS</h3>
           <div className="w-[66px] h-[1px] bg-[#175b4b]"></div>
           <div className="flex items-center flex-row gap-[10px]">
@@ -117,15 +117,18 @@ function Resume() {
       {/* main div for experience and education */}
       <div>
         {/* EXPERIENCE */}
-        <div className="relative text-white mt-[20px]">
+        <div className="relative text-white mt-[50px]">
           <h3 className="font-bold">EXPERIENCE</h3>
           <div className="w-[66px] h-[1px] bg-[#175b4b]"></div>
           {experiences.map((item, index) => (
             // main div
-            <div className="flex gap-[10px]">
+            <div className="flex gap-[10px] mt-[10px]">
               {/* second div fot circel */}
-              <div className="w-[50px] h-[50px] bg-[blue] rounded-[50px] flex justify-center items-center">
-                <p>some</p>
+              <div className="flex justify-center items-center flex-col gap-[10px]">
+                <div className="w-[50px] h-[50px] bg-[#24769f] rounded-[50px] flex justify-center items-center">
+                  <p>some</p>
+                </div>
+                <div className="w-[2px] h-[30px] bg-[white]"></div>
               </div>
               {/* for texts this div */}
               <div>
@@ -137,7 +140,7 @@ function Resume() {
         </div>
 
         {/* EDUCATION */}
-        <div className="relative text-white">
+        <div className="relative text-white mt-[50px]">
           <h3 className="font-bold">EDUCATION</h3>
           <div className="w-[66px] h-[1px] bg-[#175b4b]"></div>
           {education.map((item, index) => (
@@ -149,7 +152,7 @@ function Resume() {
       {/* main div for what can i do, interest and hobby */}
       <div>
         {/* WHAT CAN I DO */}
-        <div className="relative text-white mt-[20px]">
+        <div className="relative text-white mt-[50px]">
           <h3 className="font-bold">WHAT CAN I DO</h3>
           <div className="w-[66px] h-[1px] bg-[#175b4b]"></div>
           {whatCanIDo.map((item, index) => (
@@ -158,7 +161,7 @@ function Resume() {
         </div>
 
         {/* INTEREST */}
-        <div className="relative text-white mt-[20px]">
+        <div className="relative text-white mt-[50px]">
           <h3 className="font-bold">INTEREST</h3>
           <div className="w-[66px] h-[1px] bg-[#175b4b]"></div>
           {interests.map((item, index) => (
@@ -167,7 +170,7 @@ function Resume() {
         </div>
 
         {/* HOBBY */}
-        <div className="relative text-white mt-[20px]">
+        <div className="relative text-white mt-[50px]">
           <h3 className="font-bold">HOBBY</h3>
           <div className="w-[66px] h-[1px] bg-[#175b4b]"></div>
           {hobbies.map((item, index) => (
