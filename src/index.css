@@ -176,8 +176,8 @@ li:nth-child(5) {
   width: 100%; /* Make the slider take up the full width of the container */
   -webkit-appearance: none; /* Remove default appearance */
   appearance: none;
-  height: 3px; /* Set the height of the slider track */
-  background: #ddd; /* Set the background color of the slider track */
+  height: 3px;
+  background: #ddd;
   outline: none;
   opacity: 0.7;
   transition: opacity 0.2s; /* Add transition for smoothness */
