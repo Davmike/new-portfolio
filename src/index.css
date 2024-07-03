@@ -178,8 +178,8 @@ li:nth-child(5) {
   appearance: none;
   height: 3px; /* Set the height of the slider track */
   background: #ddd; /* Set the background color of the slider track */
-  outline: none; /* Remove outline */
-  opacity: 0.7; /* Set the opacity */
+  outline: none;
+  opacity: 0.7;
   transition: opacity 0.2s; /* Add transition for smoothness */
 }
 
