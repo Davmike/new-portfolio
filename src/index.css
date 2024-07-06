@@ -208,7 +208,7 @@ li:nth-child(5) {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-150%);
   }
 }
 
@@ -224,7 +224,7 @@ li:nth-child(5) {
 .logo_items {
   display: flex;
   align-items: center;
-  animation: slides 35s linear infinite;
+  animation: slides 20s linear infinite;
 }
 
 .logo_items img {
@@ -240,7 +240,7 @@ li:nth-child(5) {
   position: absolute;
   top: 0;
   content: "";
-  width: 250px;
+  width: 150px;
   height: 100%;
   z-index: 2;
 }
