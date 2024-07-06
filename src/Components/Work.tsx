@@ -41,13 +41,20 @@ function Work() {
 
   return (
     <div>
-      {images.map((item, index) => (
-        <div className="logos" key={index}>
-          <div className="logo_items">
-            <img src={item.src}></img>
-          </div>
+      <div className="logos">
+        <div className="logo_items">
+          {images.map((item, index) => (
+            <img src={item.src} key={index} alt={`logo-${index}`} />
+          ))}
+          {images.map((item, index) => (
+            <img
+              src={item.src}
+              key={`duplicate-${index}`}
+              alt={`logo-duplicate-${index}`}
+            />
+          ))}
         </div>
-      ))}
+      </div>
     </div>
   );
 }
