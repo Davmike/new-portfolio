@@ -168,8 +168,8 @@ li:nth-child(5) {
 /* range slider */
 
 .slider-container {
-  width: 300px; /* Set the fixed width for the container */
-  margin: 0 auto; /* Center the slider */
+  width: 300px;
+  margin: 0 auto;
 }
 
 .slider {
