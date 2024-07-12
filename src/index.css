@@ -185,7 +185,7 @@ li:nth-child(5) {
 
 /* Style for the slider thumb */
 .slider::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Remove default appearance */
+  -webkit-appearance: none; 
   appearance: none;
   width: 15px; /* Set the width of the thumb */
   height: 15px; /* Set the height of the thumb */
