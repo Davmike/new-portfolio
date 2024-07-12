@@ -185,12 +185,12 @@ li:nth-child(5) {
 
 /* Style for the slider thumb */
 .slider::-webkit-slider-thumb {
-  -webkit-appearance: none; 
+  -webkit-appearance: none;
   appearance: none;
-  width: 15px; /* Set the width of the thumb */
-  height: 15px; /* Set the height of the thumb */
-  background: white; /* Set the background color of the thumb */
-  cursor: not-allowed; /* Change cursor to not-allowed */
+  width: 15px;
+  height: 15px;
+  background: white;
+  cursor: not-allowed;
   border-radius: 50px;
 }
 
