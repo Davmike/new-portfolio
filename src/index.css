@@ -173,7 +173,7 @@ li:nth-child(5) {
 }
 
 .slider {
-  width: 100%; /* Make the slider take up the full width of the container */
+  width: 100%; 
   -webkit-appearance: none; /* Remove default appearance */
   appearance: none;
   height: 3px;
