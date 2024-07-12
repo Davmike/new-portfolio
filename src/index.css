@@ -173,8 +173,8 @@ li:nth-child(5) {
 }
 
 .slider {
-  width: 100%; 
-  -webkit-appearance: none; /* Remove default appearance */
+  width: 100%;
+  -webkit-appearance: none;
   appearance: none;
   height: 3px;
   background: #ddd;
