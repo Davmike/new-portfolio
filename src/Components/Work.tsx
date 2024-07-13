@@ -88,6 +88,16 @@ function Work() {
         <div className="w-[66px] h-[1px] bg-[#175b4b]"></div>
         <p className="text-[12px] text-[white]">Dig into my universe</p>
       </div>
+      {/* projects section starts here */}
+      <div>
+        <>
+          {imagesItem.map((item, index) => {
+            <div key={index}>
+              <img src={item.src} alt="" />;
+            </div>;
+          })}
+        </>
+      </div>
     </div>
   );
 }
