@@ -9,7 +9,7 @@ import npm from "../../public/assets/logos/npm.png";
 import pr from "../../public/assets/logos/pr.png";
 import ps from "../../public/assets/logos/ps.png";
 import python from "../../public/assets/logos/python.png";
-import react from "../../public/assets/logos/react.png";
+import reactLogo from "../../public/assets/logos/react.png";
 import redux from "../../public/assets/logos/redux.png";
 import tailwind from "../../public/assets/logos/tailwind.png";
 import typescript from "../../public/assets/logos/typescript.png";
@@ -22,7 +22,7 @@ function Work() {
     { src: html },
     { src: css },
     { src: js },
-    { src: react },
+    { src: reactLogo },
     { src: vue },
     { src: tailwind },
     { src: boostrap },
@@ -39,8 +39,35 @@ function Work() {
     { src: ae },
   ];
 
+  const imagesItem = [
+    {
+      name: "Switzerland",
+      src: "https://i.ibb.co/qCkd9jS/img1.jpg",
+      description:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!",
+    },
+    {
+      name: "Finland",
+      src: "https://i.ibb.co/jrRb11q/img2.jpg",
+      description:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!",
+    },
+    {
+      name: "Iceland",
+      src: "https://i.ibb.co/NSwVv8D/img3.jpg",
+      description:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!",
+    },
+    {
+      name: "Australia",
+      src: "https://i.ibb.co/Bq4Q0M8/img4.jpg",
+      description:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!",
+    },
+  ];
+
   return (
-    <div>
+    <div className="px-[20px] py-[20px]">
       <div className="logos">
         <div className="logo_items">
           {images.map((item, index) => (
@@ -54,6 +81,12 @@ function Work() {
             />
           ))}
         </div>
+      </div>
+      {/* work section div */}
+      <div className="mt-[10px]">
+        <h1 className="font-bold text-[20px] text-[white]">WORK</h1>
+        <div className="w-[66px] h-[1px] bg-[#175b4b]"></div>
+        <p className="text-[12px] text-[white]">Dig into my universe</p>
       </div>
     </div>
   );
