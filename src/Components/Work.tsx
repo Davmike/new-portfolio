@@ -1,4 +1,3 @@
-import React, { useEffect, useRef, useState } from "react";
 import ae from "../../public/assets/logos/ae.png";
 import boostrap from "../../public/assets/logos/boostrap.png";
 import css from "../../public/assets/logos/css.png";
@@ -18,43 +17,7 @@ import vue from "../../public/assets/logos/vue.png";
 import xd from "../../public/assets/logos/xd.png";
 import jquery from "../../public/assets/logos/jquery.png";
 
-const Work: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const [timeRunning] = useState(3000);
-  const [timeAutoNext] = useState(7000);
-  const sliderRef = useRef<HTMLDivElement>(null);
-  const thumbnailRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const runNextAuto = setTimeout(() => {
-      handleNext();
-    }, timeAutoNext);
-
-    return () => clearTimeout(runNextAuto);
-  }, [currentSlide, timeAutoNext]);
-
-  const handleNext = () => {
-    const nextSlide =
-      (currentSlide + 1) % (sliderRef.current?.children.length || 1);
-    setCurrentSlide(nextSlide);
-  };
-
-  const handlePrev = () => {
-    const prevSlide =
-      (currentSlide - 1 + (sliderRef.current?.children.length || 1)) %
-      (sliderRef.current?.children.length || 1);
-    setCurrentSlide(prevSlide);
-  };
-
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      sliderRef.current?.classList.remove("next");
-      sliderRef.current?.classList.remove("prev");
-    }, timeRunning);
-
-    return () => clearTimeout(timeout);
-  }, [currentSlide, timeRunning]);
-
+function Work() {
   const images = [
     { src: html },
     { src: css },
@@ -127,42 +90,16 @@ const Work: React.FC = () => {
       </div>
       {/* projects section starts here */}
       <div>
-        {imagesItem.map((item, index) => (
-          <div key={index} className="bg-[white]">
-            <img src={item.src} alt={item.name} />
-            <p>{item.description}</p>
-          </div>
-        ))}
-      </div>
-      <div className="carousel">
-        <div className="list" ref={sliderRef}>
-          {Array.from({ length: 5 }).map((_, index) => (
-            <div key={index} className="item">
-              {/* Replace with your actual slider content */}
-              Slide {index + 1}
-            </div>
-          ))}
-        </div>
-        <div className="thumbnail" ref={thumbnailRef}>
-          {Array.from({ length: 5 }).map((_, index) => (
-            <div key={index} className="item">
-              {/* Replace with your actual thumbnail content */}
-              Thumbnail {index + 1}
-            </div>
-          ))}
-        </div>
-        <div className="arrows">
-          <button id="prev" onClick={handlePrev}>
-            Previous
-          </button>
-          <button id="next" onClick={handleNext}>
-            Next
-          </button>
-        </div>
-        <div className="time">{/* Display time if needed */}</div>
+        <>
+          {imagesItem.map((item, index) => {
+            <div key={index} className="bg-[white]">
+              <img src={item.src} alt="" />;
+            </div>;
+          })}
+        </>
       </div>
     </div>
   );
-};
+}
 
 export default Work;
