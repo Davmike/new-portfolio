@@ -40,6 +40,14 @@ function Work() {
     { src: ae },
   ];
 
+  interface work {
+    name: string;
+    live: string;
+    src: string;
+    skills: string[];
+    description: string;
+  }
+
   const work = [
     {
       name: "Parapantest",
@@ -99,43 +107,30 @@ function Work() {
         <p className="text-[12px] text-[white]">Dig into my universe</p>
       </div>
       {/* projects section starts here */}
-      <div className="wrapper flex justify-center items-center flex-col pt-[3rem] gap-[15vh]">
-        <div
-          className="bg-[green] w-[100%] rounded-[5rem] flex overflow-hidden"
-          id="project-main"
-        >
-          <div className="overflow-hidden flex relative flex-7">
-            {/* <img src={} alt="" /> */}
+      {/* main div */}
+      {work.map((item, index) => (
+        <div key={index} className="bg-[white] mt-[100px]">
+          {/* div for card data */}
+          <div>
+            <h3>{item.name}</h3>
+            {item.skills.map((skill, skillIndex) => (
+              <span key={skillIndex}>{skill}</span>
+            ))}
+            <button>check it out</button>
           </div>
-          {/* description */}
-          <div id="description">
-            <div
-              className="text-2xl font-bold text-gray-800 mb-4"
-              data-astro-cid-sv5liydy=""
-            >
-              Description &amp; Goals
+          {/* div for image and description */}
+          <div>
+            <img src={item.src} alt="" />
+            {/* div for description */}
+            <div className="hidden">
+              {item.description.map((description, descrindex) => (
+                <h4 key={descrindex}>{description}</h4>
+              ))}
+              <p>text here</p>
             </div>
-            {/* text section for description */}
-            <p className="description-line">
-              Started as a hobby project to help a friend learn for his
-              paragliding exam, I ended up building a full-fledged quiz
-              application.
-            </p>
           </div>
         </div>
-        {/* carda data */}
-        <div>
-          <h3>hello name</h3>
-          {/* short descriptio */}
-          <div>here will be some short description</div>
-          {/* div for skills used in project */}
-          <div className="flex flex-wrap gap-[1ch]">
-            <span className="bg-[#242424] rounded-[5px] inline-block font-bold text-for-span"></span>
-          </div>
-          {/* div for button */}
-          <div className="flex gap-[1rem] mt-[auto]"></div>
-        </div>
-      </div>
+      ))}
     </div>
   );
 }
