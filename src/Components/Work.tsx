@@ -16,6 +16,7 @@ import typescript from "../../public/assets/logos/typescript.png";
 import vue from "../../public/assets/logos/vue.png";
 import xd from "../../public/assets/logos/xd.png";
 import jquery from "../../public/assets/logos/jquery.png";
+import weblance from "../../public/assets/weblance.jpg";
 
 function Work() {
   const images = [
@@ -39,30 +40,39 @@ function Work() {
     { src: ae },
   ];
 
-  const imagesItem = [
+  const work = [
     {
-      name: "Switzerland",
-      src: "https://i.ibb.co/qCkd9jS/img1.jpg",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!",
+      name: "Parapantest",
+      live: "https://parapantest.vercel.app/",
+      src: weblance,
+      skills: ["Next.js", "React", "GSAP", "Vercel API"],
+      description: [
+        "Started as a hobby project to help a friend learn for his paragliding exam, I ended up building a full-fledged quiz applicatio",
+        "It consists of 1000+ questions from 8 different categories and has a simulation mode that mimics the real exam.",
+        "From a technical point of view, my goals were to learn using more complex animations with GSAP and deliver a fast & secure web application. It runs server-less on Vercel and uses Next.js API routes to hide all sensitive data from the client, such as the correct answers.",
+      ],
     },
     {
-      name: "Finland",
-      src: "https://i.ibb.co/jrRb11q/img2.jpg",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!",
+      name: "Paddle Pong",
+      live: "https://pocket-console.vercel.app/",
+      src: weblance,
+      skills: ["Next.js", "React", "Java", "Tailwind"],
+      description: [
+        "Started as a hobby project to help a friend learn for his paragliding exam, I ended up building a full-fledged quiz applicatio",
+        "It consists of 1000+ questions from 8 different categories and has a simulation mode that mimics the real exam.",
+        "From a technical point of view, my goals were to learn using more complex animations with GSAP and deliver a fast & secure web application. It runs server-less on Vercel and uses Next.js API routes to hide all sensitive data from the client, such as the correct answers.",
+      ],
     },
     {
-      name: "Iceland",
-      src: "https://i.ibb.co/NSwVv8D/img3.jpg",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!",
-    },
-    {
-      name: "Australia",
-      src: "https://i.ibb.co/Bq4Q0M8/img4.jpg",
-      description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!",
+      name: "Snake",
+      live: "https://catalinonutu.com/games/play-snake",
+      src: weblance,
+      skills: ["React", "Redux", "C#"],
+      description: [
+        "Started as a hobby project to help a friend learn for his paragliding exam, I ended up building a full-fledged quiz applicatio",
+        "It consists of 1000+ questions from 8 different categories and has a simulation mode that mimics the real exam.",
+        "From a technical point of view, my goals were to learn using more complex animations with GSAP and deliver a fast & secure web application. It runs server-less on Vercel and uses Next.js API routes to hide all sensitive data from the client, such as the correct answers.",
+      ],
     },
   ];
 
@@ -89,14 +99,40 @@ function Work() {
         <p className="text-[12px] text-[white]">Dig into my universe</p>
       </div>
       {/* projects section starts here */}
-      <div>
-        <>
-          {imagesItem.map((item, index) => {
-            <div key={index} className="bg-[white]">
-              <img src={item.src} alt="" />;
-            </div>;
-          })}
-        </>
+      <div
+        className="bg-[green] w-[100%] rounded-[5rem] flex overflow-hidden"
+        id="project-main"
+      >
+        <div className="overflow-hidden flex relative flex-7">
+          {/* <img src={} alt="" /> */}
+        </div>
+        {/* description */}
+        <div id="description">
+          <div
+            className="text-2xl font-bold text-gray-800 mb-4"
+            data-astro-cid-sv5liydy=""
+          >
+            Description &amp; Goals
+          </div>
+          {/* first text */}
+          <p className="description-line">
+            Started as a hobby project to help a friend learn for his
+            paragliding exam, I ended up building a full-fledged quiz
+            application.
+          </p>
+          {/* second text */}
+          <p className="description-line">
+            Started as a hobby project to help a friend learn for his
+            paragliding exam, I ended up building a full-fledged quiz
+            application.
+          </p>
+          {/* third text */}
+          <p className="description-line">
+            Started as a hobby project to help a friend learn for his
+            paragliding exam, I ended up building a full-fledged quiz
+            application.
+          </p>
+        </div>
       </div>
     </div>
   );
