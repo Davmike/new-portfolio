@@ -99,39 +99,41 @@ function Work() {
         <p className="text-[12px] text-[white]">Dig into my universe</p>
       </div>
       {/* projects section starts here */}
-      <div
-        className="bg-[green] w-[100%] rounded-[5rem] flex overflow-hidden"
-        id="project-main"
-      >
-        <div className="overflow-hidden flex relative flex-7">
-          {/* <img src={} alt="" /> */}
-        </div>
-        {/* description */}
-        <div id="description">
-          <div
-            className="text-2xl font-bold text-gray-800 mb-4"
-            data-astro-cid-sv5liydy=""
-          >
-            Description &amp; Goals
+      <div className="wrapper flex justify-center items-center flex-col pt-[3rem] gap-[15vh]">
+        <div
+          className="bg-[green] w-[100%] rounded-[5rem] flex overflow-hidden"
+          id="project-main"
+        >
+          <div className="overflow-hidden flex relative flex-7">
+            {/* <img src={} alt="" /> */}
           </div>
-          {/* first text */}
-          <p className="description-line">
-            Started as a hobby project to help a friend learn for his
-            paragliding exam, I ended up building a full-fledged quiz
-            application.
-          </p>
-          {/* second text */}
-          <p className="description-line">
-            Started as a hobby project to help a friend learn for his
-            paragliding exam, I ended up building a full-fledged quiz
-            application.
-          </p>
-          {/* third text */}
-          <p className="description-line">
-            Started as a hobby project to help a friend learn for his
-            paragliding exam, I ended up building a full-fledged quiz
-            application.
-          </p>
+          {/* description */}
+          <div id="description">
+            <div
+              className="text-2xl font-bold text-gray-800 mb-4"
+              data-astro-cid-sv5liydy=""
+            >
+              Description &amp; Goals
+            </div>
+            {/* text section for description */}
+            <p className="description-line">
+              Started as a hobby project to help a friend learn for his
+              paragliding exam, I ended up building a full-fledged quiz
+              application.
+            </p>
+          </div>
+        </div>
+        {/* carda data */}
+        <div>
+          <h3>hello name</h3>
+          {/* short descriptio */}
+          <div>here will be some short description</div>
+          {/* div for skills used in project */}
+          <div className="flex flex-wrap gap-[1ch]">
+            <span className="bg-[#242424] rounded-[5px] inline-block font-bold text-for-span"></span>
+          </div>
+          {/* div for button */}
+          <div className="flex gap-[1rem] mt-[auto]"></div>
         </div>
       </div>
     </div>
