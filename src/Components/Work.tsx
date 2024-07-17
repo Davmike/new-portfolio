@@ -109,14 +109,23 @@ function Work() {
       {/* projects section starts here */}
       {/* main div */}
       {work.map((item, index) => (
-        <div key={index} className="bg-[white] mt-[100px]">
+        <div key={index} className="mt-[100px]">
           {/* div for card data */}
-          <div>
-            <h3>{item.name}</h3>
-            {item.skills.map((skill, skillIndex) => (
-              <span key={skillIndex}>{skill}</span>
-            ))}
-            <button>check it out</button>
+          <div className="bg-[#181A1B] px-[16px] py-[16px] rounded-t-[10px] pb-[20px]">
+            <h3 className="text-[white] text-[2rem]">{item.name}</h3>
+            <div className="flex flex-wrap gap-[1ch] mt-[20px]">
+              {item.skills.map((skill, skillIndex) => (
+                <span
+                  key={skillIndex}
+                  className="bg-[#242424] rounded-[5px] inline-block text-[18px] text-[white] font-bold px-[10px] py-[5px] text-for-span"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+            <button className="mt-[20px] border-none rounded-[4px] bg-[#57CF57] pointer font-bold text-[1.15rem] px-[15px] py-[8px] checkout">
+              check it out
+            </button>
           </div>
           {/* div for image and description */}
           <div>

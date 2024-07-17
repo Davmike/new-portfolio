@@ -281,7 +281,6 @@ li:nth-child(5) {
 }
 
 .text-for-span {
-  padding: 0.75rem 1rem;
   transition: background-color var(--transitionDuration) ease;
 }
 
@@ -291,4 +290,11 @@ li:nth-child(5) {
   width: 100%;
   height: auto;
   max-width: 100%;
+}
+
+.checkout {
+  box-shadow: var(--shadow);
+  color: var(--dark);
+  transform: translateY(0);
+  transition: all var(--transitionDuration) ease;
 }
