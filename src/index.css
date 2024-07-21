@@ -298,3 +298,11 @@ li:nth-child(5) {
   transform: translateY(0);
   transition: all var(--transitionDuration) ease;
 }
+
+/* .zoom-effect {
+  transition: transform 0.2s ease-in-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+} */

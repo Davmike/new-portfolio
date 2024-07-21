@@ -109,7 +109,10 @@ function Work() {
       {/* projects section starts here */}
       {/* main div */}
       {work.map((item, index) => (
-        <div key={index} className="mt-[100px]">
+        <div
+          key={index}
+          className="mt-[100px] relative max-w-[768px] m-auto group zoom-effect"
+        >
           {/* div for card data */}
           <div className="bg-[#181A1B] px-[16px] py-[16px] rounded-t-[10px] pb-[20px]">
             <h3 className="text-[white] text-[2rem]">{item.name}</h3>
@@ -128,10 +131,10 @@ function Work() {
             </button>
           </div>
           {/* div for image and description */}
-          <div>
-            <img src={item.src} alt="" />
+          <div className="relative">
+            <img src={item.src} alt="" className="w-full rounded-b-md" />
             {/* div for description */}
-            <div className="hidden">
+            <div className="absolute inset-0 bg-black bg-opacity-75 text-white flex flex-col justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 rounded-b-md p-4">
               {item.description.map((description, descrindex) => (
                 <h4 key={descrindex}>{description}</h4>
               ))}
