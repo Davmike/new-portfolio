@@ -85,7 +85,7 @@ function Work() {
   ];
 
   return (
-    <div className="px-[20px] py-[20px]">
+    <div className="px-[20px] py-[20px] flex justify-center items-center flex-col">
       <div className="logos">
         <div className="logo_items">
           {images.map((item, index) => (
@@ -101,7 +101,7 @@ function Work() {
         </div>
       </div>
       {/* work section div */}
-      <div className="mt-[10px]">
+      <div className="mt-[10px] flex justify-center items-center flex-col">
         <h1 className="font-bold text-[20px] text-[white]">WORK</h1>
         <div className="w-[66px] h-[1px] bg-[#175b4b]"></div>
         <p className="text-[12px] text-[white]">Dig into my universe</p>
@@ -136,13 +136,17 @@ function Work() {
             {/* div for description */}
             <div className="absolute inset-0 bg-black bg-opacity-75 text-white flex flex-col justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 rounded-b-md p-4">
               {item.description.map((description, descrindex) => (
-                <h4 key={descrindex}>{description}</h4>
+                <p key={descrindex}>{description}</p>
               ))}
-              <p>text here</p>
             </div>
           </div>
         </div>
       ))}
+
+      {/* button for more projects */}
+      <button className="mt-[100px] border-none rounded-[4px] bg-[#57CF57] pointer font-bold text-[1.15rem] px-[15px] py-[8px] checkout">
+        SEE MORE...
+      </button>
     </div>
   );
 }
