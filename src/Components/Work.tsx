@@ -64,7 +64,7 @@ function Work() {
       {/* work section div */}
       <div className="mt-[30px] flex justify-center items-center flex-col">
         <h1 className="font-bold text-[2rem] text-[white]">WORK</h1>
-        <div className="w-[66px] h-[1px] bg-[#175b4b]"></div>
+        <div className="w-[66px] h-[1px] bg-[#56CE56]"></div>
         <p className="text-[12px] text-[white]">Dig into my universe</p>
       </div>
       {/* projects section starts here */}
@@ -105,7 +105,7 @@ function Work() {
       ))}
 
       {/* button for more projects */}
-      <button className="mt-[100px] border-none rounded-[4px] bg-[#57CF57] pointer font-bold text-[1.15rem] px-[15px] py-[8px] checkout">
+      <button className="mt-[60px] border-none rounded-[4px] mb-[40px] bg-[#57CF57] pointer font-bold text-[1.15rem] px-[15px] py-[8px] checkout">
         SEE MORE...
       </button>
     </div>
