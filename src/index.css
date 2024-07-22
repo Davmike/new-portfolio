@@ -11,7 +11,7 @@
 }
 
 body {
-  background: black;
+  background: #181a1b;
   font-family: "Neuton", serif;
 }
 
@@ -295,6 +295,7 @@ li:nth-child(5) {
 .checkout {
   box-shadow: var(--shadow);
   color: var(--dark);
+  color: black;
   transform: translateY(0);
   transition: all var(--transitionDuration) ease;
 }

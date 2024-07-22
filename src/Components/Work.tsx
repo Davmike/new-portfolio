@@ -1,45 +1,6 @@
-import ae from "../../public/assets/logos/ae.png";
-import boostrap from "../../public/assets/logos/boostrap.png";
-import css from "../../public/assets/logos/css.png";
-import figma from "../../public/assets/logos/figma.png";
-import git from "../../public/assets/logos/git.png";
-import html from "../../public/assets/logos/html.png";
-import js from "../../public/assets/logos/javascript.png";
-import npm from "../../public/assets/logos/npm.png";
-import pr from "../../public/assets/logos/pr.png";
-import ps from "../../public/assets/logos/ps.png";
-import python from "../../public/assets/logos/python.png";
-import reactLogo from "../../public/assets/logos/react.png";
-import redux from "../../public/assets/logos/redux.png";
-import tailwind from "../../public/assets/logos/tailwind.png";
-import typescript from "../../public/assets/logos/typescript.png";
-import vue from "../../public/assets/logos/vue.png";
-import xd from "../../public/assets/logos/xd.png";
-import jquery from "../../public/assets/logos/jquery.png";
 import weblance from "../../public/assets/weblance.jpg";
 
 function Work() {
-  const images = [
-    { src: html },
-    { src: css },
-    { src: js },
-    { src: reactLogo },
-    { src: vue },
-    { src: tailwind },
-    { src: boostrap },
-    { src: typescript },
-    { src: npm },
-    { src: git },
-    { src: redux },
-    { src: jquery },
-    { src: figma },
-    { src: python },
-    { src: xd },
-    { src: ps },
-    { src: pr },
-    { src: ae },
-  ];
-
   interface work {
     name: string;
     live: string;
@@ -85,8 +46,8 @@ function Work() {
   ];
 
   return (
-    <div className="px-[20px] py-[20px] flex justify-center items-center flex-col">
-      <div className="logos">
+    <div className="bg-[#242424] px-[20px] py-[20px] flex justify-center items-center flex-col">
+      {/* <div className="logos">
         <div className="logo_items">
           {images.map((item, index) => (
             <img src={item.src} key={index} alt={`logo-${index}`} />
@@ -99,10 +60,10 @@ function Work() {
             />
           ))}
         </div>
-      </div>
+      </div> */}
       {/* work section div */}
-      <div className="mt-[10px] flex justify-center items-center flex-col">
-        <h1 className="font-bold text-[20px] text-[white]">WORK</h1>
+      <div className="mt-[30px] flex justify-center items-center flex-col">
+        <h1 className="font-bold text-[2rem] text-[white]">WORK</h1>
         <div className="w-[66px] h-[1px] bg-[#175b4b]"></div>
         <p className="text-[12px] text-[white]">Dig into my universe</p>
       </div>
@@ -111,7 +72,7 @@ function Work() {
       {work.map((item, index) => (
         <div
           key={index}
-          className="mt-[100px] relative max-w-[768px] m-auto group zoom-effect"
+          className="mt-[50px] relative max-w-[768px] m-auto group zoom-effect"
         >
           {/* div for card data */}
           <div className="bg-[#181A1B] px-[16px] py-[16px] rounded-t-[10px] pb-[20px]">
