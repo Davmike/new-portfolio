@@ -1,6 +1,3 @@
-import React from "react";
-import profile from "../../public/assets/mb.jpg"; // Make sure to replace with your actual image path
-
 function About() {
   const skills = [
     {

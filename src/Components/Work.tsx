@@ -63,7 +63,7 @@ function Work() {
       </div> */}
       {/* work section div */}
       <div className="mt-[30px] flex justify-center items-center flex-col">
-        <h1 className="font-bold text-[2rem] text-[white]">WORK</h1>
+        <h1 className="font-bold text-[white] text-2xl md:text-3xl">WORK</h1>
         <div className="w-[66px] h-[1px] bg-[#56CE56]"></div>
         <p className="text-[12px] text-[white]">Dig into my universe</p>
       </div>
@@ -72,7 +72,7 @@ function Work() {
       {work.map((item, index) => (
         <div
           key={index}
-          className="mt-[50px] relative max-w-[768px] m-auto group zoom-effect"
+          className="mt-[50px] relative m-auto group zoom-effect lg:flex lg:max-w-[1240px]"
         >
           {/* div for card data */}
           <div className="bg-[#181A1B] px-[16px] py-[16px] rounded-t-[10px] pb-[20px]">
@@ -93,7 +93,11 @@ function Work() {
           </div>
           {/* div for image and description */}
           <div className="relative">
-            <img src={item.src} alt="" className="w-full rounded-b-md" />
+            <img
+              src={item.src}
+              alt=""
+              className="w-[100%] object-cover rounded-b-md"
+            />
             {/* div for description */}
             <div className="absolute inset-0 bg-black bg-opacity-75 text-white flex flex-col justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 rounded-b-md p-4">
               {item.description.map((description, descrindex) => (
