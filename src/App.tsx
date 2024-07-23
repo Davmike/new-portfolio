@@ -10,11 +10,19 @@ import Footer from "./Components/Footer";
 function App() {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const [darkMode, setDarkMode] = useState<boolean>(true);
+  const [scrolled, setScrolled] = useState<boolean>(false);
 
   return (
     <>
       <MyContext.Provider
-        value={{ menuOpen, setMenuOpen, darkMode, setDarkMode }}
+        value={{
+          menuOpen,
+          setMenuOpen,
+          darkMode,
+          setDarkMode,
+          scrolled,
+          setScrolled,
+        }}
       >
         <Header />
         <Home />

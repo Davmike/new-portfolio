@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import profile from "../../public/assets/mb.jpg";
 import { MyContext } from "./Context";
@@ -7,14 +7,37 @@ const buttonCategories = ["About", "Projects", "Contact"];
 
 function Header() {
   const context = useContext(MyContext);
-  const { darkMode, setDarkMode }: any = context;
+  const { darkMode, setDarkMode, scrolled, setScrolled }: any = context;
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };
 
+  let lastScrollY = window.scrollY;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+      lastScrollY = window.scrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [lastScrollY]);
+
   return (
-    <header className="bg-[#181A1B] shadow-2xl px-[20px] py-[10px] fixed z-10 w-[100%] flex justify-between items-center">
+    <header
+      className={`bg-[#181A1B] shadow-2xl px-[20px] py-[10px] fixed z-10 w-[100%] flex justify-between items-center transition-transform duration-300 ${
+        scrolled ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="flex items-center space-x-4">
         <img
           src={profile} // Replace with your profile photo path

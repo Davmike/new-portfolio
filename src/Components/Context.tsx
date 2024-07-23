@@ -5,6 +5,8 @@ interface ComponentsProps {
   setMenuOpen: (menuOpen: boolean) => void;
   darkMode: boolean;
   setDarkMode: (darkMode: boolean) => void;
+  scrolled: boolean;
+  setScrolled: (scrolled: boolean) => void;
 }
 
 export const MyContext = createContext<ComponentsProps | null>(null);
