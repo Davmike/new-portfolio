@@ -1,3 +1,6 @@
+import React from "react";
+import profile from "../../public/assets/mb.jpg"; // Make sure to replace with your actual image path
+
 function About() {
   const skills = [
     {
@@ -32,58 +35,59 @@ function About() {
   ];
 
   return (
-    <div className="text-[white] px-[20px] py-[20px]">
-      {/* second main div */}
-      <div>
-        {/* about section div */}
-        <div className="flex justify-center items-center flex-col mt-[30px]">
-          <h1 className="font-bold text-[2rem]">ABOUT</h1>
-          <div className="w-[66px] h-[1px] bg-[#56CE56]"></div>
-          <p className="text-[12px]">mikeladzedav@gmail.com</p>
-        </div>
-        {/* main div for both container */}
-        <div className="mb-[40px]">
-          {/* about info text */}
-          <div className="mt-[50px]">
-            <h3 className="text-[1.5rem] font-bold">Get to know me!</h3>
-            <div className="mt-[20px]">
-              <p className="text-[17px]">
-                I'm a software developer proficient in JavaScript and the web.
-                I'm passionate about web performance, accessibility, mentoring,
-                user & developer experience.
-              </p>
-              <p className="text-[17px]">
-                I follow a digital minimalism mindset, using technology to
-                improve people's lives and provide value for businesses.
-              </p>
-              <p className="text-[17px]">
-                In my free time, I build side projects and like exploring new
-                technologies. You can see some of my work in the projects
-                section below.
-              </p>
-              <p className="text-[17px]">
-                I'm open to collaboration opportunities where I can contribute,
-                learn and grow. Don't hesitate to reach out if you think my
-                skills and experience are a good fit for your next project.
-              </p>
-            </div>
+    <div className="text-white px-5 py-5 md:px-20 md:py-20">
+      {/* About Section */}
+      <div className="flex justify-center items-center flex-col mt-10">
+        <h1 className="font-bold text-2xl md:text-3xl">ABOUT</h1>
+        <div className="w-5 h-1 bg-green-500 mt-1"></div>
+        <p className="text-[14px]">mikeladzedav@gmail.com</p>
+      </div>
+
+      {/* Main Content */}
+      <div className="mb-10 md:flex md:justify-between md:gap-10">
+        {/* About Info */}
+        <div className="mt-10 md:w-1/2">
+          <h3 className="text-xl font-bold md:text-[1.5rem]">
+            Get to know me!
+          </h3>
+          <div className="mt-5 space-y-4">
+            <p className="text-[1rem] md:text-[1.2rem]">
+              I'm a software developer proficient in JavaScript and the web. I'm
+              passionate about web performance, accessibility, mentoring, user &
+              developer experience.
+            </p>
+            <p className="text-[1rem] md:text-[1.2rem]">
+              I follow a digital minimalism mindset, using technology to improve
+              people's lives and provide value for businesses.
+            </p>
+            <p className="text-[1rem] md:text-[1.2rem]">
+              In my free time, I build side projects and like exploring new
+              technologies. You can see some of my work in the projects section
+              below.
+            </p>
+            <p className="text-[1rem] md:text-[1.2rem]">
+              I'm open to collaboration opportunities where I can contribute,
+              learn and grow. Don't hesitate to reach out if you think my skills
+              and experience are a good fit for your next project.
+            </p>
           </div>
-          <button className="mt-[20px] border-none rounded-[4px] bg-[#57CF57] pointer font-bold text-[1.15rem] px-[15px] py-[8px] checkout">
+          <button className="mt-5 bg-green-500 text-black font-bold py-2 px-4 rounded hover:bg-green-600 transition duration-200">
             PROJECTS
           </button>
-          {/* personal info */}
-          <div className="flex flex-col mt-[50px]">
-            <h3 className="text-[1.5rem] font-bold">My Toolkit</h3>
-            <div className="flex flex-wrap gap-2 mt-[20px]">
-              {skills[0].toolkit.map((toolkit, skillIndex) => (
-                <span
-                  key={skillIndex}
-                  className="bg-[#242424] rounded-[5px] inline-block text-[18px] text-[white] font-bold px-[10px] py-[5px]"
-                >
-                  {toolkit}
-                </span>
-              ))}
-            </div>
+        </div>
+
+        {/* Toolkit */}
+        <div className="mt-10 md:w-1/2">
+          <h3 className="text-xl font-bold md:text-[1.5rem]">My Toolkit</h3>
+          <div className="flex flex-wrap gap-2 mt-5">
+            {skills[0].toolkit.map((toolkit, skillIndex) => (
+              <span
+                key={skillIndex}
+                className="bg-[#242424] rounded-md inline-block text-[1rem] md:text-[1.2rem] text-white font-bold px-3 py-1"
+              >
+                {toolkit}
+              </span>
+            ))}
           </div>
         </div>
       </div>
