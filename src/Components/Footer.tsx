@@ -1,8 +1,58 @@
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+
 function Footer() {
   return (
-    <div>
-      <h1>Footer</h1>
-    </div>
+    <>
+      <div className="h-[1px] w-[100%] bg-[white] mt-[50px]"></div>
+      <div className="bg-[#181A1B] text-white p-4">
+        <div className="max-w-4xl mx-auto">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
+            <div className="mb-4 md:mb-0">
+              <h2 className="text-2xl font-bold">David Mikeladze</h2>
+              <p className="mt-2">
+                Experienced web developer who{" "}
+                <span className="text-green-500 font-bold">enjoys</span>{" "}
+                building <span className="text-green-500 font-bold">fast</span>{" "}
+                and <span className="text-green-500 font-bold">accessible</span>{" "}
+                digital products.
+              </p>
+            </div>
+            <div className="flex flex-col md:flex-row md:space-x-8">
+              <div className="mb-4 md:mb-0">
+                <h3 className="text-xl font-bold">Design</h3>
+                <p className="mt-2">
+                  Inspired by{" "}
+                  <a
+                    href="https://rammaheswari.com"
+                    className="text-green-500 font-bold"
+                  >
+                    Ram Maheshwari
+                  </a>
+                  's website.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-xl font-bold">Social</h3>
+                <div className="flex space-x-4 mt-2">
+                  <a
+                    href="https://github.com/your-profile"
+                    className="text-white hover:text-green-500 transition-colors duration-200"
+                  >
+                    <FaGithub size={24} />
+                  </a>
+                  <a
+                    href="https://linkedin.com/in/your-profile"
+                    className="text-white hover:text-green-500 transition-colors duration-200"
+                  >
+                    <FaLinkedin size={24} />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }
 

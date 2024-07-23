@@ -307,3 +307,83 @@ li:nth-child(5) {
 .zoom-effect:hover {
   transform: scale(1.1);
 } */
+
+/* .header {
+  background-color: #181a1b;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #32cd32;
+}
+
+.header-logo h2 {
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links li {
+  color: white;
+  cursor: pointer;
+  position: relative;
+}
+
+.nav-links li:hover {
+  color: #32cd32;
+}
+
+.nav-links li span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: #32cd32;
+  transform: scaleX(0);
+  transition: transform 0.2s;
+}
+
+.nav-links li:hover span {
+  transform: scaleX(1);
+}
+
+.toggle-button {
+  color: white;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 2px solid white;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.toggle-button:hover {
+  color: #32cd32;
+}
+
+.toggle-button:hover {
+  border-color: #32cd32;
+} */

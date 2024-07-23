@@ -1,5 +1,3 @@
-import React from "react";
-
 function Contact() {
   return (
     <div className="min-h-screen flex items-center justify-center bg-[#181A1B] text-white p-4">
