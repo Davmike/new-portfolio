@@ -40,7 +40,7 @@ function Header() {
     >
       <div className="flex items-center space-x-4">
         <img
-          src={profile} // Replace with your profile photo path
+          src={profile}
           alt="Profile"
           className="w-10 h-10 rounded-full border-2 border-green-500"
         />
@@ -48,11 +48,11 @@ function Header() {
       <ul className="flex justify-start items-center flex-row gap-[15px]">
         {buttonCategories.map((category, index) => (
           <li
-            className="text-white hover:text-green-500 transition-colors duration-200 relative"
+            className="text-white hover:text-green-500 transition-colors duration-200 relative md:text-[18px] lg:text-[25px]"
             key={index}
           >
             {category}
-            <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-green-500 scale-x-0 hover:scale-x-100 transition-transform duration-200"></span>
+            {/* <span className="absolute bottom-0 left-0 right-0 h-[2px] bg-green-500 scale-x-0 hover:scale-x-100 transition-transform duration-200"></span> */}
           </li>
         ))}
       </ul>
