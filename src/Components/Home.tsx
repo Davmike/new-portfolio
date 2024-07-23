@@ -44,20 +44,24 @@ function Home() {
       {/* clock section */}
       <div className="relative flex justify-center items-center flex-col text-white mb-[30px]">
         {/* <div className="absolute top-5 left-5 text-white text-4xl"> */}
-        <p className="text-[100px] font-bold">19:22</p>
+        <p className="text-[100px] font-bold lg:text-[140px]">19:22</p>
 
         {/* Content container */}
         <div className="mt-[20px]">
           <div className="text-left leading-[28px]">
-            <h3 className="text-[30px] uppercase font-light">David</h3>
-            <h1 className="text-[40px] uppercase font-extrabold">Mikeladze</h1>
+            <h3 className="text-[30px] uppercase font-light lg:text-[50px]">
+              David
+            </h3>
+            <h1 className="text-[40px] uppercase font-extrabold lg:text-[60px] lg:mt-[10px]">
+              Mikeladze
+            </h1>
           </div>
-          <p className="text-[20px] font-thin tracking-[3.9px]">
+          <p className="text-[20px] font-thin tracking-[3.9px] lg:text-[28px]">
             Full-Stack Developer
           </p>
 
           {/* Buttons container */}
-          <div className="flex gap-[15px] mt-[20px]">
+          <div className="flex justify-center items-center gap-[15px] mt-[20px]">
             <button className="border-[1px] border-[white] hover:bg-[white] text-[white] hover:text-[black] rounded-[15px] px-[25px] py-[1px]">
               Resume
             </button>
