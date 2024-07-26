@@ -94,10 +94,10 @@ function Header() {
                 >
                   {category}
                   {selected === categoryId && (
-                    <div className="absolute bg-[#16A34A] w-full h-[5px] rounded-[5px] bottom-[40px]"></div>
+                    <div className="absolute bg-[#16A34A] w-full h-[5px] rounded-[5px] bottom-[45px]"></div>
                   )}
                   {hoveredIndex === index && (
-                    <div className="hidden md:block absolute bg-[#16A34A] w-full h-[5px] rounded-[5px] top-[40px]"></div>
+                    <div className="hidden md:block absolute bg-[#16A34A] w-full h-[5px] rounded-[5px] top-[45px]"></div>
                   )}
                 </Link>
               </li>
