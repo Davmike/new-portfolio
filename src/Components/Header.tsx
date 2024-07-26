@@ -1,7 +1,8 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import profile from "../../public/assets/mb.jpg";
 import { MyContext } from "./Context";
+import { Link } from "react-scroll";
 
 const buttonCategories = ["About", "Projects", "Contact"];
 
@@ -14,6 +15,8 @@ function Header() {
     setScrolled,
     hoveredIndex,
     setHoveredIndex,
+    selected,
+    setSelected,
   }: any = context;
 
   const toggleDarkMode = () => {
@@ -55,21 +58,33 @@ function Header() {
       {/* div for dark mode an list of section */}
       <div className="flex gap-[20px]">
         <ul className="flex justify-start items-center flex-row gap-[15px]">
-          {buttonCategories.map((category, index) => (
-            <div className="flex justify-center items-center flex-col">
-              <li
-                className="text-white cursor-pointer hover:text-green-500 transition-colors duration-200 relative md:text-[18px] lg:text-[25px]"
+          {buttonCategories.map((category, index) => {
+            const categoryId = category.toLowerCase().replace(/\s+/g, "-");
+            return (
+              <Link
                 key={index}
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
+                to={categoryId}
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
               >
-                {category}
-                {hoveredIndex === index && (
-                  <div className="absolute bg-[#16A34A] w-full h-[2px] bottom-0 left-0 right-0 rounded-[5px]"></div>
-                )}
-              </li>
-            </div>
-          ))}
+                <div className="flex justify-center items-center flex-col">
+                  <li
+                    className="text-white cursor-pointer hover:text-green-500 transition-colors duration-200 relative md:text-[18px] lg:text-[25px]"
+                    key={index}
+                    onMouseEnter={() => setHoveredIndex(index)}
+                    onMouseLeave={() => setHoveredIndex(null)}
+                  >
+                    {category}
+                    {hoveredIndex === index && (
+                      <div className="absolute bg-[#16A34A] w-full h-[5px] rounded-[5px] top-[40px]"></div>
+                    )}
+                  </li>
+                </div>
+              </Link>
+            );
+          })}
         </ul>
         <div className="flex items-center space-x-4">
           <button

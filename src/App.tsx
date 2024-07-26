@@ -12,6 +12,7 @@ function App() {
   const [darkMode, setDarkMode] = useState<boolean>(true);
   const [scrolled, setScrolled] = useState<boolean>(false);
   const [hoveredIndex, setHoveredIndex] = useState<null>(null);
+  const [selected, setSelected] = useState<string>("Home");
 
   return (
     <>
@@ -25,6 +26,8 @@ function App() {
           setScrolled,
           hoveredIndex,
           setHoveredIndex,
+          selected,
+          setSelected,
         }}
       >
         <Header />

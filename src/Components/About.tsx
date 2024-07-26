@@ -32,7 +32,7 @@ function About() {
   ];
 
   return (
-    <div className="text-white px-5 py-5 md:px-20 md:py-20">
+    <div className="text-white px-5 py-5 md:px-20 md:py-20" id="about">
       {/* About Section */}
       <div className="flex justify-center items-center flex-col mt-10">
         <h1 className="font-bold text-2xl md:text-3xl">ABOUT</h1>

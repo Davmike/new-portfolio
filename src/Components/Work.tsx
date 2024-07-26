@@ -47,7 +47,10 @@ function Work() {
   ];
 
   return (
-    <div className="bg-[#242424] px-[20px] py-[20px] flex justify-center items-center flex-col">
+    <div
+      className="bg-[#242424] px-[20px] py-[20px] flex justify-center items-center flex-col"
+      id="projects"
+    >
       {/* <div className="logos">
         <div className="logo_items">
           {images.map((item, index) => (

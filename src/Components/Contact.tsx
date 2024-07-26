@@ -1,6 +1,9 @@
 function Contact() {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#181A1B] text-white p-4">
+    <div
+      className="min-h-screen flex items-center justify-center bg-[#181A1B] text-white p-4"
+      id="contact"
+    >
       <div className="max-w-md w-full">
         <h1 className="text-3xl font-bold mb-4 text-center mt-[30px] md:text-3xl">
           Contact me
