@@ -72,10 +72,12 @@ function Work() {
       {work.map((item, index) => (
         <div
           key={index}
-          className="mt-[50px] relative m-auto group zoom-effect lg:flex lg:max-w-[1240px]"
+          className={`mt-[50px] relative m-auto group zoom-effect lg:flex lg:max-w-[1200px] ${
+            index % 2 !== 0 ? "lg:flex-row-reverse" : ""
+          }`}
         >
           {/* div for card data */}
-          <div className="bg-[#181A1B] px-[16px] py-[16px] rounded-t-[10px] pb-[20px]">
+          <div className="bg-[#181A1B] lg:w-[340px] lg:p-[30px] px-[16px] py-[16px] rounded-t-[10px] pb-[20px]">
             <h3 className="text-[white] text-[2rem]">{item.name}</h3>
             <div className="flex flex-wrap gap-[1ch] mt-[20px]">
               {item.skills.map((skill, skillIndex) => (
