@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import profile from "../../public/assets/mb.jpg";
 import { MyContext } from "./Context";
@@ -94,7 +94,7 @@ function Header() {
                 >
                   {category}
                   {selected === categoryId && (
-                    <div className="absolute bg-[#16A34A] w-full h-[5px] rounded-[5px] bottom-[40px]"></div>
+                    <div className="absolute bg-[#16A34A] w-full h-[5px] rounded-[5px] bottom-[39px]"></div>
                   )}
                   {hoveredIndex === index && (
                     <div className="absolute bg-[#16A34A] w-full h-[5px] rounded-[5px] top-[40px]"></div>
