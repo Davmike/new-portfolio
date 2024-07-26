@@ -3,6 +3,7 @@ import { FaMoon, FaSun } from "react-icons/fa";
 import profile from "../../public/assets/mb.jpg";
 import { MyContext } from "./Context";
 import { Link } from "react-scroll";
+import Scrollspy from "react-scrollspy";
 
 const buttonCategories = ["About", "Projects", "Contact"];
 
@@ -75,7 +76,11 @@ function Header() {
                     key={index}
                     onMouseEnter={() => setHoveredIndex(index)}
                     onMouseLeave={() => setHoveredIndex(null)}
+                    onClick={() => setSelected(category)}
                   >
+                    {selected === category && (
+                      <div className="absolute bg-[#16A34A] w-full h-[5px] rounded-[5px] bottom-[40px]"></div>
+                    )}
                     {category}
                     {hoveredIndex === index && (
                       <div className="absolute bg-[#16A34A] w-full h-[5px] rounded-[5px] top-[40px]"></div>
@@ -86,6 +91,7 @@ function Header() {
             );
           })}
         </ul>
+
         <div className="flex items-center space-x-4">
           <button
             onClick={toggleDarkMode}

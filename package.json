@@ -14,13 +14,16 @@
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^5.2.1",
-    "react-scroll": "^1.9.0"
+    "react-scroll": "^1.9.0",
+    "react-scrollspy": "^3.4.3",
+    "react-ui-scrollspy": "^2.3.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@types/react-helmet": "^6.1.11",
     "@types/react-scroll": "^1.8.10",
+    "@types/react-scrollspy": "^3.3.9",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
     "@vitejs/plugin-react": "^4.2.1",
