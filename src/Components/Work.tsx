@@ -1,4 +1,5 @@
 import weblance from "../../public/assets/weblance.jpg";
+import { IoOpenOutline } from "react-icons/io5";
 
 function Work() {
   interface work {
@@ -77,7 +78,7 @@ function Work() {
           }`}
         >
           {/* div for card data */}
-          <div className="bg-[#181A1B] lg:w-[340px] lg:p-[30px] px-[16px] py-[16px] rounded-t-[10px] pb-[20px]">
+          <div className="bg-[#181A1B] px-[16px] py-[16px] rounded-t-[10px] pb-[20px] flex flex-col justify-between lg:justify-start lg:w-[340px] lg:p-[30px]">
             <h3 className="text-[white] text-[2rem]">{item.name}</h3>
             <div className="flex flex-wrap gap-[1ch] mt-[20px]">
               {item.skills.map((skill, skillIndex) => (
@@ -89,9 +90,15 @@ function Work() {
                 </span>
               ))}
             </div>
-            <button className="mt-[20px] border-none rounded-[4px] bg-[#57CF57] pointer font-bold text-[1.15rem] px-[15px] py-[8px] checkout">
-              check it out
-            </button>
+            <a
+              href={item.live}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-[20px] flex items-center gap-[5px] w-[150px] border-none rounded-[4px] bg-[#57CF57] pointer font-bold text-[1.15rem] px-[15px] py-[8px] lg:mt-auto checkout"
+            >
+              Check it out
+              <IoOpenOutline />
+            </a>
           </div>
           {/* div for image and description */}
           <div className="relative">
@@ -101,7 +108,7 @@ function Work() {
               className="w-[100%] object-cover rounded-b-md"
             />
             {/* div for description */}
-            <div className="absolute inset-0 bg-black bg-opacity-75 text-white flex flex-col justify-center items-center opacity-0 transition-opacity duration-300 group-hover:opacity-100 rounded-b-md p-4">
+            <div className="bg-[#181A1B] text-[white] px-[16px] py-[16px] lg:absolute lg:inset-0 lg:bg-black lg:bg-opacity-75 lg:text-white lg:flex lg:flex-col lg:justify-center lg:items-center lg:opacity-0 lg:transition-opacity lg:duration-300 lg:group-hover:opacity-100 lg:rounded-b-md lg:p-4">
               {item.description.map((description, descrindex) => (
                 <p key={descrindex}>{description}</p>
               ))}
