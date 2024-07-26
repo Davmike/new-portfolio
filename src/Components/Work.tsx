@@ -78,7 +78,11 @@ function Work() {
           }`}
         >
           {/* div for card data */}
-          <div className="bg-[#181A1B] px-[16px] py-[16px] rounded-t-[10px] pb-[20px] flex flex-col justify-between lg:justify-start lg:w-[340px] lg:p-[30px]">
+          <div
+            className={`bg-[#181A1B] px-[32px] py-[32px] flex flex-col justify-between lg:justify-start lg:w-[340px] lg:p-[30px] rounded-t-[10px] lg:rounded-none lg:rounded-l-[10px] ${
+              index % 2 !== 0 ? "lg:rounded-l-none lg:rounded-r-[10px]" : ""
+            }`}
+          >
             <h3 className="text-[white] text-[2rem]">{item.name}</h3>
             <div className="flex flex-wrap gap-[1ch] mt-[20px]">
               {item.skills.map((skill, skillIndex) => (
@@ -102,13 +106,9 @@ function Work() {
           </div>
           {/* div for image and description */}
           <div className="relative">
-            <img
-              src={item.src}
-              alt=""
-              className="w-[100%] object-cover rounded-b-md"
-            />
+            <img src={item.src} alt="" className="w-[100%] object-cover" />
             {/* div for description */}
-            <div className="bg-[#181A1B] text-[white] px-[16px] py-[16px] lg:absolute lg:inset-0 lg:bg-black lg:bg-opacity-75 lg:text-white lg:flex lg:flex-col lg:justify-center lg:items-center lg:opacity-0 lg:transition-opacity lg:duration-300 lg:group-hover:opacity-100 lg:rounded-b-md lg:p-4">
+            <div className="bg-[#181A1B] text-[white] px-[32px] py-[32px] rounded-b-[10px] lg:absolute lg:inset-0 lg:bg-black lg:bg-opacity-75 lg:text-white lg:flex lg:flex-col lg:justify-center lg:items-center lg:opacity-0 lg:transition-opacity lg:duration-300 lg:group-hover:opacity-100 lg:rounded-b-md lg:p-4">
               {item.description.map((description, descrindex) => (
                 <p key={descrindex}>{description}</p>
               ))}
