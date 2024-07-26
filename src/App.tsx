@@ -11,6 +11,7 @@ function App() {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const [darkMode, setDarkMode] = useState<boolean>(true);
   const [scrolled, setScrolled] = useState<boolean>(false);
+  const [hoveredIndex, setHoveredIndex] = useState<null>(null);
 
   return (
     <>
@@ -22,6 +23,8 @@ function App() {
           setDarkMode,
           scrolled,
           setScrolled,
+          hoveredIndex,
+          setHoveredIndex,
         }}
       >
         <Header />

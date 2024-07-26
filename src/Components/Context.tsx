@@ -7,6 +7,8 @@ interface ComponentsProps {
   setDarkMode: (darkMode: boolean) => void;
   scrolled: boolean;
   setScrolled: (scrolled: boolean) => void;
+  hoveredIndex: null;
+  setHoveredIndex: (hoveredIndex: null) => void;
 }
 
 export const MyContext = createContext<ComponentsProps | null>(null);
