@@ -1,9 +1,8 @@
-import { useContext, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import profile from "../../public/assets/mb.jpg";
 import { MyContext } from "./Context";
 import { Link } from "react-scroll";
-import Scrollspy from "react-scrollspy";
 
 const buttonCategories = ["About", "Projects", "Contact"];
 
@@ -34,6 +33,23 @@ function Header() {
         setScrolled(false);
       }
       lastScrollY = window.scrollY;
+
+      // Update selected section
+      const sections = buttonCategories.map((category) =>
+        document.getElementById(category.toLowerCase().replace(/\s+/g, "-"))
+      );
+
+      const scrollPosition = window.scrollY + window.innerHeight / 2;
+      let currentSection = "";
+      for (let section of sections) {
+        if (section && section.offsetTop <= scrollPosition) {
+          currentSection = section.id;
+        }
+      }
+
+      if (currentSection) {
+        setSelected(currentSection);
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -41,7 +57,7 @@ function Header() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [lastScrollY]);
+  }, [lastScrollY, setScrolled, setSelected]);
 
   return (
     <header
@@ -56,42 +72,38 @@ function Header() {
           className="w-10 h-10 rounded-full border-2 border-green-500"
         />
       </div>
-      {/* div for dark mode an list of section */}
       <div className="flex gap-[20px]">
         <ul className="flex justify-start items-center flex-row gap-[15px]">
           {buttonCategories.map((category, index) => {
             const categoryId = category.toLowerCase().replace(/\s+/g, "-");
             return (
-              <Link
+              <li
                 key={index}
-                to={categoryId}
-                spy={true}
-                smooth={true}
-                offset={0}
-                duration={500}
+                className="text-white cursor-pointer hover:text-green-500 transition-colors duration-200 relative md:text-[18px] lg:text-[25px]"
+                onMouseEnter={() => setHoveredIndex(index)}
+                onMouseLeave={() => setHoveredIndex(null)}
+                onClick={() => setSelected(categoryId)}
+                data-to={categoryId}
               >
-                <div className="flex justify-center items-center flex-col">
-                  <li
-                    className="text-white cursor-pointer hover:text-green-500 transition-colors duration-200 relative md:text-[18px] lg:text-[25px]"
-                    key={index}
-                    onMouseEnter={() => setHoveredIndex(index)}
-                    onMouseLeave={() => setHoveredIndex(null)}
-                    onClick={() => setSelected(category)}
-                  >
-                    {selected === category && (
-                      <div className="absolute bg-[#16A34A] w-full h-[5px] rounded-[5px] bottom-[40px]"></div>
-                    )}
-                    {category}
-                    {hoveredIndex === index && (
-                      <div className="absolute bg-[#16A34A] w-full h-[5px] rounded-[5px] top-[40px]"></div>
-                    )}
-                  </li>
-                </div>
-              </Link>
+                <Link
+                  to={categoryId}
+                  spy={true}
+                  smooth={true}
+                  offset={0}
+                  duration={500}
+                >
+                  {category}
+                  {selected === categoryId && (
+                    <div className="absolute bg-[#16A34A] w-full h-[5px] rounded-[5px] bottom-[40px]"></div>
+                  )}
+                  {hoveredIndex === index && (
+                    <div className="absolute bg-[#16A34A] w-full h-[5px] rounded-[5px] top-[40px]"></div>
+                  )}
+                </Link>
+              </li>
             );
           })}
         </ul>
-
         <div className="flex items-center space-x-4">
           <button
             onClick={toggleDarkMode}
