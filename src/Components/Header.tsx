@@ -79,7 +79,11 @@ function Header() {
             return (
               <li
                 key={index}
-                className="text-white cursor-pointer hover:text-green-500 transition-colors duration-200 relative md:text-[18px] lg:text-[25px]"
+                className={`relative cursor-pointer transition-colors duration-200 md:text-[18px] lg:text-[25px] ${
+                  selected === categoryId
+                    ? "text-green-500"
+                    : "text-white hover:text-green-500"
+                }`}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
                 onClick={() => setSelected(categoryId)}
