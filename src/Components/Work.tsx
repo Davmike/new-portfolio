@@ -14,25 +14,6 @@ function Work() {
 
   const work = [
     {
-      name: "Link Sharing App",
-      live: "https://davmike.github.io/link-sharing-app/",
-      src: link,
-      skills: [
-        "HTML5",
-        "CSS custom properties",
-        "Flexbox",
-        "JavaScript",
-        "Localstorage",
-        "Mobile-first workflow",
-      ],
-      description: [
-        "platform is designed to provide an optimal user experience across all devices. Users will enjoy a responsive layout that adjusts seamlessly to their device's screen size, ensuring that each page is perfectly displayed whether you're on a desktop, tablet, or smartphone.",
-        "We offer a straightforward registration and authorization process, allowing users to easily sign up and log in to access all features. Once registered, users can upload their personal information securely, ensuring their profile is complete and up-to-date.",
-        "Sharing content is made simple with our copy link functionality. Users can quickly copy links to their favorite content and share them with friends, family, or colleagues, expanding the reach and engagement of the platform.",
-        "Experience a user-friendly interface with all the features you need to stay connected and share your content effortlessly.",
-      ],
-    },
-    {
       name: "Redberry",
       live: "https://redberry-website-geleck.vercel.app/",
       src: redberry,
@@ -71,6 +52,25 @@ function Work() {
         "Started as a hobby project to help a friend learn for his paragliding exam, I ended up building a full-fledged quiz applicatio",
         "It consists of 1000+ questions from 8 different categories and has a simulation mode that mimics the real exam.",
         "From a technical point of view, my goals were to learn using more complex animations with GSAP and deliver a fast & secure web application. It runs server-less on Vercel and uses Next.js API routes to hide all sensitive data from the client, such as the correct answers.",
+      ],
+    },
+    {
+      name: "Link Sharing App",
+      live: "https://davmike.github.io/link-sharing-app/",
+      src: link,
+      skills: [
+        "HTML5",
+        "CSS custom properties",
+        "Flexbox",
+        "JavaScript",
+        "Localstorage",
+        "Mobile-first workflow",
+      ],
+      description: [
+        "platform is designed to provide an optimal user experience across all devices. Users will enjoy a responsive layout that adjusts seamlessly to their device's screen size, ensuring that each page is perfectly displayed whether you're on a desktop, tablet, or smartphone.",
+        "We offer a straightforward registration and authorization process, allowing users to easily sign up and log in to access all features. Once registered, users can upload their personal information securely, ensuring their profile is complete and up-to-date.",
+        "Sharing content is made simple with our copy link functionality. Users can quickly copy links to their favorite content and share them with friends, family, or colleagues, expanding the reach and engagement of the platform.",
+        "Experience a user-friendly interface with all the features you need to stay connected and share your content effortlessly.",
       ],
     },
   ];
@@ -138,9 +138,24 @@ function Work() {
           </div>
           {/* div for image and description */}
           <div className="relative">
-            <img src={item.src} alt="" className="w-[100%] object-cover" />
+            <img
+              src={item.src}
+              alt=""
+              className={`w-[100%] lg:rounded-r-md object-cover ${
+                index % 2 !== 0 ? "lg:rounded-r-none lg:rounded-l-md" : ""
+              }`}
+            />
             {/* div for description */}
-            <div className="bg-[#181A1B] text-[white] px-[32px] py-[32px] rounded-b-[10px] lg:absolute lg:inset-0 lg:bg-black lg:bg-opacity-75 lg:text-white lg:flex lg:flex-col lg:justify-center lg:items-center lg:opacity-0 lg:transition-opacity lg:duration-300 lg:group-hover:opacity-100 lg:rounded-b-md lg:p-4">
+            <div
+              className={`bg-[#181A1B] text-[white] text-left px-[32px] py-[32px] rounded-b-md lg:rounded-b-none lg:rounded-r-md lg:rounded-br-md lg:absolute lg:inset-0 lg:backdrop-blur-md lg:bg-opacity-75 lg:text-white lg:text-[22px] lg:flex lg:flex-col lg:justify-center lg:opacity-0 lg:transition-opacity lg:duration-300 lg:group-hover:opacity-100 lg:p-4 ${
+                index % 2 !== 0
+                  ? "lg:rounded-r-none lg:rounded-br-none lg:rounded-l-md lg:rounded-bl-md"
+                  : ""
+              }`}
+            >
+              <p className="text-[30px] font-bold lg:text-[35px] lg:mb-[10px] lg:text-left">
+                Description
+              </p>
               {item.description.map((description, descrindex) => (
                 <p key={descrindex}>{description}</p>
               ))}
