@@ -1,3 +1,5 @@
+import { Link } from "react-scroll";
+
 function About() {
   const skills = [
     {
@@ -37,7 +39,7 @@ function About() {
       <div className="flex justify-center items-center flex-col mt-10">
         <h1 className="font-bold text-2xl md:text-3xl">ABOUT</h1>
         <div className="w-5 h-1 bg-green-500 mt-1"></div>
-        <p className="text-[14px]">mikeladzedav@gmail.com</p>
+        <p className="text-[14px]">Full-Stack Developer</p>
       </div>
 
       {/* Main Content */}
@@ -68,9 +70,17 @@ function About() {
               and experience are a good fit for your next project.
             </p>
           </div>
-          <button className="mt-5 bg-green-500 text-black font-bold py-2 px-4 rounded hover:bg-green-600 transition duration-200">
-            PROJECTS
-          </button>
+          <Link
+            to={"projects"}
+            spy={true}
+            smooth={true}
+            offset={0}
+            duration={500}
+          >
+            <button className="mt-5 bg-green-500 text-black font-bold py-2 px-4 rounded hover:bg-green-600 transition duration-200">
+              PROJECTS
+            </button>
+          </Link>
         </div>
 
         {/* Toolkit */}

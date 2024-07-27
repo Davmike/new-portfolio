@@ -5,11 +5,12 @@ function Contact() {
       id="contact"
     >
       <div className="max-w-md w-full">
-        <h1 className="text-3xl font-bold mb-4 text-center mt-[30px] md:text-3xl">
+        <h1 className="text-3xl font-bold text-center mt-[30px] md:text-3xl">
           Contact me
         </h1>
-        <div className="w-full flex justify-center mb-8">
-          <div className="h-[2px] w-[50px] bg-green-500"></div>
+        <div className="w-full flex justify-center items-center flex-col mb-8">
+          <div className="w-5 h-1 bg-green-500 mt-1"></div>
+          <p className="text-[14px]">mikeladzedav@gmail.com</p>
         </div>
         <form>
           <div className="mb-4">

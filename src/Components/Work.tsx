@@ -1,4 +1,6 @@
-import weblance from "../../public/assets/weblance.jpg";
+import link from "../../public/assets/link.jpg";
+import redberry from "../../public/assets/redberry.jpg";
+import movie from "../../public/assets/movie.jpg";
 import { IoOpenOutline } from "react-icons/io5";
 
 function Work() {
@@ -12,32 +14,59 @@ function Work() {
 
   const work = [
     {
-      name: "Parapantest",
-      live: "https://parapantest.vercel.app/",
-      src: weblance,
-      skills: ["Next.js", "React", "GSAP", "Vercel API"],
+      name: "Link Sharing App",
+      live: "https://davmike.github.io/link-sharing-app/",
+      src: link,
+      skills: [
+        "HTML5",
+        "CSS custom properties",
+        "Flexbox",
+        "JavaScript",
+        "Localstorage",
+        "Mobile-first workflow",
+      ],
       description: [
-        "Started as a hobby project to help a friend learn for his paragliding exam, I ended up building a full-fledged quiz applicatio",
-        "It consists of 1000+ questions from 8 different categories and has a simulation mode that mimics the real exam.",
-        "From a technical point of view, my goals were to learn using more complex animations with GSAP and deliver a fast & secure web application. It runs server-less on Vercel and uses Next.js API routes to hide all sensitive data from the client, such as the correct answers.",
+        "platform is designed to provide an optimal user experience across all devices. Users will enjoy a responsive layout that adjusts seamlessly to their device's screen size, ensuring that each page is perfectly displayed whether you're on a desktop, tablet, or smartphone.",
+        "We offer a straightforward registration and authorization process, allowing users to easily sign up and log in to access all features. Once registered, users can upload their personal information securely, ensuring their profile is complete and up-to-date.",
+        "Sharing content is made simple with our copy link functionality. Users can quickly copy links to their favorite content and share them with friends, family, or colleagues, expanding the reach and engagement of the platform.",
+        "Experience a user-friendly interface with all the features you need to stay connected and share your content effortlessly.",
       ],
     },
     {
-      name: "Paddle Pong",
-      live: "https://pocket-console.vercel.app/",
-      src: weblance,
-      skills: ["Next.js", "React", "Java", "Tailwind"],
+      name: "Redberry",
+      live: "https://redberry-website-geleck.vercel.app/",
+      src: redberry,
+      skills: [
+        "Semantic HTML5 markup",
+        "Tailwind",
+        "Desktop",
+        "React",
+        "React-Slick Slider",
+        "TypeScript",
+        "Localstorage",
+        "API",
+        "Back-End",
+      ],
       description: [
-        "Started as a hobby project to help a friend learn for his paragliding exam, I ended up building a full-fledged quiz applicatio",
-        "It consists of 1000+ questions from 8 different categories and has a simulation mode that mimics the real exam.",
-        "From a technical point of view, my goals were to learn using more complex animations with GSAP and deliver a fast & secure web application. It runs server-less on Vercel and uses Next.js API routes to hide all sensitive data from the client, such as the correct answers.",
+        "View the optimal layout for each page, no matter their device's screen size. Whether you're using a desktop, tablet, or smartphone, the layout will adjust seamlessly for the best viewing experience.",
+        "See hover states for all interactive elements throughout the site, providing clear visual feedback and enhancing usability.",
+        "Easily authorize their accounts, ensuring secure and quick access to all features. Upload personal information securely, allowing users to maintain up-to-date profiles.",
+        "Add blogs effortlessly, enabling users to share their thoughts, stories, and insights with the community.",
       ],
     },
     {
-      name: "Snake",
-      live: "https://catalinonutu.com/games/play-snake",
-      src: weblance,
-      skills: ["React", "Redux", "C#"],
+      name: "Entertainment Web",
+      live: "https://entertainment-web-app-five-theta.vercel.app/",
+      src: movie,
+      skills: [
+        "React",
+        "Typescript",
+        "Vite",
+        "Tailwind",
+        "JSON",
+        "Localstorage",
+        "Responsive",
+      ],
       description: [
         "Started as a hobby project to help a friend learn for his paragliding exam, I ended up building a full-fledged quiz applicatio",
         "It consists of 1000+ questions from 8 different categories and has a simulation mode that mimics the real exam.",
@@ -68,7 +97,7 @@ function Work() {
       {/* work section div */}
       <div className="mt-[30px] flex justify-center items-center flex-col">
         <h1 className="font-bold text-[white] text-2xl md:text-3xl">WORK</h1>
-        <div className="w-[66px] h-[1px] bg-[#56CE56]"></div>
+        <div className="w-5 h-1 bg-green-500 mt-1"></div>
         <p className="text-[12px] text-[white]">Dig into my universe</p>
       </div>
       {/* projects section starts here */}
@@ -121,9 +150,13 @@ function Work() {
       ))}
 
       {/* button for more projects */}
-      <button className="mt-[60px] border-none rounded-[4px] mb-[40px] bg-[#57CF57] pointer font-bold text-[1.15rem] px-[15px] py-[8px] checkout">
+      <a
+        className="mt-[60px] border-none rounded-[4px] mb-[40px] bg-[#57CF57] pointer font-bold text-[1.15rem] px-[15px] py-[8px] checkout"
+        href="https://github.com/Davmike?tab=repositories"
+        target="_blank"
+      >
         SEE MORE...
-      </button>
+      </a>
     </div>
   );
 }
