@@ -1,4 +1,4 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -19,32 +19,38 @@ function Footer() {
             </div>
             <div className="flex flex-col md:flex-row md:space-x-8">
               <div className="mb-4 md:mb-0">
-                <h3 className="text-xl font-bold">Design</h3>
+                <h3 className="text-xl font-bold">Contact</h3>
                 <p className="mt-2">
-                  Inspired by{" "}
-                  <a
-                    href="https://rammaheswari.com"
-                    className="text-green-500 font-bold"
-                  >
-                    Ram Maheshwari
+                  Gmail:{" "}
+                  <a href="" className="text-green-500 font-bold">
+                    {" "}
+                    mikeladzedav@gmail.com
                   </a>
-                  's website.
                 </p>
               </div>
               <div>
                 <h3 className="text-xl font-bold">Social</h3>
                 <div className="flex space-x-4 mt-2">
                   <a
-                    href="https://github.com/your-profile"
+                    href="https://github.com/Davmike"
+                    target="_blank"
                     className="text-white hover:text-green-500 transition-colors duration-200"
                   >
                     <FaGithub size={24} />
                   </a>
                   <a
-                    href="https://linkedin.com/in/your-profile"
+                    href="https://www.linkedin.com/in/davmikeladze/"
+                    target="_blank"
                     className="text-white hover:text-green-500 transition-colors duration-200"
                   >
                     <FaLinkedin size={24} />
+                  </a>
+                  <a
+                    href="https://www.instagram.com/davmikeladze/"
+                    target="_blank"
+                    className="text-white hover:text-green-500 transition-colors duration-200"
+                  >
+                    <FaInstagram size={24} />
                   </a>
                 </div>
               </div>
