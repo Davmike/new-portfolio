@@ -17,61 +17,19 @@ function Work() {
       name: "Redberry",
       live: "https://redberry-website-geleck.vercel.app/",
       src: redberry,
-      skills: [
-        "Semantic HTML5 markup",
-        "Tailwind",
-        "Desktop",
-        "React",
-        "React-Slick Slider",
-        "TypeScript",
-        "Localstorage",
-        "API",
-        "Back-End",
-      ],
-      description: [
-        "View the optimal layout for each page, no matter their device's screen size. Whether you're using a desktop, tablet, or smartphone, the layout will adjust seamlessly for the best viewing experience.",
-        "See hover states for all interactive elements throughout the site, providing clear visual feedback and enhancing usability.",
-        "Easily authorize their accounts, ensuring secure and quick access to all features. Upload personal information securely, allowing users to maintain up-to-date profiles.",
-        "Add blogs effortlessly, enabling users to share their thoughts, stories, and insights with the community.",
-      ],
+      description: "Just add your everyday blogs",
     },
     {
       name: "Entertainment Web",
       live: "https://entertainment-web-app-five-theta.vercel.app/",
       src: movie,
-      skills: [
-        "React",
-        "Typescript",
-        "Vite",
-        "Tailwind",
-        "JSON",
-        "Localstorage",
-        "Responsive",
-      ],
-      description: [
-        "Started as a hobby project to help a friend learn for his paragliding exam, I ended up building a full-fledged quiz applicatio",
-        "It consists of 1000+ questions from 8 different categories and has a simulation mode that mimics the real exam.",
-        "From a technical point of view, my goals were to learn using more complex animations with GSAP and deliver a fast & secure web application. It runs server-less on Vercel and uses Next.js API routes to hide all sensitive data from the client, such as the correct answers.",
-      ],
+      description: "You can Watch your Fav Movies",
     },
     {
       name: "Link Sharing App",
       live: "https://davmike.github.io/link-sharing-app/",
       src: link,
-      skills: [
-        "HTML5",
-        "CSS custom properties",
-        "Flexbox",
-        "JavaScript",
-        "Localstorage",
-        "Mobile-first workflow",
-      ],
-      description: [
-        "platform is designed to provide an optimal user experience across all devices. Users will enjoy a responsive layout that adjusts seamlessly to their device's screen size, ensuring that each page is perfectly displayed whether you're on a desktop, tablet, or smartphone.",
-        "We offer a straightforward registration and authorization process, allowing users to easily sign up and log in to access all features. Once registered, users can upload their personal information securely, ensuring their profile is complete and up-to-date.",
-        "Sharing content is made simple with our copy link functionality. Users can quickly copy links to their favorite content and share them with friends, family, or colleagues, expanding the reach and engagement of the platform.",
-        "Experience a user-friendly interface with all the features you need to stay connected and share your content effortlessly.",
-      ],
+      description: "You can share your profile",
     },
   ];
 
@@ -100,22 +58,21 @@ function Work() {
         <div className="w-5 h-1 bg-[#F04D40] mt-1"></div>
         <p className="text-[12px] text-[white]">Dig into my universe</p>
       </div>
-
       {work.map((item, index) => (
         <div
           key={index}
           className={`relative flex flex-col md:flex-row ${
-            index % 2 === 0 ? "md:flex-row-reverse" : ""
-          } bg-cover bg-center h-[400px] w-full max-w-[800px] mt-[50px]`}
+            index % 2 === 0 ? "md:flex-row-reverse md:left-[40px]" : ""
+          } bg-cover bg-center h-[400px] w-full max-w-[800px] mt-[50px] group`}
           style={{ backgroundImage: `url(${item.src})` }}
         >
           <div
-            className={`absolute inset-0 bg-gray-900 bg-opacity-50 flex flex-col justify-center items-center md:items-start ${
+            className={`absolute inset-0 bg-gray-900 bg-opacity-70 flex flex-col justify-center items-center md:items-start ${
               index % 2 === 0 ? "md:items-end pr-10" : "pl-10"
-            }`}
+            } transition duration-500 ease-in-out group-hover:bg-opacity-90 group-hover:bg-[#0b2130; linear-gradient(260deg, #0b2130 74%, #051018 100%);]`}
           >
             <h1 className="text-5xl font-bold text-white">{item.name}</h1>
-            <p className="text-xl text-white mt-4">{item.description[0]}</p>
+            <p className="text-xl text-white mt-4">{item.description}</p>
             <a
               href={item.live}
               target="_blank"
