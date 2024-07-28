@@ -61,7 +61,7 @@ function Header() {
 
   return (
     <header
-      className={`bg-[#181A1B] shadow-2xl px-[20px] py-[10px] fixed z-10 w-[100%] flex justify-between items-center transition-transform duration-300 ${
+      className={`bg-[#051018] shadow-2xl px-[20px] py-[10px] fixed z-10 w-[100%] flex justify-between items-center transition-transform duration-300 ${
         scrolled ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -69,7 +69,7 @@ function Header() {
         <img
           src={profile}
           alt="Profile"
-          className="w-10 h-10 rounded-full border-2 border-green-500"
+          className="w-10 h-10 rounded-full border-2 border-[white]"
         />
       </div>
       <div className="flex gap-[20px]">
@@ -81,8 +81,8 @@ function Header() {
                 key={index}
                 className={`relative cursor-pointer transition-colors duration-200 md:text-[18px] lg:text-[25px] ${
                   selected === categoryId
-                    ? "text-green-500"
-                    : "text-white hover:text-green-500"
+                    ? "text-[white]"
+                    : "text-[white] hover:text-[#dfd4d4]"
                 }`}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
@@ -98,10 +98,10 @@ function Header() {
                 >
                   {category}
                   {selected === categoryId && (
-                    <div className="absolute bg-[#16A34A] w-full h-[5px] rounded-[5px] bottom-[39px] md:bottom-[45px]"></div>
+                    <div className="absolute bg-[white] w-full h-[5px] rounded-[5px] bottom-[39px] md:bottom-[45px]"></div>
                   )}
                   {hoveredIndex === index && (
-                    <div className="hidden md:block absolute bg-[#16A34A] w-full h-[5px] rounded-[5px] md:top-[45px]"></div>
+                    <div className="hidden md:block absolute bg-[white] w-full h-[5px] rounded-[5px] md:top-[45px]"></div>
                   )}
                 </Link>
               </li>
@@ -111,8 +111,8 @@ function Header() {
         <div className="flex items-center space-x-4">
           <button
             onClick={toggleDarkMode}
-            className="text-white hover:text-green-500 transition-colors duration-200 relative w-10 h-10 flex items-center justify-center rounded-full border-2"
-            style={{ borderColor: darkMode ? "white" : "green" }}
+            className="text-white hover:text-[#aaa6c3] transition-colors duration-200 relative w-10 h-10 flex items-center justify-center rounded-full border-2"
+            style={{ borderColor: darkMode ? "white" : "#aaa6c3" }}
           >
             {darkMode ? <FaMoon size={24} /> : <FaSun size={24} />}
           </button>

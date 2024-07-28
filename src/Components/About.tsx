@@ -38,7 +38,7 @@ function About() {
       {/* About Section */}
       <div className="flex justify-center items-center flex-col mt-10">
         <h1 className="font-bold text-2xl md:text-3xl">ABOUT</h1>
-        <div className="w-5 h-1 bg-green-500 mt-1"></div>
+        <div className="w-5 h-1 bg-[#F04D40] mt-1"></div>
         <p className="text-[14px]">Full-Stack Developer</p>
       </div>
 
@@ -77,7 +77,7 @@ function About() {
             offset={0}
             duration={500}
           >
-            <button className="mt-5 bg-green-500 text-black font-bold py-2 px-4 rounded hover:bg-green-600 transition duration-200">
+            <button className="mt-5 bg-[#F04D40] text-white font-bold py-2 px-4 rounded hover:bg-[#abffe9] transition duration-200">
               PROJECTS
             </button>
           </Link>
@@ -90,7 +90,7 @@ function About() {
             {skills[0].toolkit.map((toolkit, skillIndex) => (
               <span
                 key={skillIndex}
-                className="bg-[#242424] rounded-md inline-block text-[1rem] md:text-[1.2rem] text-white font-bold px-3 py-1"
+                className="bg-[#F04D40] rounded-md inline-block text-[1rem] md:text-[1.2rem] text-white font-bold px-3 py-1"
               >
                 {toolkit}
               </span>

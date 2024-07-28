@@ -1,7 +1,7 @@
 function Contact() {
   return (
     <div
-      className="min-h-screen flex items-center justify-center bg-[#181A1B] text-white p-4"
+      className="min-h-screen flex items-center justify-center bg-[#122b43] text-white p-4"
       id="contact"
     >
       <div className="max-w-md w-full">
@@ -9,7 +9,7 @@ function Contact() {
           Contact me
         </h1>
         <div className="w-full flex justify-center items-center flex-col mb-8">
-          <div className="w-5 h-1 bg-green-500 mt-1"></div>
+          <div className="w-5 h-1 bg-[#F04D40] mt-1"></div>
           <p className="text-[14px]">mikeladzedav@gmail.com</p>
         </div>
         <form>
@@ -21,7 +21,7 @@ function Contact() {
               type="text"
               id="title"
               placeholder="What you're writing about?"
-              className="w-full bg-[#242424] border border-gray-600 rounded-md p-2 text-white focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full bg-[#ffffff] border-none border-gray-600 rounded-md p-2 text-black focus:outline-none focus:ring-2 focus:ring-[#F04D40]"
             />
           </div>
           <div className="mb-4">
@@ -31,14 +31,14 @@ function Contact() {
             <textarea
               id="message"
               placeholder="Full message comes here..."
-              className="w-full bg-[#242424] border border-gray-600 rounded-md p-2 text-white h-32 focus:outline-none focus:ring-2 focus:ring-green-500"
+              className="w-full bg-[#ffffff] border-none rounded-md p-2 text-black h-32 focus:outline-none focus:ring-2 focus:ring-[#F04D40]"
             />
           </div>
           <button
             type="submit"
-            className="mt-[10px] border-none rounded-[4px] bg-[#57CF57] pointer font-bold text-[1.15rem] px-[15px] py-[8px] checkout"
+            className="mt-[10px] border-none rounded-[4px] bg-[#F04D40] pointer font-bold text-[1.15rem] px-[15px] py-[8px] checkout"
           >
-            Submit
+            SUBMIT
           </button>
         </form>
       </div>

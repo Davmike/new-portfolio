@@ -11,17 +11,76 @@
 }
 
 body {
-  background: #181a1b;
+  background: #0b2130;
   font-family: "Neuton", serif;
 }
 
 #home {
-  background-image: url("./assets/setup.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background: #0b2130;
+  position: relative;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.background-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgba(255, 255, 255, 0.1); /* White color with low opacity */
+  font-size: 29vw; /* Responsive font size */
+  font-weight: 700;
+  letter-spacing: 1vw;
+  white-space: nowrap;
+  pointer-events: none; /* Makes sure it doesn't interfere with any clicks */
+}
+
+@media (max-width: 768px) {
+  .background-text {
+    font-size: 30vw; /* Adjust the font size for smaller screens */
+  }
+}
+
+#about {
+  /* background: rgb(1, 187, 136);
+  background: radial-gradient(
+    circle,
+    rgba(1, 187, 136, 1) 0%,
+    rgba(12, 27, 45, 1) 0%,
+    rgba(11, 43, 54, 1) 0%,
+    rgba(11, 41, 53, 1) 11%,
+    rgba(11, 38, 51, 1) 28%,
+    rgba(11, 34, 49, 1) 52%,
+    rgba(12, 26, 44, 1) 100%,
+    rgba(12, 26, 44, 0.3087359943977591) 100%
+  ); */
+
+  background: rgb(5, 16, 24);
+  background: linear-gradient(
+    180deg,
+    rgba(5, 16, 24, 1) 30%,
+    rgba(11, 33, 48, 1) 80%
+  );
+}
+
+#projects {
+  background: rgb(11, 33, 48);
+  background: linear-gradient(
+    180deg,
+    rgba(11, 33, 48, 1) 30%,
+    rgba(5, 16, 24, 1) 80%
+  );
+}
+
+#contact {
+  background: rgb(5, 16, 24);
+  background: linear-gradient(
+    180deg,
+    rgba(5, 16, 24, 1) 30%,
+    rgba(11, 33, 48, 1) 80%
+  );
 }
 
 #menu {
@@ -295,7 +354,7 @@ li:nth-child(5) {
 .checkout {
   box-shadow: var(--shadow);
   color: var(--dark);
-  color: black;
+  color: white;
   transform: translateY(0);
   transition: all var(--transitionDuration) ease;
 }
@@ -379,3 +438,11 @@ li:nth-child(5) {
 .toggle-button:hover {
   border-color: #32cd32;
 } */
+
+#message::placeholder {
+  color: #787878;
+}
+
+#title::placeholder {
+  color: #787878;
+}

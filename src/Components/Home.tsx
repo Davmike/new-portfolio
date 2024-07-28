@@ -4,6 +4,7 @@ import x from "../../public/assets/x.png";
 import linkedin from "../../public/assets/linkedin.png";
 import github from "../../public/assets/github.png";
 import gmail from "../../public/assets/gmail.png";
+import { Link } from "react-scroll";
 
 function Home() {
   const categories = [
@@ -41,9 +42,11 @@ function Home() {
       {/* Background overlay */}
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
+      {/* Background text */}
+      <div className="background-text">HELLO</div>
+
       {/* clock section */}
       <div className="relative flex justify-center items-center flex-col text-white mb-[30px]">
-        {/* <div className="absolute top-5 left-5 text-white text-4xl"> */}
         <p className="text-[100px] font-bold lg:text-[140px]">19:22</p>
 
         {/* Content container */}
@@ -65,26 +68,33 @@ function Home() {
             <button className="border-[1px] border-[white] hover:bg-[white] text-[white] hover:text-[black] rounded-[15px] px-[25px] py-[1px]">
               Resume
             </button>
-            <button className="border-[1px] border-[white] hover:bg-[white] text-[white] hover:text-[black] rounded-[15px] px-[25px] py-[1px]">
-              Projects
-            </button>
+            <Link
+              to={"projects"}
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
+              <button className="border-[1px] border-[white] hover:bg-[white] text-[white] hover:text-[black] rounded-[15px] px-[25px] py-[1px]">
+                Projects
+              </button>
+            </Link>
           </div>
         </div>
       </div>
+
       {/* social media section */}
       <div className="absolute bottom-[10px] left-[10px] flex justify-center items-center flex-row w-[140px] gap-[3px]">
-        {categories.map((category, index) => {
-          return (
-            <a
-              href={category.link}
-              target="_blank"
-              className="pointer"
-              key={index}
-            >
-              <img src={category.src} alt="" />
-            </a>
-          );
-        })}
+        {categories.map((category, index) => (
+          <a
+            href={category.link}
+            target="_blank"
+            className="pointer"
+            key={index}
+          >
+            <img src={category.src} alt="" />
+          </a>
+        ))}
       </div>
     </div>
   );
