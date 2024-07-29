@@ -81,19 +81,19 @@ function Work() {
               index % 2 === 0 ? "md:items-end pr-20" : "pl-20"
             } transition duration-500 ease-in-out group-hover:bg-opacity-90 group-hover:bg-[#0b2130; linear-gradient(260deg, #0b2130 74%, #051018 100%);]`}
           >
-            <h1 className="md:text-5xl text-xl font-bold text-white">
+            <h1 className="md:text-5xl text-[35px] font-bold text-white">
               {item.name}
             </h1>
-            <p className="md:text-xl text-md text-white mt-4">
+            <p className="md:text-xl text-[20px] text-white">
               {item.description}
             </p>
             <a
               href={item.live}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-6 px-6 py-3 bg-red-500 text-white font-semibold rounded hover:bg-red-600"
+              className="mt-3 px-6 py-3 bg-red-500 text-white font-semibold rounded hover:bg-red-600"
             >
-              Case Study
+              Live Demo
             </a>
           </div>
         </div>
