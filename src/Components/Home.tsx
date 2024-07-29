@@ -46,8 +46,8 @@ function Home() {
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
       {/* Background text */}
-      <div className="background-text">HELLO</div>
-      <div className="background-world background-text">WORLD</div>
+      <div className="background-text hello-move">HELLO</div>
+      <div className="background-text background-world world-move">WORLD</div>
 
       {/* clock section */}
       <div className="relative flex justify-center items-center flex-col text-white mb-[30px]">

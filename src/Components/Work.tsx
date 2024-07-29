@@ -1,6 +1,7 @@
 import link from "../../public/assets/link.jpg";
 import redberry from "../../public/assets/redberry.jpg";
 import movie from "../../public/assets/movie.jpg";
+import weblance from "../../public/assets/weblance.jpg";
 
 function Work() {
   interface work {
@@ -33,6 +34,13 @@ function Work() {
       description: "You can share your profile",
       num: "03",
     },
+    {
+      name: "webLance",
+      live: "https://www.weblance.ge/",
+      src: weblance,
+      description: "Our Company Website",
+      num: "04",
+    },
   ];
 
   return (
@@ -64,7 +72,7 @@ function Work() {
         <div
           key={index}
           className={`relative flex flex-col md:flex-row ${
-            index % 2 === 0 ? "md:flex-row-reverse md:left-[40px]" : ""
+            index % 2 === 0 ? "md:flex-row-reverse lg:left-[40px]" : ""
           } bg-cover bg-center h-[400px] w-full max-w-[800px] mt-[50px] group zoom-hover-effect`}
           style={{ backgroundImage: `url(${item.src})` }}
         >

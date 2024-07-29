@@ -46,7 +46,52 @@ body {
   .background-text {
     font-size: 25vw; /* Adjust the font size for smaller screens */
   }
+
+  .background-world {
+    font-size: 22vw;
+  }
 }
+
+/* Keyframes for moving right from center and reappearing from left */
+/* @keyframes moveRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  50% {
+    transform: translateX(100vw);
+  }
+  50.01% {
+    transform: translateX(-100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+} */
+
+/* Keyframes for moving left from center and reappearing from right */
+/* @keyframes moveLeft {
+  0% {
+    transform: translateX(-50%);
+  }
+  50% {
+    transform: translateX(-200vw);
+  }
+  50.01% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(0);
+  }
+} */
+
+/* Applying animations */
+/* .hello-move {
+  animation: moveRight 10s linear infinite;
+}
+
+.world-move {
+  animation: moveLeft 10s linear infinite;
+} */
 
 #about {
   background: rgb(5, 16, 24);
