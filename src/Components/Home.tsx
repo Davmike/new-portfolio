@@ -1,35 +1,38 @@
-import fb from "../../public/assets/fb.png";
-import insta from "../../public/assets/instagram.png";
-import x from "../../public/assets/x.png";
-import linkedin from "../../public/assets/linkedin.png";
-import github from "../../public/assets/github.png";
-import gmail from "../../public/assets/gmail.png";
+// import fb from "../../public/assets/fb.png";
+// import insta from "../../public/assets/instagram.png";
+// import x from "../../public/assets/x.png";
+// import linkedin from "../../public/assets/linkedin.png";
+// import github from "../../public/assets/github.png";
+// import gmail from "../../public/assets/gmail.png";
 import { Link } from "react-scroll";
+import { FaFacebook, FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
+import { BiLogoGmail } from "react-icons/bi";
+import { FaXTwitter } from "react-icons/fa6";
 
 function Home() {
   const categories = [
     {
-      src: fb,
+      src: <FaFacebook style={{ color: "white", fontSize: "24px" }} />,
       link: "https://www.facebook.com/profile.php?id=61560549462701",
     },
     {
-      src: insta,
+      src: <FaInstagram style={{ color: "white", fontSize: "24px" }} />,
       link: "https://www.instagram.com/davmikeladze/",
     },
     {
-      src: x,
+      src: <FaXTwitter style={{ color: "white", fontSize: "24px" }} />,
       link: "https://x.com/davmikeladze",
     },
     {
-      src: linkedin,
-      link: "https://www.linkedin.com/in/davmikeladze/",
-    },
-    {
-      src: gmail,
+      src: <BiLogoGmail style={{ color: "white", fontSize: "24px" }} />,
       link: "https://mail.google.com/",
     },
     {
-      src: github,
+      src: <FaLinkedin style={{ color: "white", fontSize: "24px" }} />,
+      link: "https://www.linkedin.com/in/davmikeladze/",
+    },
+    {
+      src: <FaGithub style={{ color: "white", fontSize: "24px" }} />,
       link: "https://github.com/Davmike",
     },
   ];
@@ -92,7 +95,7 @@ function Home() {
             className="pointer"
             key={index}
           >
-            <img src={category.src} alt="" />
+            {category.src}
           </a>
         ))}
       </div>

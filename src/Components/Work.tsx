@@ -1,7 +1,6 @@
 import link from "../../public/assets/link.jpg";
 import redberry from "../../public/assets/redberry.jpg";
 import movie from "../../public/assets/movie.jpg";
-// import { IoOpenOutline } from "react-icons/io5";
 
 function Work() {
   interface work {
