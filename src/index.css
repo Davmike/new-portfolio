@@ -34,16 +34,17 @@ body {
   font-weight: 700;
   letter-spacing: 1vw;
   white-space: nowrap;
-  pointer-events: none; /* Makes sure it doesn't interfere with any clicks */
+  pointer-events: none;
 }
 
 .background-world {
   top: 60%;
+  font-size: 20vw;
 }
 
 @media (max-width: 768px) {
   .background-text {
-    font-size: 30vw; /* Adjust the font size for smaller screens */
+    font-size: 25vw; /* Adjust the font size for smaller screens */
   }
 }
 
