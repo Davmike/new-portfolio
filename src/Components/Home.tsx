@@ -47,25 +47,25 @@ function Home() {
 
       {/* clock section */}
       <div className="relative flex justify-center items-center flex-col text-white mb-[30px]">
-        <p className="text-[100px] font-bold lg:text-[140px]">19:22</p>
+        <p className="text-[115px] font-bold lg:text-[140px]">19:22</p>
 
         {/* Content container */}
         <div className="mt-[20px]">
           <div className="text-left leading-[28px]">
-            <h3 className="text-[30px] uppercase font-light lg:text-[50px]">
+            <h3 className="text-[40px] uppercase font-light lg:text-[50px]">
               David
             </h3>
-            <h1 className="text-[40px] uppercase font-extrabold lg:text-[60px] lg:mt-[10px]">
+            <h1 className="text-[50px] mt-[5px] uppercase font-extrabold lg:text-[60px] lg:mt-[10px]">
               Mikeladze
             </h1>
           </div>
-          <p className="text-[20px] font-thin tracking-[3.9px] lg:text-[28px]">
+          <p className="text-[30px] font-thin tracking-[3.9px] lg:text-[28px]">
             Full-Stack Developer
           </p>
 
           {/* Buttons container */}
           <div className="flex justify-center items-center gap-[15px] mt-[20px]">
-            <button className="border-[1px] border-[white] hover:bg-[white] text-[white] hover:text-[black] rounded-[15px] px-[25px] py-[1px]">
+            <button className="border-[1px] text-[20px] border-[white] hover:bg-[white] text-[white] hover:text-[black] rounded-[15px] px-[25px] py-[1px]">
               Resume
             </button>
             <Link
@@ -75,7 +75,7 @@ function Home() {
               offset={0}
               duration={500}
             >
-              <button className="border-[1px] border-[white] hover:bg-[white] text-[white] hover:text-[black] rounded-[15px] px-[25px] py-[1px]">
+              <button className="border-[1px] text-[20px] border-[white] hover:bg-[white] text-[white] hover:text-[black] rounded-[15px] px-[25px] py-[1px]">
                 Projects
               </button>
             </Link>
@@ -84,7 +84,7 @@ function Home() {
       </div>
 
       {/* social media section */}
-      <div className="absolute bottom-[10px] left-[10px] flex justify-center items-center flex-row w-[140px] gap-[3px]">
+      <div className="absolute bottom-[10px] left-[10px] flex justify-center items-center flex-row w-[160px] gap-[3px]">
         {categories.map((category, index) => (
           <a
             href={category.link}

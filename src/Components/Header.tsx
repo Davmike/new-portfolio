@@ -79,7 +79,7 @@ function Header() {
             return (
               <li
                 key={index}
-                className={`relative cursor-pointer transition-colors duration-200 md:text-[18px] lg:text-[25px] ${
+                className={`relative cursor-pointer transition-colors duration-200 text-[20px] md:text-[18px] lg:text-[25px] ${
                   selected === categoryId
                     ? "text-[white]"
                     : "text-[white] hover:text-[#dfd4d4]"
