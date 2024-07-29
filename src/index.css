@@ -44,11 +44,11 @@ body {
 
 @media (max-width: 768px) {
   .background-text {
-    font-size: 25vw; /* Adjust the font size for smaller screens */
+    font-size: 22vw;
   }
 
   .background-world {
-    font-size: 22vw;
+    font-size: 24vw;
   }
 }
 
