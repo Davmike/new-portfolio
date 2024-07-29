@@ -446,3 +446,15 @@ li:nth-child(5) {
 #title::placeholder {
   color: #787878;
 }
+
+/* zoom hover effect for projects div */
+
+@media only screen and (min-width: 768px) {
+  .zoom-hover-effect {
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .zoom-hover-effect:hover {
+    transform: scale(1.1);
+  }
+}

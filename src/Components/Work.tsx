@@ -18,18 +18,21 @@ function Work() {
       live: "https://redberry-website-geleck.vercel.app/",
       src: redberry,
       description: "Just add your everyday blogs",
+      num: "01",
     },
     {
       name: "Entertainment Web",
       live: "https://entertainment-web-app-five-theta.vercel.app/",
       src: movie,
       description: "You can Watch your Fav Movies",
+      num: "02",
     },
     {
       name: "Link Sharing App",
       live: "https://davmike.github.io/link-sharing-app/",
       src: link,
       description: "You can share your profile",
+      num: "03",
     },
   ];
 
@@ -63,16 +66,27 @@ function Work() {
           key={index}
           className={`relative flex flex-col md:flex-row ${
             index % 2 === 0 ? "md:flex-row-reverse md:left-[40px]" : ""
-          } bg-cover bg-center h-[400px] w-full max-w-[800px] mt-[50px] group`}
+          } bg-cover bg-center h-[400px] w-full max-w-[800px] mt-[50px] group zoom-hover-effect`}
           style={{ backgroundImage: `url(${item.src})` }}
         >
+          <h2
+            className={`text-white text-[100px] ${
+              index % 2 === 0 ? "md:right-[40px]" : "md:left-[40px]"
+            } absolute top-[-30px] right-[30px] md:top-[-40px] font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out z-10`}
+          >
+            {item.num}
+          </h2>
           <div
-            className={`absolute inset-0 bg-gray-900 bg-opacity-70 flex flex-col justify-center items-center md:items-start ${
-              index % 2 === 0 ? "md:items-end pr-10" : "pl-10"
+            className={`absolute inset-0 bg-gray-900 bg-opacity-70 flex flex-col justify-center items-start pl-[20px] ${
+              index % 2 === 0 ? "md:items-end pr-20" : "pl-20"
             } transition duration-500 ease-in-out group-hover:bg-opacity-90 group-hover:bg-[#0b2130; linear-gradient(260deg, #0b2130 74%, #051018 100%);]`}
           >
-            <h1 className="text-5xl font-bold text-white">{item.name}</h1>
-            <p className="text-xl text-white mt-4">{item.description}</p>
+            <h1 className="md:text-5xl text-xl font-bold text-white">
+              {item.name}
+            </h1>
+            <p className="md:text-xl text-md text-white mt-4">
+              {item.description}
+            </p>
             <a
               href={item.live}
               target="_blank"
