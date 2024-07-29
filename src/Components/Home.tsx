@@ -47,6 +47,7 @@ function Home() {
 
       {/* Background text */}
       <div className="background-text">HELLO</div>
+      <div className="background-world background-text">WORLD</div>
 
       {/* clock section */}
       <div className="relative flex justify-center items-center flex-col text-white mb-[30px]">

@@ -26,7 +26,7 @@ body {
 
 .background-text {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: rgba(255, 255, 255, 0.1); /* White color with low opacity */
@@ -37,6 +37,10 @@ body {
   pointer-events: none; /* Makes sure it doesn't interfere with any clicks */
 }
 
+.background-world {
+  top: 60%;
+}
+
 @media (max-width: 768px) {
   .background-text {
     font-size: 30vw; /* Adjust the font size for smaller screens */
@@ -44,19 +48,6 @@ body {
 }
 
 #about {
-  /* background: rgb(1, 187, 136);
-  background: radial-gradient(
-    circle,
-    rgba(1, 187, 136, 1) 0%,
-    rgba(12, 27, 45, 1) 0%,
-    rgba(11, 43, 54, 1) 0%,
-    rgba(11, 41, 53, 1) 11%,
-    rgba(11, 38, 51, 1) 28%,
-    rgba(11, 34, 49, 1) 52%,
-    rgba(12, 26, 44, 1) 100%,
-    rgba(12, 26, 44, 0.3087359943977591) 100%
-  ); */
-
   background: rgb(5, 16, 24);
   background: linear-gradient(
     180deg,
