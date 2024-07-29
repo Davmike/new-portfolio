@@ -4,16 +4,16 @@ function Footer() {
   return (
     <>
       <div className="h-[1px] w-[100%] bg-[white] mt-[50px]"></div>
-      <div className="bg-[#050816] text-white p-4">
+      <div className="bg-[#050816] text-white p-4" id="footer">
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
             <div className="mb-4 md:mb-0">
               <h2 className="text-2xl font-bold">David Mikeladze</h2>
               <p className="mt-2">
                 Experienced web developer who{" "}
-                <span className="text-[#aaa6c3] font-bold">enjoys</span>{" "}
-                building <span className="text-[#aaa6c3] font-bold">fast</span>{" "}
-                and <span className="text-[#aaa6c3] font-bold">accessible</span>{" "}
+                <span className="text-[#F04D40] font-bold">enjoys</span>{" "}
+                building <span className="text-[#F04D40] font-bold">fast</span>{" "}
+                and <span className="text-[#F04D40] font-bold">accessible</span>{" "}
                 digital products.
               </p>
             </div>
@@ -22,7 +22,7 @@ function Footer() {
                 <h3 className="text-xl font-bold">Contact</h3>
                 <p className="mt-2">
                   Gmail:{" "}
-                  <a href="" className="text-[#aaa6c3] font-bold">
+                  <a href="" className="text-[#F04D40] font-bold">
                     {" "}
                     mikeladzedav@gmail.com
                   </a>

@@ -120,6 +120,15 @@ body {
   );
 }
 
+#footer {
+  background: rgb(11, 33, 48);
+  background: linear-gradient(
+    180deg,
+    rgba(11, 33, 48, 1) 30%,
+    rgba(5, 16, 24, 1) 80%
+  );
+}
+
 #menu {
   z-index: 2;
 }
