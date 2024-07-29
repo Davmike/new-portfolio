@@ -18,7 +18,7 @@ function Footer() {
               </p>
             </div>
             <div className="flex flex-col md:flex-row md:space-x-8">
-              <div className="mb-4 md:mb-0">
+              {/* <div className="mb-4 md:mb-0">
                 <h3 className="text-xl font-bold">Contact</h3>
                 <p className="mt-2">
                   Gmail:{" "}
@@ -27,7 +27,7 @@ function Footer() {
                     mikeladzedav@gmail.com
                   </a>
                 </p>
-              </div>
+              </div> */}
               <div>
                 <h3 className="text-xl font-bold">Social</h3>
                 <div className="flex space-x-4 mt-2">
@@ -55,6 +55,9 @@ function Footer() {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="flex justify-center items-center mt-[20px]">
+            <p className="text-[15px] font-normal">2024 @ David Mikeladze</p>
           </div>
         </div>
       </div>
