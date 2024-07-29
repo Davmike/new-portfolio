@@ -86,7 +86,7 @@ function Work() {
           <div
             className={`absolute inset-0 bg-gray-900 bg-opacity-70 flex flex-col justify-center items-start pl-[20px] ${
               index % 2 === 0 ? "md:items-end pr-20" : "pl-20"
-            } transition duration-500 ease-in-out group-hover:bg-opacity-90 group-hover:bg-[#0b2130; linear-gradient(260deg, #0b2130 74%, #051018 100%);]`}
+            } transition duration-500 ease-in-out group-hover:bg-opacity-80 group-hover:bg-[#0b2130; group-hover:backdrop-blur-sm`}
           >
             <h1 className="md:text-5xl text-[35px] font-bold text-white">
               {item.name}
