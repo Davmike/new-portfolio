@@ -52,47 +52,6 @@ body {
   }
 }
 
-/* Keyframes for moving right from center and reappearing from left */
-/* @keyframes moveRight {
-  0% {
-    transform: translateX(-50%);
-  }
-  50% {
-    transform: translateX(100vw);
-  }
-  50.01% {
-    transform: translateX(-100vw);
-  }
-  100% {
-    transform: translateX(0);
-  }
-} */
-
-/* Keyframes for moving left from center and reappearing from right */
-/* @keyframes moveLeft {
-  0% {
-    transform: translateX(-50%);
-  }
-  50% {
-    transform: translateX(-200vw);
-  }
-  50.01% {
-    transform: translateX(100vw);
-  }
-  100% {
-    transform: translateX(0);
-  }
-} */
-
-/* Applying animations */
-/* .hello-move {
-  animation: moveRight 10s linear infinite;
-}
-
-.world-move {
-  animation: moveLeft 10s linear infinite;
-} */
-
 #about {
   background: rgb(5, 16, 24);
   background: linear-gradient(
@@ -404,86 +363,6 @@ li:nth-child(5) {
   transform: translateY(0);
   transition: all var(--transitionDuration) ease;
 }
-
-/* .header {
-  background-color: #181a1b;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  padding: 10px 20px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 10;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.header-logo {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.header-logo img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 2px solid #32cd32;
-}
-
-.header-logo h2 {
-  color: white;
-}
-
-.nav-links {
-  display: flex;
-  gap: 15px;
-}
-
-.nav-links li {
-  color: white;
-  cursor: pointer;
-  position: relative;
-}
-
-.nav-links li:hover {
-  color: #32cd32;
-}
-
-.nav-links li span {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 2px;
-  background-color: #32cd32;
-  transform: scaleX(0);
-  transition: transform 0.2s;
-}
-
-.nav-links li:hover span {
-  transform: scaleX(1);
-}
-
-.toggle-button {
-  color: white;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 2px solid white;
-  transition: color 0.2s, border-color 0.2s;
-}
-
-.toggle-button:hover {
-  color: #32cd32;
-}
-
-.toggle-button:hover {
-  border-color: #32cd32;
-} */
 
 #message::placeholder {
   color: #787878;
