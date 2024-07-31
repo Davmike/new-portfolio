@@ -71,7 +71,11 @@ function Header() {
           alt="Profile"
           className="w-10 h-10 rounded-full border-2 border-[white]"
         />
+        <h3 className="hidden md:block text-[white] text-[25px] dav">
+          davmikeladze
+        </h3>
       </div>
+
       <div className="flex gap-[20px]">
         <ul className="flex justify-start items-center flex-row gap-[15px]">
           {buttonCategories.map((category, index) => {
