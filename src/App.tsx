@@ -6,6 +6,7 @@ import About from "./Components/About";
 import Work from "./Components/Work";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
+import Resume from "./Components/Resume";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
@@ -33,6 +34,7 @@ function App() {
         <Header />
         <Home />
         <About />
+        <Resume />
         <Work />
         <Contact />
         <Footer />
