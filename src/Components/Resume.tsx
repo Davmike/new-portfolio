@@ -1,29 +1,48 @@
 function Resume() {
   const timelineData = [
     {
-      title: "Title 1",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      title: "React.js Developer",
+      company: "StartupX",
+      date: "March 2020 - April 2021",
+      description: [
+        "Developing and maintaining web applications using React.js and other related technologies.",
+        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+        "Implementing responsive design and ensuring cross-browser compatibility.",
+        "Participating in code reviews and providing constructive feedback to other developers.",
+      ],
     },
     {
-      title: "Title 2",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      title: "React Native Developer",
+      company: "TechX",
+      date: "Jan 2021 - Feb 2022",
+      description: [
+        "Developing and maintaining web applications using React Native and other related technologies.",
+        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+        "Implementing responsive design and ensuring cross-browser compatibility.",
+        "Participating in code reviews and providing constructive feedback to other developers.",
+      ],
     },
     {
-      title: "Title 3",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      title: "Web Developer",
+      company: "Shopify",
+      date: "Jan 2022 - Jan 2023",
+      description: [
+        "Developing and maintaining web applications using React.js and other related technologies.",
+        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+        "Implementing responsive design and ensuring cross-browser compatibility.",
+        "Participating in code reviews and providing constructive feedback to other developers.",
+      ],
     },
     {
-      title: "Title 4",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    },
-    {
-      title: "Title 5",
-      description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      title: "Full Stack Developer",
+      company: "FullX",
+      date: "Jan 2023 - Present",
+      description: [
+        "Developing and maintaining web applications using React.js and other related technologies.",
+        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+        "Implementing responsive design and ensuring cross-browser compatibility.",
+        "Participating in code reviews and providing constructive feedback to other developers.",
+      ],
     },
   ];
 
@@ -33,8 +52,18 @@ function Resume() {
         {timelineData.map((item, index) => (
           <div className="card relative max-w-[400px]" key={index}>
             <div className="info flex flex-col bg-[#051018] text-[white] rounded-[10px] p-[10px]">
-              <h3 className="title text-[orangered] relative">{item.title}</h3>
-              <p>{item.description}</p>
+              <h3 className="title text-[orangered] relative text-[24px]">
+                {item.title}
+              </h3>
+              <p className="text-[14px]">{item.company}</p>
+              {item.description.map((description, i) => (
+                <div className="flex justify-center items-center flex-row">
+                  <div className="w-[7px] h-[7px] rounded-[50px] bg-[white]"></div>
+                  <p key={i} className="mt-[10px]">
+                    {description}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         ))}
