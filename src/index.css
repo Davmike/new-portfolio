@@ -470,12 +470,16 @@ li:nth-child(5) {
   text-align: right;
 }
 
+.card:nth-child(even) > .info > .company {
+  text-align: right;
+}
+
 /* setting dot to the left if the card is odd */
 .card:nth-child(odd) > .info > .title::before {
-  left: -45px;
+  left: -51px;
 }
 
 /* setting dot to the right if the card is odd */
 .card:nth-child(even) > .info > .title::before {
-  right: -45px;
+  right: -51px;
 }
