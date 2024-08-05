@@ -13,21 +13,31 @@ function About() {
     const elements = toolkitRef.current?.querySelectorAll("[data-speed]");
 
     if (elements) {
-      gsap.to(elements, {
-        y: (_i, el) => {
-          const speed = parseFloat(el.getAttribute("data-speed") || "1");
-          return (1 - speed) * window.innerHeight;
+      gsap.fromTo(
+        elements,
+        {
+          y: (_i, el): any => {
+            return gsap.getProperty(el, "y");
+          },
+          opacity: 1, // Start fully visible
         },
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: toolkitRef.current,
-          start: "top top",
-          end: "bottom bottom",
-          scrub: 1,
-          invalidateOnRefresh: true,
-          anticipatePin: 1,
-        },
-      });
+        {
+          y: (_i, el) => {
+            const speed = parseFloat(el.getAttribute("data-speed") || "1");
+            return (1 - speed) * window.innerHeight; // Move to a new position based on speed
+          },
+          opacity: 0, // Fade out
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: toolkitRef.current,
+            start: "top 10%",
+            end: "bottom top",
+            scrub: 1,
+            invalidateOnRefresh: true,
+            anticipatePin: 1,
+          },
+        }
+      );
     }
   }, []);
 
@@ -120,8 +130,10 @@ function About() {
             {skills[0].toolkit.map((toolkit, skillIndex) => (
               <span
                 key={skillIndex}
-                data-speed={(skillIndex % 5) * 0.25}
+                data-speed={(skillIndex % 2) * 0.5 + 0.5}
+                // data-speed={(skillIndex + 1) * 0.1}
                 className="bg-[#F04D40] rounded-md inline-block text-[1rem] md:text-[1.2rem] text-white font-bold px-3 py-1"
+                style={{ transform: "translateY(0)" }}
               >
                 {toolkit}
               </span>
