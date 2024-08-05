@@ -1,6 +1,36 @@
+import { useEffect, useRef } from "react";
 import { Link } from "react-scroll";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+// Register ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
 
 function About() {
+  const toolkitRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const elements = toolkitRef.current?.querySelectorAll("[data-speed]");
+
+    if (elements) {
+      gsap.to(elements, {
+        y: (_i, el) => {
+          const speed = parseFloat(el.getAttribute("data-speed") || "1");
+          return (1 - speed) * window.innerHeight;
+        },
+        ease: "power2.out",
+        scrollTrigger: {
+          trigger: toolkitRef.current,
+          start: "top top",
+          end: "bottom bottom",
+          scrub: 1,
+          invalidateOnRefresh: true,
+          anticipatePin: 1,
+        },
+      });
+    }
+  }, []);
+
   const skills = [
     {
       toolkit: [
@@ -84,12 +114,13 @@ function About() {
         </div>
 
         {/* Toolkit */}
-        <div className="mt-10 md:w-1/2">
+        <div className="mt-10 md:w-1/2" ref={toolkitRef}>
           <h3 className="text-xl font-bold md:text-[1.5rem]">My Toolkit</h3>
           <div className="flex flex-wrap gap-2 mt-5">
             {skills[0].toolkit.map((toolkit, skillIndex) => (
               <span
                 key={skillIndex}
+                data-speed={(skillIndex % 5) * 0.25}
                 className="bg-[#F04D40] rounded-md inline-block text-[1rem] md:text-[1.2rem] text-white font-bold px-3 py-1"
               >
                 {toolkit}

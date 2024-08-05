@@ -1,15 +1,48 @@
-// import fb from "../../public/assets/fb.png";
-// import insta from "../../public/assets/instagram.png";
-// import x from "../../public/assets/x.png";
-// import linkedin from "../../public/assets/linkedin.png";
-// import github from "../../public/assets/github.png";
-// import gmail from "../../public/assets/gmail.png";
 import { Link } from "react-scroll";
 import { FaFacebook, FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { FaXTwitter } from "react-icons/fa6";
 
+// import { useEffect, useRef } from "react";
+// import gsap from "gsap";
+// import { useGSAP } from "@gsap/react";
+// import { ScrollTrigger } from "gsap-trial/ScrollTrigger";
+
+// gsap.registerPlugin(SplitText, ScrollTrigger);
+
+// let mySplitText = new SplitText(".david", { type: "chars" });
+// let chars = mySplitText.chars;
+
 function Home() {
+  // gsap.from(chars, {
+  //   yPercent: 130,
+  //   stagger: 0.05,
+  //   ease: "back.out",
+  //   duration: 1,
+  //   scrollTrigger: {
+  //     trigger: ".david",
+  //     start: "top 80%",
+  //   },
+  // });
+  // const textRef = useRef(null);
+
+  // useEffect(() => {
+  //   gsap.from(textRef.current, {
+  //     duration: 1,
+  //     autoAlpha: 0,
+  //     ease: "none",
+  //     delay: 1,
+  //   });
+  // }, []);
+
+  // useGSAP(
+  //   () => {
+  //     // gsap code here...
+  //     gsap.to(".david", { duration: 3 });
+  //   },
+  //   { scope: container }
+  // );
+
   const categories = [
     {
       src: <FaFacebook style={{ color: "white", fontSize: "24px" }} />,
@@ -56,14 +89,14 @@ function Home() {
         {/* Content container */}
         <div className="mt-[20px]">
           <div className="text-left leading-[28px]">
-            <h3 className="text-[40px] uppercase font-light lg:text-[50px]">
+            <h3 className="text-[40px] uppercase font-light lg:text-[50px] david">
               David
             </h3>
-            <h1 className="text-[50px] mt-[5px] uppercase font-extrabold lg:text-[60px] lg:mt-[10px]">
+            <h1 className="text-[50px] mt-[5px] uppercase font-extrabold lg:text-[60px] lg:mt-[10px] mikeladze">
               Mikeladze
             </h1>
           </div>
-          <p className="text-[30px] font-thin tracking-[3.9px] lg:text-[28px]">
+          <p className="text-[30px] font-thin tracking-[3.9px] lg:text-[28px] developer">
             Full-Stack Developer
           </p>
 
