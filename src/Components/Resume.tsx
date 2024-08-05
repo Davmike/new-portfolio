@@ -51,11 +51,13 @@ function Resume() {
       <div className="outer">
         {timelineData.map((item, index) => (
           <div className="card relative max-w-[400px]" key={index}>
-            <div className="info flex flex-col bg-[#051018] text-[white] rounded-[10px] p-[16px]">
+            <div className="info flex flex-col bg-[#051018] bg-opacity-20 backdrop-blur-md shadow-2xl text-[white] rounded-[10px] p-[16px]">
               <h3 className="title text-[#F04D40] relative text-[24px]">
                 {item.title}
               </h3>
-              <p className="text-[14px] company">{item.company}</p>
+              <p className="text-[14px] text-[#B4B5BA] company">
+                {item.company}
+              </p>
               {item.description.map((description, i) => (
                 <div className="flex justify-center items-baseline flex-row gap-[10px]">
                   <div className="w-[5px] h-[5px] rounded-[50px] bg-[white] pl-[4px] md:pl-[6px]"></div>
@@ -64,7 +66,9 @@ function Resume() {
                   </p>
                 </div>
               ))}
-              <p className="text-[14px] mt-[10px]">{item.date}</p>
+              <p className="text-[14px] mt-[10px] text-[#B4B5BA]">
+                {item.date}
+              </p>
             </div>
           </div>
         ))}
