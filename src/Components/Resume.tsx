@@ -1,4 +1,37 @@
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { useEffect } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
+
 function Resume() {
+  useEffect(() => {
+    const cards = gsap.utils.toArray<HTMLElement>(".card");
+
+    cards.forEach((card, index) => {
+      gsap.fromTo(
+        card,
+        {
+          x: index % 2 === 0 ? "-100%" : "100%",
+          opacity: 0,
+        },
+        {
+          x: "0%",
+          opacity: 1,
+          duration: 1,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 90%",
+            end: "bottom 100%",
+            scrub: 1,
+            markers: false,
+          },
+        }
+      );
+    });
+  }, []);
+
   const timelineData = [
     {
       title: "React.js Developer",

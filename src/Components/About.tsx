@@ -10,9 +10,9 @@ function About() {
   const toolkitRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const textElements = gsap.utils.toArray(".text");
+    const textElements = gsap.utils.toArray(".text") as HTMLElement[];
 
-    textElements.forEach((text) =>
+    textElements.forEach((text: HTMLElement) => {
       gsap.to(text, {
         backgroundSize: "100%",
         ease: "none",
@@ -22,10 +22,9 @@ function About() {
           end: "center 20%",
           scrub: true,
         },
-      })
-    );
+      });
+    });
   }, []);
-
   useEffect(() => {
     const elements = toolkitRef.current?.querySelectorAll("[data-speed]");
 
