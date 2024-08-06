@@ -126,28 +126,58 @@ function Home() {
     ScrollReveal().reveal("#project", config);
   }, []);
 
+  // on scroll show social network image smooth effect
+  useEffect(() => {
+    const icons = [
+      { id: "facebook", delay: 300 },
+      { id: "instagram", delay: 600 },
+      { id: "twitter", delay: 900 },
+      { id: "gmail", delay: 1200 },
+      { id: "linkedin", delay: 1500 },
+      { id: "github", delay: 1800 },
+    ];
+
+    icons.forEach(({ id, delay }) => {
+      ScrollReveal().reveal(`#${id}`, {
+        origin: "top",
+        distance: "50px",
+        duration: 1000,
+        delay: delay,
+        opacity: 0,
+        easing: "ease-in-out",
+        reset: false,
+      });
+    });
+  }, []);
+
   const categories = [
     {
+      id: "facebook",
       src: <FaFacebook style={{ color: "white", fontSize: "24px" }} />,
       link: "https://www.facebook.com/profile.php?id=61560549462701",
     },
     {
+      id: "instagram",
       src: <FaInstagram style={{ color: "white", fontSize: "24px" }} />,
       link: "https://www.instagram.com/davmikeladze/",
     },
     {
+      id: "twitter",
       src: <FaXTwitter style={{ color: "white", fontSize: "24px" }} />,
       link: "https://x.com/davmikeladze",
     },
     {
+      id: "gmail",
       src: <BiLogoGmail style={{ color: "white", fontSize: "24px" }} />,
       link: "https://mail.google.com/",
     },
     {
+      id: "linkedin",
       src: <FaLinkedin style={{ color: "white", fontSize: "24px" }} />,
       link: "https://www.linkedin.com/in/davmikeladze/",
     },
     {
+      id: "github",
       src: <FaGithub style={{ color: "white", fontSize: "24px" }} />,
       link: "https://github.com/Davmike",
     },
@@ -226,14 +256,16 @@ function Home() {
 
       {/* social media section */}
       <div className="absolute bottom-[10px] left-[10px] flex justify-center items-center flex-row w-[160px] gap-[3px]">
-        {categories.map((category, index) => (
+        {categories.map(({ id, src, link }, index) => (
           <a
-            href={category.link}
+            href={link}
             target="_blank"
-            className="pointer"
+            rel="noopener noreferrer"
+            id={id}
             key={index}
+            className="transition-transform transform hover:scale-110 pointer"
           >
-            {category.src}
+            {src}
           </a>
         ))}
       </div>

@@ -21,7 +21,7 @@ function Footer() {
 
   return (
     <>
-      <div className="h-[1px] w-[100%] bg-[white] mt-[50px]"></div>
+      <div className="h-[1px] w-[100%] bg-[white] mt-[50px]" id="reset"></div>
       <div className="bg-[#050816] text-white p-4" id="footer">
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-start md:items-center">
