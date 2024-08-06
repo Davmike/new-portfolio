@@ -5,16 +5,6 @@ import { FaXTwitter } from "react-icons/fa6";
 import ScrollReveal from "scrollreveal";
 import { useEffect } from "react";
 
-// import { useEffect, useRef } from "react";
-// import gsap from "gsap";
-// import { useGSAP } from "@gsap/react";
-// import { ScrollTrigger } from "gsap-trial/ScrollTrigger";
-
-// gsap.registerPlugin(SplitText, ScrollTrigger);
-
-// let mySplitText = new SplitText(".david", { type: "chars" });
-// let chars = mySplitText.chars;
-
 function Home() {
   // on scroll show hello text smooth effect
   useEffect(() => {
@@ -50,7 +40,7 @@ function Home() {
   useEffect(() => {
     const config = {
       origin: "top",
-      // distance: "50px",
+      distance: "50px",
       duration: 1000,
       delay: 1200,
       opacity: 0,
@@ -65,7 +55,7 @@ function Home() {
   useEffect(() => {
     const config = {
       origin: "top",
-      // distance: "50px",
+      distance: "50px",
       duration: 1000,
       delay: 1600,
       opacity: 0,
@@ -80,7 +70,7 @@ function Home() {
   useEffect(() => {
     const config = {
       origin: "top",
-      // distance: "50px",
+      distance: "50px",
       duration: 1000,
       delay: 2100,
       opacity: 0,
@@ -95,7 +85,7 @@ function Home() {
   useEffect(() => {
     const config = {
       origin: "top",
-      // distance: "50px",
+      distance: "50px",
       duration: 1000,
       delay: 1900,
       opacity: 0,
@@ -110,7 +100,7 @@ function Home() {
   useEffect(() => {
     const config = {
       origin: "top",
-      // distance: "50px",
+      distance: "50px",
       duration: 1000,
       delay: 1700,
       opacity: 0,
@@ -125,7 +115,7 @@ function Home() {
   useEffect(() => {
     const config = {
       origin: "top",
-      // distance: "50px",
+      distance: "50px",
       duration: 1000,
       delay: 1500,
       opacity: 0,

@@ -10,6 +10,23 @@ function About() {
   const toolkitRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const textElements = gsap.utils.toArray(".text");
+
+    textElements.forEach((text) =>
+      gsap.to(text, {
+        backgroundSize: "100%",
+        ease: "none",
+        scrollTrigger: {
+          trigger: text,
+          start: "center 80%",
+          end: "center 20%",
+          scrub: true,
+        },
+      })
+    );
+  }, []);
+
+  useEffect(() => {
     const elements = toolkitRef.current?.querySelectorAll("[data-speed]");
 
     if (elements) {
@@ -90,21 +107,21 @@ function About() {
             Get to know me!
           </h3>
           <div className="mt-5 space-y-4">
-            <p className="text-[1rem] md:text-[1.2rem]">
+            <p className="text-[1rem] md:text-[1.2rem] text">
               I'm a software developer proficient in JavaScript and the web. I'm
               passionate about web performance, accessibility, mentoring, user &
               developer experience.
             </p>
-            <p className="text-[1rem] md:text-[1.2rem]">
+            <p className="text-[1rem] md:text-[1.2rem] text">
               I follow a digital minimalism mindset, using technology to improve
               people's lives and provide value for businesses.
             </p>
-            <p className="text-[1rem] md:text-[1.2rem]">
+            <p className="text-[1rem] md:text-[1.2rem] text">
               In my free time, I build side projects and like exploring new
               technologies. You can see some of my work in the projects section
               below.
             </p>
-            <p className="text-[1rem] md:text-[1.2rem]">
+            <p className="text-[1rem] md:text-[1.2rem] text">
               I'm open to collaboration opportunities where I can contribute,
               learn and grow. Don't hesitate to reach out if you think my skills
               and experience are a good fit for your next project.
