@@ -20,7 +20,7 @@ function Home() {
   useEffect(() => {
     const config = {
       origin: "top",
-      distance: "50px",
+      // distance: "50px",
       duration: 1000,
       delay: 300,
       opacity: 0,
@@ -35,7 +35,7 @@ function Home() {
   useEffect(() => {
     const config = {
       origin: "top",
-      distance: "50px",
+      // distance: "50px",
       duration: 1000,
       delay: 800,
       opacity: 0,
@@ -50,7 +50,7 @@ function Home() {
   useEffect(() => {
     const config = {
       origin: "top",
-      distance: "50px",
+      // distance: "50px",
       duration: 1000,
       delay: 1200,
       opacity: 0,
@@ -65,7 +65,7 @@ function Home() {
   useEffect(() => {
     const config = {
       origin: "top",
-      distance: "50px",
+      // distance: "50px",
       duration: 1000,
       delay: 1600,
       opacity: 0,
@@ -80,7 +80,7 @@ function Home() {
   useEffect(() => {
     const config = {
       origin: "top",
-      distance: "50px",
+      // distance: "50px",
       duration: 1000,
       delay: 2100,
       opacity: 0,
@@ -95,7 +95,7 @@ function Home() {
   useEffect(() => {
     const config = {
       origin: "top",
-      distance: "50px",
+      // distance: "50px",
       duration: 1000,
       delay: 1900,
       opacity: 0,
@@ -110,7 +110,7 @@ function Home() {
   useEffect(() => {
     const config = {
       origin: "top",
-      distance: "50px",
+      // distance: "50px",
       duration: 1000,
       delay: 1700,
       opacity: 0,
@@ -125,7 +125,7 @@ function Home() {
   useEffect(() => {
     const config = {
       origin: "top",
-      distance: "50px",
+      // distance: "50px",
       duration: 1000,
       delay: 1500,
       opacity: 0,
@@ -135,35 +135,6 @@ function Home() {
 
     ScrollReveal().reveal("#project", config);
   }, []);
-
-  // gsap.from(chars, {
-  //   yPercent: 130,
-  //   stagger: 0.05,
-  //   ease: "back.out",
-  //   duration: 1,
-  //   scrollTrigger: {
-  //     trigger: ".david",
-  //     start: "top 80%",
-  //   },
-  // });
-  // const textRef = useRef(null);
-
-  // useEffect(() => {
-  //   gsap.from(textRef.current, {
-  //     duration: 1,
-  //     autoAlpha: 0,
-  //     ease: "none",
-  //     delay: 1,
-  //   });
-  // }, []);
-
-  // useGSAP(
-  //   () => {
-  //     // gsap code here...
-  //     gsap.to(".david", { duration: 3 });
-  //   },
-  //   { scope: container }
-  // );
 
   const categories = [
     {
