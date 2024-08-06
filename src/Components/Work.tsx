@@ -2,6 +2,11 @@ import link from "../../public/assets/link.jpg";
 import redberry from "../../public/assets/redberry.jpg";
 import movie from "../../public/assets/movie.jpg";
 import weblance from "../../public/assets/weblance.jpg";
+import { useEffect } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Work() {
   interface work {
@@ -43,13 +48,40 @@ function Work() {
     },
   ];
 
+  useEffect(() => {
+    const cards = gsap.utils.toArray<HTMLElement>(".fade-in-effect");
+
+    cards.forEach((card) => {
+      gsap.fromTo(
+        card,
+        {
+          opacity: 0,
+          y: 20,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 80%",
+            end: "bottom 30%",
+            scrub: 1,
+            markers: false,
+          },
+        }
+      );
+    });
+  }, []);
+
   return (
     <div
       className="bg-[#122b43] px-[20px] py-[20px] flex justify-center items-center flex-col"
       id="projects"
     >
       {/* work section div */}
-      <div className="mt-[30px] flex justify-center items-center flex-col">
+      <div className="mt-[30px] flex justify-center items-center flex-col fade-in-effect">
         <h1 className="font-bold text-[white] text-2xl md:text-3xl">WORK</h1>
         <div className="w-5 h-1 bg-[#F04D40] mt-1"></div>
         <p className="text-[12px] text-[white]">Dig into my universe</p>
@@ -59,7 +91,7 @@ function Work() {
           key={index}
           className={`relative flex flex-col md:flex-row ${
             index % 2 === 0 ? "md:flex-row-reverse lg:left-[40px]" : ""
-          } bg-cover bg-center h-[400px] w-full max-w-[800px] mt-[50px] group zoom-hover-effect`}
+          } bg-cover bg-center h-[400px] w-full max-w-[800px] mt-[50px] group zoom-hover-effect fade-in-effect`}
           style={{ backgroundImage: `url(${item.src})` }}
         >
           <h2
