@@ -1,10 +1,67 @@
+import React, { useEffect } from "react";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 function Contact() {
+  useEffect(() => {
+    // GSAP animation for the contact section
+    gsap.fromTo(
+      ".contact-content",
+      {
+        rotateY: 90,
+        opacity: 0,
+        scale: 0.8,
+      },
+      {
+        rotateY: 0,
+        opacity: 1,
+        scale: 1,
+        duration: 1.2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: ".contact-container",
+          start: "top 90%",
+          end: "bottom 10%",
+          scrub: 1,
+          markers: false,
+        },
+      }
+    );
+
+    // GSAP animation for form elements with bounce
+    gsap.fromTo(
+      "form input, form textarea, form button",
+      {
+        opacity: 0,
+        y: 20,
+        scale: 0.9,
+      },
+      {
+        opacity: 1,
+        y: 0,
+        scale: 1,
+        duration: 0.8,
+        ease: "bounce.out",
+        stagger: 0.2,
+        scrollTrigger: {
+          trigger: "form",
+          start: "top 90%",
+          end: "bottom 100%",
+          scrub: 1,
+          markers: false,
+        },
+      }
+    );
+  }, []);
+
   return (
     <div
-      className="min-h-screen flex items-center justify-center bg-[#122b43] text-white p-4"
+      className="contact-container min-h-screen flex items-center justify-center bg-[#122b43] text-white p-4"
       id="contact"
     >
-      <div className="max-w-md w-full">
+      <div className="contact-content max-w-md w-full">
         <h1 className="text-3xl font-bold text-center mt-[30px] md:text-3xl">
           Contact me
         </h1>
