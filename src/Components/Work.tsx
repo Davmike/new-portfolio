@@ -91,7 +91,7 @@ function Work() {
           key={index}
           className={`relative flex flex-col md:flex-row ${
             index % 2 === 0 ? "md:flex-row-reverse lg:left-[40px]" : ""
-          } bg-cover bg-center h-[400px] w-full max-w-[800px] mt-[50px] shadow-2xl rounded-[10px] group zoom-hover-effect fade-in-effect`}
+          } bg-cover bg-center h-[400px] w-full max-w-[800px] mt-[50px] shadow-2xl rounded-[10px] cursor-pointer group zoom-hover-effect fade-in-effect`}
           style={{ backgroundImage: `url(${item.src})` }}
         >
           <h2
@@ -102,7 +102,7 @@ function Work() {
             {item.num}
           </h2>
           <div
-            className={`absolute inset-0 bg-gray-900 bg-opacity-70 flex flex-col justify-center items-start pl-[20px] ${
+            className={`absolute inset-0 bg-gray-900 bg-opacity-70 flex flex-col justify-center items-start rounded-[10px] pl-[20px] ${
               index % 2 === 0 ? "md:items-end pr-20" : "pl-20"
             } transition duration-500 ease-in-out group-hover:bg-opacity-80 group-hover:bg-[#0b2130; group-hover:backdrop-blur-sm`}
           >
@@ -123,18 +123,15 @@ function Work() {
           </div>
         </div>
       ))}
-      <button className="mt-20 bg-[#F04D40] text-white font-bold py-2 px-4 rounded hover:bg-red-600 transition duration-200 fade-in-effect">
+      <a
+        href="https://github.com/Davmike?tab=repositories"
+        target="_blank"
+        className="mt-20 bg-[#F04D40] text-white font-bold py-2 px-4 rounded hover:bg-red-600 transition duration-200 fade-in-effect"
+      >
         SEE MORE...
-      </button>
+      </a>
     </div>
   );
 }
-<a
-  className="mt-[60px] border-none rounded-[4px] mb-[40px] bg-[#F04D40] pointer font-bold text-[1.15rem] px-[15px] py-[8px] checkout"
-  href="https://github.com/Davmike?tab=repositories"
-  target="_blank"
->
-  SEE MORE...
-</a>;
 
 export default Work;

@@ -210,7 +210,7 @@ function About() {
                 key={skillIndex}
                 data-speed={(skillIndex % 2) * 0.5 + 0.5}
                 // data-speed={(skillIndex + 1) * 0.1}
-                className="bg-[#F04D40] hover:bg-red-600 rounded-md inline-block text-[1rem] md:text-[1.2rem] text-white font-bold px-3 py-1"
+                className="bg-[#F04D40] hover:bg-red-600 cursor-pointer rounded-md inline-block text-[1rem] md:text-[1.2rem] text-white font-bold px-3 py-1"
                 style={{ transform: "translateY(0)" }}
               >
                 {toolkit}

@@ -50,21 +50,21 @@ function Footer() {
                   <a
                     href="https://github.com/Davmike"
                     target="_blank"
-                    className="text-white hover:text-green-500 transition-colors duration-200"
+                    className="text-white hover:text-[#F04D40] transition-colors duration-200"
                   >
                     <FaGithub size={24} />
                   </a>
                   <a
                     href="https://www.linkedin.com/in/davmikeladze/"
                     target="_blank"
-                    className="text-white hover:text-green-500 transition-colors duration-200"
+                    className="text-white hover:text-[#F04D40] transition-colors duration-200"
                   >
                     <FaLinkedin size={24} />
                   </a>
                   <a
                     href="https://www.instagram.com/davmikeladze/"
                     target="_blank"
-                    className="text-white hover:text-green-500 transition-colors duration-200"
+                    className="text-white hover:text-[#F04D40] transition-colors duration-200"
                   >
                     <FaInstagram size={24} />
                   </a>

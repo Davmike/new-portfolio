@@ -259,16 +259,18 @@ function Home() {
       {/* social media section */}
       <div className="absolute bottom-[10px] left-[10px] flex justify-center items-center flex-row w-[160px] gap-[3px]">
         {categories.map(({ id, src, link }, index) => (
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            id={id}
-            key={index}
-            className="transition-transform transform hover:scale-110 pointer"
-          >
-            {src}
-          </a>
+          <div className="hover:scale-110 transition-transform duration-300 cursor-pointer">
+            <a
+              href={link}
+              target="_blank"
+              rel="noopener noreferrer"
+              id={id}
+              key={index}
+              // className="hover:scale-110 transition-transform duration-300 cursor-pointer"
+            >
+              {src}
+            </a>
+          </div>
         ))}
       </div>
     </div>

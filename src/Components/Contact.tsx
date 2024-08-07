@@ -70,24 +70,38 @@ function Contact() {
           <p className="text-[14px]">mikeladzedav@gmail.com</p>
         </div>
         <form>
+          {/* name input */}
           <div className="mb-4">
             <label htmlFor="title" className="block text-lg font-medium mb-2">
-              Title
+              Your Name
             </label>
             <input
               type="text"
               id="title"
-              placeholder="What you're writing about?"
+              placeholder="What's your good name?"
               className="w-full bg-[#ffffff] border-none border-gray-600 rounded-md p-2 text-black focus:outline-none focus:ring-2 focus:ring-[#F04D40]"
             />
           </div>
+          {/* email input */}
+          <div className="mb-4">
+            <label htmlFor="title" className="block text-lg font-medium mb-2">
+              Your email
+            </label>
+            <input
+              type="text"
+              id="title"
+              placeholder="What's your web address?"
+              className="w-full bg-[#ffffff] border-none border-gray-600 rounded-md p-2 text-black focus:outline-none focus:ring-2 focus:ring-[#F04D40]"
+            />
+          </div>
+          {/* message input */}
           <div className="mb-4">
             <label htmlFor="message" className="block text-lg font-medium mb-2">
               Message
             </label>
             <textarea
               id="message"
-              placeholder="Full message comes here..."
+              placeholder="What you want to say?"
               className="w-full bg-[#ffffff] border-none rounded-md p-2 text-black h-32 focus:outline-none focus:ring-2 focus:ring-[#F04D40]"
             />
           </div>

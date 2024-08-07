@@ -83,7 +83,10 @@ function Resume() {
     <div className="timeline p-[20px] flex justify-center overflow-x-hidden">
       <div className="outer">
         {timelineData.map((item, index) => (
-          <div className="card relative max-w-[400px]" key={index}>
+          <div
+            className="card relative max-w-[400px] cursor-pointer"
+            key={index}
+          >
             <div className="info flex flex-col bg-[#051018] bg-opacity-20 backdrop-blur-md shadow-2xl text-[white] rounded-[10px] p-[16px]">
               <h3 className="title text-[#F04D40] relative text-[24px]">
                 {item.title}
