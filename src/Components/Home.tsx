@@ -230,12 +230,14 @@ function Home() {
 
           {/* Buttons container */}
           <div className="flex justify-center items-center gap-[15px] mt-[20px]">
-            <button
-              className="border-[1px] text-[20px] border-[white] hover:bg-[white] text-[white] hover:text-[black] rounded-[15px] px-[25px] py-[1px]"
-              id="cv"
-            >
-              Resume
-            </button>
+            <div className="wrapper">
+              <button
+                className="border-[1px] text-[20px] border-[white] hover:bg-[white] text-[white] hover:text-[black] rounded-[15px] px-[25px] py-[1px]"
+                id="cv"
+              >
+                Resume
+              </button>
+            </div>
             <Link
               to={"projects"}
               spy={true}

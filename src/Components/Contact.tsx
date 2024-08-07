@@ -93,7 +93,7 @@ function Contact() {
           </div>
           <button
             type="submit"
-            className="mt-[10px] border-none rounded-[4px] bg-[#F04D40] pointer font-bold text-[1.15rem] px-[15px] py-[8px] checkout"
+            className="mt-[10px] border-none rounded-[4px] bg-[#F04D40] hover:bg-red-600 pointer font-bold text-[1.15rem] px-[15px] py-[8px] checkout"
           >
             SUBMIT
           </button>

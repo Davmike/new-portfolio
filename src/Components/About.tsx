@@ -87,6 +87,42 @@ function About() {
     });
   }, []);
 
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    const buttonElement = buttonRef.current;
+
+    if (buttonElement) {
+      // GSAP animation setup
+      const diagonalTimeline = gsap.timeline({ paused: true });
+
+      diagonalTimeline
+        .to(buttonElement, {
+          x: 10, // Move right
+          y: 10, // Move down
+          duration: 0.3,
+          ease: "power2.out",
+        })
+        .to(buttonElement, {
+          x: 0, // Return to original position
+          y: 0,
+          duration: 0.3,
+          ease: "power2.inOut",
+        });
+
+      const handleMouseEnter = () => diagonalTimeline.play();
+      const handleMouseLeave = () => diagonalTimeline.reverse();
+
+      buttonElement.addEventListener("mouseenter", handleMouseEnter);
+      buttonElement.addEventListener("mouseleave", handleMouseLeave);
+
+      return () => {
+        buttonElement.removeEventListener("mouseenter", handleMouseEnter);
+        buttonElement.removeEventListener("mouseleave", handleMouseLeave);
+      };
+    }
+  }, []);
+
   const skills = [
     {
       toolkit: [
@@ -163,7 +199,10 @@ function About() {
             offset={0}
             duration={500}
           >
-            <button className="mt-5 bg-[#F04D40] text-white font-bold py-2 px-4 rounded hover:bg-[#abffe9] transition duration-200 fade-in-effect">
+            <button
+              ref={buttonRef}
+              className="mt-5 bg-[#F04D40] text-white font-bold py-2 px-4 rounded hover:bg-red-600 transition duration-200 fade-in-effect"
+            >
               PROJECTS
             </button>
           </Link>
@@ -180,7 +219,7 @@ function About() {
                 key={skillIndex}
                 data-speed={(skillIndex % 2) * 0.5 + 0.5}
                 // data-speed={(skillIndex + 1) * 0.1}
-                className="bg-[#F04D40] rounded-md inline-block text-[1rem] md:text-[1.2rem] text-white font-bold px-3 py-1"
+                className="bg-[#F04D40] hover:bg-red-600 rounded-md inline-block text-[1rem] md:text-[1.2rem] text-white font-bold px-3 py-1"
                 style={{ transform: "translateY(0)" }}
               >
                 {toolkit}
