@@ -79,14 +79,44 @@ function Resume() {
     },
   ];
 
+  // smooth show experience text
+  useEffect(() => {
+    const cards = gsap.utils.toArray<HTMLElement>(".fade-in-effect");
+
+    cards.forEach((card) => {
+      gsap.fromTo(
+        card,
+        {
+          opacity: 0,
+          y: 20,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 80%",
+            end: "bottom 20%",
+            scrub: 1,
+            markers: false,
+          },
+        }
+      );
+    });
+  }, []);
+
   return (
     <>
       {/* experience text section */}
-      <div className="mt-[120px] mb-[50px] flex justify-center items-center flex-col">
-        <p className="text-[18px] text-[#F04D40] uppercase tracking-wider">
+      <div className="mt-[120px] mb-[50px] flex justify-center items-center flex-col fade-in-effect">
+        <p className="text-[18px] text-[#F04D40] md:text-[20px] lg:text-[22px] uppercase tracking-wider">
           What I have done so far
         </p>
-        <h3 className="text-[40px] text-[white]">Work Experience.</h3>
+        <h3 className="text-[40px] text-[white] md:text-[45px] lg:text-[50px]">
+          Work Experience.
+        </h3>
       </div>
       {/* full version here */}
       <div className="timeline p-[20px] flex justify-center overflow-x-hidden">
