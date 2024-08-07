@@ -269,7 +269,6 @@ function Home() {
               rel="noopener noreferrer"
               id={id}
               key={index}
-              // className="hover:scale-110 transition-transform duration-300 cursor-pointer"
             >
               {src}
             </a>

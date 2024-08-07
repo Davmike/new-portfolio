@@ -80,37 +80,47 @@ function Resume() {
   ];
 
   return (
-    <div className="timeline p-[20px] flex justify-center overflow-x-hidden">
-      <div className="outer">
-        {timelineData.map((item, index) => (
-          <div
-            className="card relative max-w-[400px] cursor-pointer"
-            key={index}
-          >
-            <div className="info flex flex-col bg-[#051018] bg-opacity-20 backdrop-blur-md shadow-2xl text-[white] rounded-[10px] p-[16px]">
-              <h3 className="title text-[#F04D40] relative text-[24px]">
-                {item.title}
-              </h3>
-              <p className="text-[14px] text-[#B4B5BA] company">
-                {item.company}
-              </p>
-              {item.description.map((description, i) => (
-                <div
-                  key={i}
-                  className="flex justify-center items-baseline flex-row gap-[10px]"
-                >
-                  <div className="w-[5px] h-[5px] rounded-[50px] bg-[white] pl-[4px] md:pl-[6px]"></div>
-                  <p className="mt-[10px]">{description}</p>
-                </div>
-              ))}
-              <p className="text-[14px] mt-[10px] text-[#B4B5BA]">
-                {item.date}
-              </p>
-            </div>
-          </div>
-        ))}
+    <>
+      {/* experience text section */}
+      <div className="mt-[120px] mb-[50px] flex justify-center items-center flex-col">
+        <p className="text-[18px] text-[#F04D40] uppercase tracking-wider">
+          What I have done so far
+        </p>
+        <h3 className="text-[40px] text-[white]">Work Experience.</h3>
       </div>
-    </div>
+      {/* full version here */}
+      <div className="timeline p-[20px] flex justify-center overflow-x-hidden">
+        <div className="outer">
+          {timelineData.map((item, index) => (
+            <div
+              className="card relative max-w-[400px] cursor-pointer"
+              key={index}
+            >
+              <div className="info flex flex-col bg-[#051018] bg-opacity-20 backdrop-blur-md shadow-2xl text-[white] rounded-[10px] p-[16px]">
+                <h3 className="title text-[#F04D40] relative text-[24px]">
+                  {item.title}
+                </h3>
+                <p className="text-[14px] text-[#B4B5BA] company">
+                  {item.company}
+                </p>
+                {item.description.map((description, i) => (
+                  <div
+                    key={i}
+                    className="flex justify-center items-baseline flex-row gap-[10px]"
+                  >
+                    <div className="w-[5px] h-[5px] rounded-[50px] bg-[white] pl-[4px] md:pl-[6px]"></div>
+                    <p className="mt-[10px]">{description}</p>
+                  </div>
+                ))}
+                <p className="text-[14px] mt-[10px] text-[#B4B5BA]">
+                  {item.date}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </>
   );
 }
 
