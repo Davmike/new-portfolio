@@ -14,6 +14,13 @@
 body {
   background: #0b2130;
   font-family: "Neuton", serif;
+  caret-color: #f04d40;
+}
+
+::selection {
+  background-color: #f04d40;
+  color: #fff;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .dav {

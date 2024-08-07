@@ -95,11 +95,12 @@ function Resume() {
                 {item.company}
               </p>
               {item.description.map((description, i) => (
-                <div className="flex justify-center items-baseline flex-row gap-[10px]">
+                <div
+                  key={i}
+                  className="flex justify-center items-baseline flex-row gap-[10px]"
+                >
                   <div className="w-[5px] h-[5px] rounded-[50px] bg-[white] pl-[4px] md:pl-[6px]"></div>
-                  <p key={i} className="mt-[10px]">
-                    {description}
-                  </p>
+                  <p className="mt-[10px]">{description}</p>
                 </div>
               ))}
               <p className="text-[14px] mt-[10px] text-[#B4B5BA]">
