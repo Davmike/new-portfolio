@@ -25,6 +25,8 @@ function About() {
       });
     });
   }, []);
+
+  // gsap for toolkit
   useEffect(() => {
     const elements = toolkitRef.current?.querySelectorAll("[data-speed]");
 
@@ -55,6 +57,34 @@ function About() {
         }
       );
     }
+  }, []);
+
+  // show effect
+  useEffect(() => {
+    const cards = gsap.utils.toArray<HTMLElement>(".fade-in-effect");
+
+    cards.forEach((card) => {
+      gsap.fromTo(
+        card,
+        {
+          opacity: 0,
+          y: 20,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: card,
+            start: "top 50%",
+            end: "center 100%",
+            scrub: 1,
+            markers: false,
+          },
+        }
+      );
+    });
   }, []);
 
   const skills = [
@@ -92,7 +122,7 @@ function About() {
   return (
     <div className="text-white px-5 py-5 md:px-20 md:py-20" id="about">
       {/* About Section */}
-      <div className="flex justify-center items-center flex-col mt-10">
+      <div className="flex justify-center items-center flex-col mt-10 fade-in-effect">
         <h1 className="font-bold text-2xl md:text-3xl">ABOUT</h1>
         <div className="w-5 h-1 bg-[#F04D40] mt-1"></div>
         <p className="text-[14px]">Full-Stack Developer</p>
@@ -102,25 +132,25 @@ function About() {
       <div className="mb-10 md:flex md:justify-between md:gap-10">
         {/* About Info */}
         <div className="mt-10 md:w-1/2">
-          <h3 className="text-xl font-bold md:text-[1.5rem]">
+          <h3 className="text-xl font-bold md:text-[1.5rem] fade-in-effect">
             Get to know me!
           </h3>
           <div className="mt-5 space-y-4">
-            <p className="text-[1rem] md:text-[1.2rem] text">
+            <p className="text-[1rem] md:text-[1.2rem] text fade-in-effect">
               I'm a software developer proficient in JavaScript and the web. I'm
               passionate about web performance, accessibility, mentoring, user &
               developer experience.
             </p>
-            <p className="text-[1rem] md:text-[1.2rem] text">
+            <p className="text-[1rem] md:text-[1.2rem] text fade-in-effect">
               I follow a digital minimalism mindset, using technology to improve
               people's lives and provide value for businesses.
             </p>
-            <p className="text-[1rem] md:text-[1.2rem] text">
+            <p className="text-[1rem] md:text-[1.2rem] text fade-in-effect">
               In my free time, I build side projects and like exploring new
               technologies. You can see some of my work in the projects section
               below.
             </p>
-            <p className="text-[1rem] md:text-[1.2rem] text">
+            <p className="text-[1rem] md:text-[1.2rem] text fade-in-effect">
               I'm open to collaboration opportunities where I can contribute,
               learn and grow. Don't hesitate to reach out if you think my skills
               and experience are a good fit for your next project.
@@ -133,7 +163,7 @@ function About() {
             offset={0}
             duration={500}
           >
-            <button className="mt-5 bg-[#F04D40] text-white font-bold py-2 px-4 rounded hover:bg-[#abffe9] transition duration-200">
+            <button className="mt-5 bg-[#F04D40] text-white font-bold py-2 px-4 rounded hover:bg-[#abffe9] transition duration-200 fade-in-effect">
               PROJECTS
             </button>
           </Link>
@@ -141,8 +171,10 @@ function About() {
 
         {/* Toolkit */}
         <div className="mt-10 md:w-1/2" ref={toolkitRef}>
-          <h3 className="text-xl font-bold md:text-[1.5rem]">My Toolkit</h3>
-          <div className="flex flex-wrap gap-2 mt-5">
+          <h3 className="text-xl font-bold md:text-[1.5rem] fade-in-effect">
+            My Toolkit
+          </h3>
+          <div className="flex flex-wrap gap-2 mt-5 fade-in-effect">
             {skills[0].toolkit.map((toolkit, skillIndex) => (
               <span
                 key={skillIndex}
