@@ -87,39 +87,30 @@ function About() {
     });
   }, []);
 
+  // breathing effect for buttons
+
   const buttonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const buttonElement = buttonRef.current;
 
     if (buttonElement) {
-      // GSAP animation setup
-      const diagonalTimeline = gsap.timeline({ paused: true });
+      // GSAP timeline for the breathing effect
+      const breatheTimeline = gsap.timeline({ repeat: -1, yoyo: true });
 
-      diagonalTimeline
+      breatheTimeline
         .to(buttonElement, {
-          x: 10, // Move right
-          y: 10, // Move down
-          duration: 0.3,
-          ease: "power2.out",
+          scale: 1.1,
+          y: -10, // Move up
+          duration: 0.6,
+          ease: "power1.inOut",
         })
         .to(buttonElement, {
-          x: 0, // Return to original position
-          y: 0,
-          duration: 0.3,
-          ease: "power2.inOut",
+          scale: 1,
+          y: 0, // Move back to original position
+          duration: 0.6,
+          ease: "power1.inOut",
         });
-
-      const handleMouseEnter = () => diagonalTimeline.play();
-      const handleMouseLeave = () => diagonalTimeline.reverse();
-
-      buttonElement.addEventListener("mouseenter", handleMouseEnter);
-      buttonElement.addEventListener("mouseleave", handleMouseLeave);
-
-      return () => {
-        buttonElement.removeEventListener("mouseenter", handleMouseEnter);
-        buttonElement.removeEventListener("mouseleave", handleMouseLeave);
-      };
     }
   }, []);
 

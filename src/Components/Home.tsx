@@ -15,7 +15,7 @@ function Home() {
       delay: 300,
       opacity: 0,
       easing: "ease-in-out",
-      reset: false,
+      reset: true,
     };
 
     ScrollReveal().reveal("#hello", config);
@@ -30,7 +30,7 @@ function Home() {
       delay: 800,
       opacity: 0,
       easing: "ease-in-out",
-      reset: false,
+      reset: true,
     };
 
     ScrollReveal().reveal("#world", config);
@@ -45,7 +45,7 @@ function Home() {
       delay: 1200,
       opacity: 0,
       easing: "ease-in-out",
-      reset: false,
+      reset: true,
     };
 
     ScrollReveal().reveal("#time", config);
@@ -60,7 +60,7 @@ function Home() {
       delay: 1600,
       opacity: 0,
       easing: "ease-in-out",
-      reset: false,
+      reset: true,
     };
 
     ScrollReveal().reveal("#david", config);
@@ -75,7 +75,7 @@ function Home() {
       delay: 2100,
       opacity: 0,
       easing: "ease-in-out",
-      reset: false,
+      reset: true,
     };
 
     ScrollReveal().reveal("#mikeladze", config);
@@ -90,7 +90,7 @@ function Home() {
       delay: 1900,
       opacity: 0,
       easing: "ease-in-out",
-      reset: false,
+      reset: true,
     };
 
     ScrollReveal().reveal("#fullstack", config);
@@ -105,7 +105,7 @@ function Home() {
       delay: 1700,
       opacity: 0,
       easing: "ease-in-out",
-      reset: false,
+      reset: true,
     };
 
     ScrollReveal().reveal("#cv", config);
@@ -120,7 +120,7 @@ function Home() {
       delay: 1500,
       opacity: 0,
       easing: "ease-in-out",
-      reset: false,
+      reset: true,
     };
 
     ScrollReveal().reveal("#project", config);
@@ -145,7 +145,7 @@ function Home() {
         delay: delay,
         opacity: 0,
         easing: "ease-in-out",
-        reset: false,
+        reset: true,
       });
     });
   }, []);

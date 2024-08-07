@@ -75,8 +75,6 @@ function Work() {
     });
   }, []);
 
-  // for live demo hover
-
   return (
     <div
       className="bg-[#122b43] px-[20px] py-[20px] flex justify-center items-center flex-col"
@@ -125,6 +123,9 @@ function Work() {
           </div>
         </div>
       ))}
+      <button className="mt-20 bg-[#F04D40] text-white font-bold py-2 px-4 rounded hover:bg-red-600 transition duration-200 fade-in-effect">
+        SEE MORE...
+      </button>
     </div>
   );
 }
