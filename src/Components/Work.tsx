@@ -75,6 +75,8 @@ function Work() {
     });
   }, []);
 
+  // for live demo hover
+
   return (
     <div
       className="bg-[#122b43] px-[20px] py-[20px] flex justify-center items-center flex-col"
@@ -91,7 +93,7 @@ function Work() {
           key={index}
           className={`relative flex flex-col md:flex-row ${
             index % 2 === 0 ? "md:flex-row-reverse lg:left-[40px]" : ""
-          } bg-cover bg-center h-[400px] w-full max-w-[800px] mt-[50px] group zoom-hover-effect fade-in-effect`}
+          } bg-cover bg-center h-[400px] w-full max-w-[800px] mt-[50px] shadow-2xl group zoom-hover-effect fade-in-effect`}
           style={{ backgroundImage: `url(${item.src})` }}
         >
           <h2
