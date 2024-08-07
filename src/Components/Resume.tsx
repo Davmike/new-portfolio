@@ -80,7 +80,7 @@ function Resume() {
   ];
 
   return (
-    <div className="timeline p-[20px] flex justify-center">
+    <div className="timeline p-[20px] flex justify-center overflow-x-hidden">
       <div className="outer">
         {timelineData.map((item, index) => (
           <div className="card relative max-w-[400px]" key={index}>
