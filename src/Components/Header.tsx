@@ -1,8 +1,9 @@
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useRef } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import profile from "../../public/assets/mb.jpg";
 import { MyContext } from "./Context";
 import { Link } from "react-scroll";
+import gsap from "gsap";
 
 const buttonCategories = ["About", "Projects", "Contact"];
 
@@ -59,6 +60,62 @@ function Header() {
     };
   }, [lastScrollY, setScrolled, setSelected]);
 
+  // gsap animation for davmikeladze text
+
+  const textRef = useRef<HTMLHeadingElement>(null);
+
+  useEffect(() => {
+    const textElement = textRef.current;
+
+    if (textElement) {
+      // Split the text into individual spans
+      const text = textElement.textContent || "";
+      textElement.innerHTML = text
+        .split("")
+        .map(
+          (char, _index) =>
+            `<span class="letter" style="display: inline-block; transition: transform 0.3s">${char}</span>`
+        )
+        .join("");
+
+      const letters = textElement.querySelectorAll(".letter");
+
+      // GSAP animation setup
+      const animation = gsap.timeline({ paused: true });
+
+      animation
+        .to(letters, {
+          y: -10, // Move letters up
+          duration: 0.2,
+          stagger: 0.05, // Stagger the animation
+          ease: "power2.out",
+        })
+        .to(letters, {
+          y: 10, // Move letters down
+          duration: 0.2,
+          stagger: 0.05,
+          ease: "power2.inOut",
+        })
+        .to(letters, {
+          y: 0, // Return to original position
+          duration: 0.2,
+          stagger: 0.05,
+          ease: "power2.out",
+        });
+
+      const handleMouseEnter = () => animation.play();
+      const handleMouseLeave = () => animation.reverse();
+
+      textElement.addEventListener("mouseenter", handleMouseEnter);
+      textElement.addEventListener("mouseleave", handleMouseLeave);
+
+      return () => {
+        textElement.removeEventListener("mouseenter", handleMouseEnter);
+        textElement.removeEventListener("mouseleave", handleMouseLeave);
+      };
+    }
+  }, []);
+
   return (
     <header
       className={`bg-[#051018] bg-opacity-50 backdrop-blur-md shadow-2xl px-[20px] py-[10px] fixed z-10 w-[100%] flex justify-between items-center transition-transform duration-300 ${
@@ -71,7 +128,10 @@ function Header() {
           alt="Profile"
           className="w-10 h-10 rounded-full border-2 border-[white]"
         />
-        <h3 className="hidden md:block text-[white] text-[25px] dav">
+        <h3
+          ref={textRef}
+          className="hidden md:block text-[white] text-[25px] cursor-pointer dav"
+        >
           davmikeladze
         </h3>
       </div>
