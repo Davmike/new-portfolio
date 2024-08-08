@@ -11,6 +11,14 @@ interface ComponentsProps {
   setHoveredIndex: (hoveredIndex: null) => void;
   selected: string;
   setSelected: (selected: string) => void;
+  name: string;
+  setName: (name: string) => void;
+  email: string;
+  setEmail: (email: string) => void;
+  message: string;
+  setMessage: (message: string) => void;
+  isButtonDisabled: boolean;
+  setIsButtonDisabled: (isButtonDisabled: boolean) => void;
 }
 
 export const MyContext = createContext<ComponentsProps | null>(null);

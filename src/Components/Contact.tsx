@@ -1,10 +1,52 @@
-import { useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import { MyContext } from "./Context";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function Contact() {
+  const [errors, setErrors] = useState({ name: "", email: "", message: "" });
+
+  const context = useContext(MyContext);
+  const {
+    name,
+    setName,
+    email,
+    setEmail,
+    message,
+    setMessage,
+    isButtonDisabled,
+    setIsButtonDisabled,
+  }: any = context;
+
+  // check if all input section will writed
+  useEffect(() => {
+    if (name && email && message) {
+      setIsButtonDisabled(false);
+    } else {
+      setIsButtonDisabled(true);
+    }
+  }, [name, email, message]);
+
+  // error message
+  const handleSubmit = (e: { preventDefault: () => void }) => {
+    e.preventDefault();
+
+    const newErrors = {
+      name: name === "" ? "Name is required" : "",
+      email: email === "" ? "Email is required" : "",
+      message: message === "" ? "Message is required" : "",
+    };
+
+    setErrors(newErrors);
+
+    if (!newErrors.name && !newErrors.email && !newErrors.message) {
+      // Handle form submission here
+      console.log("Form submitted:", { name, email, message });
+    }
+  };
+
   useEffect(() => {
     // GSAP animation for the contact section
     gsap.fromTo(
@@ -69,7 +111,7 @@ function Contact() {
           <div className="w-5 h-1 bg-[#F04D40] mt-1"></div>
           <p className="text-[14px]">mikeladzedav@gmail.com</p>
         </div>
-        <form>
+        <form onSubmit={handleSubmit}>
           {/* name input */}
           <div className="mb-4">
             <label htmlFor="title" className="block text-lg font-medium mb-2">
@@ -80,7 +122,12 @@ function Contact() {
               id="title"
               placeholder="What's your good name?"
               className="w-full bg-[#ffffff] border-none border-gray-600 rounded-md p-2 text-black focus:outline-none focus:ring-2 focus:ring-[#F04D40]"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             />
+            {errors.name && (
+              <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+            )}
           </div>
           {/* email input */}
           <div className="mb-4">
@@ -92,7 +139,12 @@ function Contact() {
               id="title"
               placeholder="What's your web address?"
               className="w-full bg-[#ffffff] border-none border-gray-600 rounded-md p-2 text-black focus:outline-none focus:ring-2 focus:ring-[#F04D40]"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             />
+            {errors.email && (
+              <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+            )}
           </div>
           {/* message input */}
           <div className="mb-4">
@@ -103,11 +155,17 @@ function Contact() {
               id="message"
               placeholder="What you want to say?"
               className="w-full bg-[#ffffff] border-none rounded-md p-2 text-black h-32 focus:outline-none focus:ring-2 focus:ring-[#F04D40]"
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
             />
+            {errors.message && (
+              <p className="text-red-500 text-sm mt-1">{errors.message}</p>
+            )}
           </div>
           <button
             type="submit"
-            className="mt-[10px] border-none rounded-[4px] bg-[#F04D40] hover:bg-red-600 pointer font-bold text-[1.15rem] px-[15px] py-[8px] checkout"
+            className="mt-[10px] border-none rounded-[4px] bg-[#F04D40] hover:bg-red-600 cursor-pointer font-bold text-[1.15rem] px-[15px] py-[8px] checkout"
+            disabled={isButtonDisabled}
           >
             SUBMIT
           </button>
