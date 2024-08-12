@@ -112,40 +112,6 @@ body {
 
 /* range slider */
 
-/* .slider-container {
-  width: 300px;
-  margin: 0 auto;
-}
-
-.slider {
-  width: 100%;
-  -webkit-appearance: none;
-  appearance: none;
-  height: 3px;
-  background: #ddd;
-  outline: none;
-  opacity: 0.7;
-  transition: opacity 0.2s;
-} */
-
-/* Style for the slider thumb */
-/* .slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 15px;
-  height: 15px;
-  background: white;
-  cursor: not-allowed;
-  border-radius: 50px;
-}
-
-.slider::-moz-range-thumb {
-  width: 20px;
-  height: 20px;
-  background: #4caf50;
-  cursor: not-allowed;
-} */
-
 /* here start infinity logo slider styles */
 
 /* @keyframes slides {
