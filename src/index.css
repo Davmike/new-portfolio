@@ -202,15 +202,6 @@ body {
   height: auto;
   max-width: 100%;
 } */
-
-/* .checkout {
-  box-shadow: var(--shadow);
-  color: var(--dark);
-  color: white;
-  transform: translateY(0);
-  transition: all var(--transitionDuration) ease;
-} */
-
 #message::placeholder {
   color: #787878;
 }
