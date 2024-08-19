@@ -1,12 +1,13 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import { MyContext } from "./Context";
+import emailjs from "@emailjs/browser";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function Contact() {
-  const [errors, setErrors] = useState({ name: "", email: "", message: "" });
+  // const [errors, setErrors] = useState({ name: "", email: "", message: "" });
 
   const context = useContext(MyContext);
   const {
@@ -20,6 +21,31 @@ function Contact() {
     setIsButtonDisabled,
   }: any = context;
 
+  // use emailjs for send message on gmail
+  const form = useRef<HTMLFormElement>(null);
+
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    if (form.current) {
+      emailjs
+        .sendForm("service_ippu9b1", "template_8uhpsbe", form.current, {
+          publicKey: "MImGqGN1YXPN6fmPU",
+        })
+        .then(
+          () => {
+            console.log("SUCCESS!");
+          },
+          (error) => {
+            console.log("FAILED...", error.text);
+          }
+        );
+      e.currentTarget.reset(); // Reset the form
+    } else {
+      console.error("Form reference is null.");
+    }
+  };
+
   // check if all input section will writed
   useEffect(() => {
     if (name && email && message) {
@@ -30,22 +56,21 @@ function Contact() {
   }, [name, email, message]);
 
   // error message
-  const handleSubmit = (e: { preventDefault: () => void }) => {
-    e.preventDefault();
+  // const handleSubmit = (e: { preventDefault: () => void }) => {
+  //   e.preventDefault();
 
-    const newErrors = {
-      name: name === "" ? "Name is required" : "",
-      email: email === "" ? "Email is required" : "",
-      message: message === "" ? "Message is required" : "",
-    };
+  //   const newErrors = {
+  //     name: name === "" ? "Name is required" : "",
+  //     email: email === "" ? "Email is required" : "",
+  //     message: message === "" ? "Message is required" : "",
+  //   };
 
-    setErrors(newErrors);
+  //   setErrors(newErrors);
 
-    if (!newErrors.name && !newErrors.email && !newErrors.message) {
-      // Handle form submission here
-      console.log("Form submitted:", { name, email, message });
-    }
-  };
+  //   if (!newErrors.name && !newErrors.email && !newErrors.message) {
+  //     console.log("Form submitted:", { name, email, message });
+  //   }
+  // };
 
   useEffect(() => {
     // GSAP animation for the contact section
@@ -111,13 +136,14 @@ function Contact() {
           <div className="w-5 h-1 bg-[#F04D40] mt-1"></div>
           <p className="text-[14px]">mikeladzedav@gmail.com</p>
         </div>
-        <form onSubmit={handleSubmit}>
+        <form ref={form} onSubmit={sendEmail}>
           {/* name input */}
           <div className="mb-4">
             <label htmlFor="title" className="block text-lg font-medium mb-2">
               Your Name
             </label>
             <input
+              name="user_name"
               type="text"
               id="title"
               placeholder="What's your good name?"
@@ -125,9 +151,9 @@ function Contact() {
               value={name}
               onChange={(e) => setName(e.target.value)}
             />
-            {errors.name && (
+            {/* {errors.name && (
               <p className="text-red-500 text-sm mt-1">{errors.name}</p>
-            )}
+            )} */}
           </div>
           {/* email input */}
           <div className="mb-4">
@@ -135,6 +161,7 @@ function Contact() {
               Your email
             </label>
             <input
+              name="user_email"
               type="text"
               id="title"
               placeholder="What's your web address?"
@@ -142,9 +169,9 @@ function Contact() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            {errors.email && (
+            {/* {errors.email && (
               <p className="text-red-500 text-sm mt-1">{errors.email}</p>
-            )}
+            )} */}
           </div>
           {/* message input */}
           <div className="mb-4">
@@ -152,15 +179,16 @@ function Contact() {
               Message
             </label>
             <textarea
+              name="message"
               id="message"
               placeholder="What you want to say?"
               className="w-full bg-[#ffffff] border-none rounded-md p-2 text-black h-32 focus:outline-none focus:ring-2 focus:ring-[#F04D40]"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             />
-            {errors.message && (
+            {/* {errors.message && (
               <p className="text-red-500 text-sm mt-1">{errors.message}</p>
-            )}
+            )} */}
           </div>
           <button
             type="submit"
