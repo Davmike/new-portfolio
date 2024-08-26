@@ -175,10 +175,23 @@ function Header() {
         <div className="flex items-center space-x-4">
           <button
             onClick={toggleDarkMode}
-            className="text-white hover:text-[#F04D40] transition-colors duration-200 relative w-10 h-10 flex items-center justify-center rounded-full border-2"
-            style={{ borderColor: darkMode ? "white" : "#aaa6c3" }}
+            className={`relative w-12 h-12 flex items-center justify-center rounded-full border-2 transition-all duration-300 ease-in-out ${
+              darkMode
+                ? "bg-[#1c1c1c] border-white"
+                : "bg-[#f5f5f5] border-[#aaa6c3]"
+            }`}
           >
-            {darkMode ? <FaMoon size={24} /> : <FaSun size={24} />}
+            <div
+              className={`transform transition-transform duration-300 ease-in-out ${
+                darkMode ? "rotate-180" : "rotate-0"
+              }`}
+            >
+              {darkMode ? (
+                <FaMoon size={24} className="text-[#F04D40]" />
+              ) : (
+                <FaSun size={24} className="text-yellow-500" />
+              )}
+            </div>
           </button>
         </div>
       </div>
