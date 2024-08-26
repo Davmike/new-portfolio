@@ -183,7 +183,7 @@ function Header() {
           >
             <div
               className={`transform transition-transform duration-300 ease-in-out ${
-                darkMode ? "rotate-180" : "rotate-0"
+                darkMode ? "rotate-0" : "rotate-180"
               }`}
             >
               {darkMode ? (
