@@ -55,23 +55,6 @@ function Contact() {
     }
   }, [name, email, message]);
 
-  // error message
-  // const handleSubmit = (e: { preventDefault: () => void }) => {
-  //   e.preventDefault();
-
-  //   const newErrors = {
-  //     name: name === "" ? "Name is required" : "",
-  //     email: email === "" ? "Email is required" : "",
-  //     message: message === "" ? "Message is required" : "",
-  //   };
-
-  //   setErrors(newErrors);
-
-  //   if (!newErrors.name && !newErrors.email && !newErrors.message) {
-  //     console.log("Form submitted:", { name, email, message });
-  //   }
-  // };
-
   useEffect(() => {
     // GSAP animation for the contact section
     gsap.fromTo(
