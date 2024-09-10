@@ -183,6 +183,15 @@ function Home() {
     },
   ];
 
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = '../../public/assets/cv/David Mikeladze.pdf'; // Path to your CV PDF file
+    link.download = 'David Mikeladze.pdf'; // Name of the file when downloaded
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <div
       id="home"
@@ -232,6 +241,7 @@ function Home() {
           <div className="flex justify-center items-center gap-[15px] mt-[20px]">
             <div className="wrapper">
               <button
+                onClick={handleDownload}
                 className="border-[1px] text-[20px] border-[white] hover:bg-[white] text-[white] hover:text-[black] rounded-[15px] px-[25px] py-[1px]"
                 id="cv"
               >
