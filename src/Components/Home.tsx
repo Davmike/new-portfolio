@@ -3,7 +3,7 @@ import { FaFacebook, FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { FaXTwitter } from "react-icons/fa6";
 import ScrollReveal from "scrollreveal";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function Home() {
   // on scroll show hello text smooth effect
@@ -183,6 +183,7 @@ function Home() {
     },
   ];
 
+  // Onclick download cv
   const handleDownload = () => {
     const link = document.createElement('a');
     link.href = '../../public/assets/cv/David Mikeladze.pdf'; // Path to your CV PDF file
@@ -191,6 +192,22 @@ function Home() {
     link.click();
     document.body.removeChild(link);
   };
+
+  // real-time clock
+  const [currentTime, setCurrentTime] = useState("");
+
+  // Update the current time every second
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      setCurrentTime(now.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', second: '2-digit' }));
+    };
+
+    updateTime(); // Initial call
+    const timerId = setInterval(updateTime, 1000); // Update every second
+
+    return () => clearInterval(timerId); // Cleanup the timer on unmount
+  }, []);
 
   return (
     <div
@@ -211,7 +228,7 @@ function Home() {
       {/* clock section */}
       <div className="relative flex justify-center items-center flex-col text-white mb-[30px]">
         <p className="text-[115px] font-bold lg:text-[140px]" id="time">
-          19:22
+          {currentTime}
         </p>
 
         {/* Content container */}
