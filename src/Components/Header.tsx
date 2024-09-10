@@ -118,9 +118,8 @@ function Header() {
 
   return (
     <header
-      className={`bg-[#051018] bg-opacity-50 backdrop-blur-md shadow-2xl px-[20px] py-[10px] fixed z-10 w-[100%] flex justify-between items-center transition-transform duration-300 ${
-        scrolled ? "translate-y-0" : "-translate-y-full"
-      }`}
+      className={`bg-[#051018] bg-opacity-50 backdrop-blur-md shadow-2xl px-[20px] py-[10px] fixed z-10 w-[100%] flex justify-between items-center transition-transform duration-300 ${scrolled ? "translate-y-0" : "-translate-y-full"
+        }`}
     >
       <div className="flex items-center space-x-4">
         <img
@@ -143,11 +142,10 @@ function Header() {
             return (
               <li
                 key={index}
-                className={`relative cursor-pointer transition-colors duration-200 text-[20px] md:text-[18px] lg:text-[25px] ${
-                  selected === categoryId
-                    ? "text-[white]"
-                    : "text-[white] hover:text-[#dfd4d4]"
-                }`}
+                className={`relative cursor-pointer transition-colors duration-200 text-[20px] md:text-[18px] lg:text-[25px] ${selected === categoryId
+                  ? "text-[white]"
+                  : "text-[white] hover:text-[#dfd4d4]"
+                  }`}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
                 onClick={() => setSelected(categoryId)}
@@ -175,16 +173,14 @@ function Header() {
         <div className="flex items-center space-x-4">
           <button
             onClick={toggleDarkMode}
-            className={`relative w-12 h-12 flex items-center justify-center rounded-full border-2 transition-all duration-300 ease-in-out ${
-              darkMode
-                ? "bg-[#1c1c1c] border-white"
-                : "bg-[#f5f5f5] border-[#aaa6c3]"
-            }`}
+            className={`relative w-12 h-12 flex items-center justify-center rounded-full border-2 transition-all duration-300 ease-in-out ${darkMode
+              ? "bg-[#1c1c1c] border-white"
+              : "bg-[#f5f5f5] border-[#aaa6c3]"
+              }`}
           >
             <div
-              className={`transform transition-transform duration-300 ease-in-out ${
-                darkMode ? "rotate-0" : "rotate-180"
-              }`}
+              className={`transform transition-transform duration-300 ease-in-out ${darkMode ? "rotate-0" : "rotate-180"
+                }`}
             >
               {darkMode ? (
                 <FaMoon size={24} className="text-[#F04D40]" />
