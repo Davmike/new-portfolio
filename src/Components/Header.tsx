@@ -1,4 +1,4 @@
-import { useContext, useEffect, useRef } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 import profile from "../../public/assets/mb.jpg";
 import { MyContext } from "./Context";
@@ -20,7 +20,10 @@ function Header() {
     setSelected,
   }: any = context;
 
+  const [fade, setFade] = useState(false);
+
   const toggleDarkMode = () => {
+    setFade(true);
     setDarkMode(!darkMode);
   };
 
@@ -117,81 +120,84 @@ function Header() {
   }, []);
 
   return (
-    <header
-      className={`bg-[#051018] bg-opacity-50 backdrop-blur-md shadow-2xl px-[20px] py-[10px] fixed z-10 w-[100%] flex justify-between items-center transition-transform duration-300 ${scrolled ? "translate-y-0" : "-translate-y-full"
-        }`}
-    >
-      <div className="flex items-center space-x-4">
-        <img
-          src={profile}
-          alt="Profile"
-          className="w-10 h-10 rounded-full border-2 border-[white]"
-        />
-        <h3
-          ref={textRef}
-          className="hidden md:block text-[white] text-[25px] cursor-pointer dav"
-        >
-          davmikeladze
-        </h3>
-      </div>
+    <div className={`transition-opacity duration-300 ${fade ? "opacity-0" : "opacity-100"}`}>
+      <header
+        className={`bg-[#051018] bg-opacity-50 backdrop-blur-md shadow-2xl px-[20px] py-[10px] fixed z-10 w-[100%] flex justify-between items-center transition-transform duration-300 ${scrolled ? "translate-y-0" : "-translate-y-full"}
+      ${darkMode ? "bg-[#051018]" : "bg-white"} bg-opacity-50 backdrop-blur-md shadow-2xl`}
 
-      <div className="flex gap-[20px]">
-        <ul className="flex justify-start items-center flex-row gap-[15px]">
-          {buttonCategories.map((category, index) => {
-            const categoryId = category.toLowerCase().replace(/\s+/g, "-");
-            return (
-              <li
-                key={index}
-                className={`relative cursor-pointer transition-colors duration-200 text-[20px] md:text-[18px] lg:text-[25px] ${selected === categoryId
-                  ? "text-[white]"
-                  : "text-[white] hover:text-[#dfd4d4]"
-                  }`}
-                onMouseEnter={() => setHoveredIndex(index)}
-                onMouseLeave={() => setHoveredIndex(null)}
-                onClick={() => setSelected(categoryId)}
-                data-to={categoryId}
-              >
-                <Link
-                  to={categoryId}
-                  spy={true}
-                  smooth={true}
-                  offset={0}
-                  duration={500}
-                >
-                  {category}
-                  {selected === categoryId && (
-                    <div className="absolute bg-[white] w-full h-[5px] rounded-[5px] bottom-[39px] md:bottom-[45px]"></div>
-                  )}
-                  {hoveredIndex === index && (
-                    <div className="hidden md:block absolute bg-[white] w-full h-[5px] rounded-[5px] md:top-[45px]"></div>
-                  )}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
+      >
         <div className="flex items-center space-x-4">
-          <button
-            onClick={toggleDarkMode}
-            className={`relative w-12 h-12 flex items-center justify-center rounded-full border-2 transition-all duration-300 ease-in-out ${darkMode
-              ? "bg-[#1c1c1c] border-white"
-              : "bg-[#f5f5f5] border-[#aaa6c3]"
-              }`}
+          <img
+            src={profile}
+            alt="Profile"
+            className="w-10 h-10 rounded-full border-2 border-[white]"
+          />
+          <h3
+            ref={textRef}
+            className="hidden md:block text-[white] text-[25px] cursor-pointer dav"
           >
-            <div
-              className={`transform transition-transform duration-300 ease-in-out ${darkMode ? "rotate-0" : "rotate-180"
+            davmikeladze
+          </h3>
+        </div>
+
+        <div className="flex gap-[20px]">
+          <ul className="flex justify-start items-center flex-row gap-[15px]">
+            {buttonCategories.map((category, index) => {
+              const categoryId = category.toLowerCase().replace(/\s+/g, "-");
+              return (
+                <li
+                  key={index}
+                  className={`relative cursor-pointer transition-colors duration-200 text-[20px] md:text-[18px] lg:text-[25px] ${selected === categoryId
+                    ? "text-[white]"
+                    : "text-[white] hover:text-[#dfd4d4]"
+                    }`}
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                  onClick={() => setSelected(categoryId)}
+                  data-to={categoryId}
+                >
+                  <Link
+                    to={categoryId}
+                    spy={true}
+                    smooth={true}
+                    offset={0}
+                    duration={500}
+                  >
+                    {category}
+                    {selected === categoryId && (
+                      <div className="absolute bg-[white] w-full h-[5px] rounded-[5px] bottom-[39px] md:bottom-[45px]"></div>
+                    )}
+                    {hoveredIndex === index && (
+                      <div className="hidden md:block absolute bg-[white] w-full h-[5px] rounded-[5px] md:top-[45px]"></div>
+                    )}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+          <div className="flex items-center space-x-4">
+            <button
+              onClick={toggleDarkMode}
+              className={`relative w-12 h-12 flex items-center justify-center rounded-full border-2 transition-all duration-300 ease-in-out ${darkMode
+                ? "bg-[#1c1c1c] border-white"
+                : "bg-[#f5f5f5] border-[#aaa6c3]"
                 }`}
             >
-              {darkMode ? (
-                <FaMoon size={24} className="text-[#F04D40]" />
-              ) : (
-                <FaSun size={24} className="text-yellow-500" />
-              )}
-            </div>
-          </button>
+              <div
+                className={`transform transition-transform duration-300 ease-in-out ${darkMode ? "rotate-180" : "rotate-360"
+                  }`}
+              >
+                {darkMode ? (
+                  <FaSun size={24} className="text-yellow-500" />
+                ) : (
+                  <FaMoon size={24} className="text-[#F04D40]" />
+                )}
+              </div>
+            </button>
+          </div>
         </div>
-      </div>
-    </header>
+      </header>
+    </div>
   );
 }
 
