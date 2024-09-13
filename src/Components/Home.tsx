@@ -3,13 +3,9 @@ import { FaFacebook, FaInstagram, FaGithub, FaLinkedin } from "react-icons/fa";
 import { BiLogoGmail } from "react-icons/bi";
 import { FaXTwitter } from "react-icons/fa6";
 import ScrollReveal from "scrollreveal";
-import { useContext, useEffect, useState } from "react";
-import { MyContext } from "./Context";
+import { useEffect, useState } from "react";
 
 function Home() {
-  const context = useContext(MyContext);
-  const { darkMode }: any = context;
-
   // on scroll show hello text smooth effect
   useEffect(() => {
     const config = {
