@@ -1,5 +1,5 @@
 import { useState, useEffect, ComponentType } from "react";
-import Loading from "./Loading"; // Adjust the path to your Loading component
+import Loading from "./Loading";
 
 // Define a higher-order component type that takes a component and returns a component
 const withLoading = <P extends object>(WrappedComponent: ComponentType<P>) => {
