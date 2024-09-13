@@ -1,5 +1,5 @@
 import { useContext, useEffect, useRef } from "react";
-import { FaMoon, FaSun } from "react-icons/fa";
+// import { FaMoon, FaSun } from "react-icons/fa";
 import profile from "../../public/assets/mb.jpg";
 import { MyContext } from "./Context";
 import { Link } from "react-scroll";
@@ -10,8 +10,8 @@ const buttonCategories = ["About", "Projects", "Contact"];
 function Header() {
   const context = useContext(MyContext);
   const {
-    darkMode,
-    setDarkMode,
+    // darkMode,
+    // setDarkMode,
     scrolled,
     setScrolled,
     hoveredIndex,
@@ -20,9 +20,9 @@ function Header() {
     setSelected,
   }: any = context;
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
+  // const toggleDarkMode = () => {
+  //   setDarkMode(!darkMode);
+  // };
 
   let lastScrollY = window.scrollY;
 
@@ -118,9 +118,7 @@ function Header() {
 
   return (
     <header
-      className={`bg-[#051018] bg-opacity-50 backdrop-blur-md shadow-2xl px-[20px] py-[10px] fixed z-10 w-[100%] flex justify-between items-center transition-transform duration-300 ${scrolled ? "translate-y-0" : "-translate-y-full"}
-      ${darkMode ? "bg-[#051018]" : "bg-white"} bg-opacity-50 backdrop-blur-md shadow-2xl`}
-
+      className={`bg-[#051018] bg-opacity-50 backdrop-blur-md shadow-2xl px-[20px] py-[10px] fixed z-10 w-[100%] flex justify-between items-center transition-transform duration-300 ${scrolled ? "translate-y-0" : "-translate-y-full"} bg-opacity-50 backdrop-blur-md shadow-2xl`}
     >
       <div className="flex items-center space-x-4">
         <img
@@ -171,7 +169,7 @@ function Header() {
             );
           })}
         </ul>
-        <div className="flex items-center space-x-4">
+        {/* <div className="flex items-center space-x-4">
           <button
             onClick={toggleDarkMode}
             className={`relative w-12 h-12 flex items-center justify-center rounded-full border-2 transition-all duration-300 ease-in-out ${darkMode
@@ -190,7 +188,7 @@ function Header() {
               )}
             </div>
           </button>
-        </div>
+        </div> */}
       </div>
     </header>
   );
