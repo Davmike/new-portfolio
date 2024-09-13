@@ -117,10 +117,10 @@ function About() {
   const skills = [
     {
       toolkit: [
+        "HTML5",
+        "CSS3",
         "JavaScript",
-        "Node.js",
         "TypeScript",
-        "CSS",
         "SASS",
         "GraphQL",
         "SQL",
@@ -128,19 +128,20 @@ function About() {
         "React Native",
         "Redux",
         "Next.js",
-        "Angular",
-        "Phaser",
+        "Vue.js",
+        "Tailwind",
         "GSAP",
-        "Express",
+        "Boostrap",
+        "Three.js",
         "Vite",
         "webpack",
-        "Astro",
-        "Jest",
-        "Cypress",
-        "CLI",
+        "Styled-components",
+        "D3.js",
+        "Python",
+        "WordPress",
+        "Webflow",
         "Git",
         "SEO",
-        "a11y",
         "Vercel",
       ],
     },
@@ -164,18 +165,14 @@ function About() {
           </h3>
           <div className="mt-5 space-y-4">
             <p className="text-[1rem] md:text-[1.2rem] text fade-in-effect">
-              I'm a software developer proficient in JavaScript and the web. I'm
-              passionate about web performance, accessibility, mentoring, user &
-              developer experience.
+              Greetings! I'm David, I am a dedicated and innovative Front-End Developer with 2 years of hands-on experience in creating visually appealing and highly functional web applications.
             </p>
             <p className="text-[1rem] md:text-[1.2rem] text fade-in-effect">
-              I follow a digital minimalism mindset, using technology to improve
-              people's lives and provide value for businesses.
+              My previous tenure as a Frontend Developer has cemented a strong foundation in modern web development, which I now leverage to lead webLance's strategic technical initiatives.
             </p>
             <p className="text-[1rem] md:text-[1.2rem] text fade-in-effect">
-              In my free time, I build side projects and like exploring new
-              technologies. You can see some of my work in the projects section
-              below.
+              I am about continuous learning and staying updated with industry trends.
+              I am fluent in Georgian and proficient in English, with basic knowledge of Russian and German.
             </p>
             <p className="text-[1rem] md:text-[1.2rem] text fade-in-effect">
               I'm open to collaboration opportunities where I can contribute,
