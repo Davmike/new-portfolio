@@ -22,28 +22,28 @@ function Work() {
       name: "Redberry",
       live: "https://redberry-website-geleck.vercel.app/",
       src: redberry,
-      description: "Just add your everyday blogs",
+      description: "A dynamic platform for sharing and reading everyday blogs.",
       num: "01",
     },
     {
       name: "Entertainment Web",
       live: "https://entertainment-web-app-five-theta.vercel.app/",
       src: movie,
-      description: "You can Watch your Fav Movies",
+      description: "A user-friendly web application that allows you to watch your favorite movies.",
       num: "02",
     },
     {
       name: "Link Sharing App",
       live: "https://davmike.github.io/link-sharing-app/",
       src: link,
-      description: "You can share your profile",
+      description: "A simple app designed for users to share their profiles efficiently.",
       num: "03",
     },
     {
       name: "webLance",
       live: "https://www.weblance.ge/",
       src: weblance,
-      description: "Our Company Website",
+      description: "The official website for our company, showcasing services, projects, and business offerings in a professional layout.",
       num: "04",
     },
   ];
@@ -89,22 +89,19 @@ function Work() {
       {work.map((item, index) => (
         <div
           key={index}
-          className={`relative flex flex-col md:flex-row ${
-            index % 2 === 0 ? "md:flex-row-reverse lg:left-[40px]" : ""
-          } bg-cover bg-center h-[400px] w-full max-w-[800px] mt-[50px] shadow-2xl rounded-[10px] cursor-pointer group zoom-hover-effect fade-in-effect`}
+          className={`relative flex flex-col md:flex-row ${index % 2 === 0 ? "md:flex-row-reverse lg:left-[40px]" : ""
+            } bg-cover bg-center h-[400px] w-full max-w-[800px] mt-[50px] shadow-2xl rounded-[10px] cursor-pointer group zoom-hover-effect fade-in-effect`}
           style={{ backgroundImage: `url(${item.src})` }}
         >
           <h2
-            className={`text-white text-[100px] ${
-              index % 2 === 0 ? "md:right-[40px]" : "md:left-[40px]"
-            } absolute top-[-30px] right-[30px] md:top-[-40px] font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out z-10`}
+            className={`text-white text-[100px] ${index % 2 === 0 ? "md:right-[40px]" : "md:left-[40px]"
+              } absolute top-[-30px] right-[30px] md:top-[-40px] font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out z-10`}
           >
             {item.num}
           </h2>
           <div
-            className={`absolute inset-0 bg-gray-900 bg-opacity-70 flex flex-col justify-center items-start rounded-[10px] pl-[20px] ${
-              index % 2 === 0 ? "md:items-end pr-20" : "pl-20"
-            } transition duration-500 ease-in-out group-hover:bg-opacity-80 group-hover:bg-[#0b2130; group-hover:backdrop-blur-sm`}
+            className={`absolute inset-0 bg-gray-900 bg-opacity-70 flex flex-col justify-center items-start rounded-[10px] pl-[20px] ${index % 2 === 0 ? "md:items-end pr-20" : "pl-20"
+              } transition duration-500 ease-in-out group-hover:bg-opacity-80 group-hover:bg-[#0b2130; group-hover:backdrop-blur-sm`}
           >
             <h1 className="md:text-5xl text-[35px] font-bold text-white">
               {item.name}
