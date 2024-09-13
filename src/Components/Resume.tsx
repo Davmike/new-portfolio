@@ -34,47 +34,47 @@ function Resume() {
 
   const timelineData = [
     {
-      title: "React.js Developer",
-      company: "StartupX",
-      date: "March 2020 - April 2021",
+      title: "Teaching Assistant",
+      company: "Digital Institute",
+      date: "May 2023 - Jan 2024",
       description: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Mentored 50+ junior developers on front-end development best practices.",
+        "Assisted in the development and review of learning materials and exercises.",
+        "Provided technical support and guidance to students during projects.",
+        "Collaborated with instructors to deliver high-quality learning experiences."
       ],
     },
     {
-      title: "React Native Developer",
-      company: "TechX",
-      date: "Jan 2021 - Feb 2022",
+      title: "Frontend Developer",
+      company: "XLcrewMarine",
+      date: "Sep 2023 - Mar 2024",
       description: [
-        "Developing and maintaining web applications using React Native and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Developed and maintained web applications for a marine employment service.",
+        "Ensured responsive and user-friendly design across different devices and platforms.",
+        "Collaborated with stakeholders to align project goals with client needs.",
+        "Fixed bugs and optimized performance to enhance the user experience."
       ],
     },
     {
-      title: "Web Developer",
-      company: "Shopify",
-      date: "Jan 2022 - Jan 2023",
+      title: "Frontend Developer",
+      company: "webLance",
+      date: "Feb 2024 - Jul 2024",
       description: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Led a team of 5 developers in delivering 40+ successful projects.",
+        "Achieved a 99% client satisfaction rate by focusing on high-quality work.",
+        "Implemented modern web technologies to create scalable and efficient web applications.",
+        "Mentored team members and performed code reviews."
       ],
     },
     {
-      title: "Full Stack Developer",
+      title: "CTO & Co-Founder",
       company: "FullX",
-      date: "Jan 2023 - Present",
+      date: "Jul 2024 - Present",
       description: [
-        "Developing and maintaining web applications using React.js and other related technologies.",
-        "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-        "Implementing responsive design and ensuring cross-browser compatibility.",
-        "Participating in code reviews and providing constructive feedback to other developers.",
+        "Oversee the technical strategy and development of all web projects.",
+        "Lead a growing team of developers, ensuring alignment with business goals.",
+        "Develop and maintain web applications, focusing on scalability and performance.",
+        "Collaborate with stakeholders and clients to deliver cutting-edge digital solutions."
       ],
     },
   ];
