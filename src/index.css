@@ -66,38 +66,30 @@ body {
 
 #about {
   background: rgb(5, 16, 24);
-  background: linear-gradient(
-    180deg,
-    rgba(5, 16, 24, 1) 30%,
-    rgba(11, 33, 48, 1) 80%
-  );
+  background: linear-gradient(180deg,
+      rgba(5, 16, 24, 1) 30%,
+      rgba(11, 33, 48, 1) 80%);
 }
 
 #projects {
   background: rgb(11, 33, 48);
-  background: linear-gradient(
-    180deg,
-    rgba(11, 33, 48, 1) 30%,
-    rgba(5, 16, 24, 1) 80%
-  );
+  background: linear-gradient(180deg,
+      rgba(11, 33, 48, 1) 30%,
+      rgba(5, 16, 24, 1) 80%);
 }
 
 #contact {
   background: rgb(5, 16, 24);
-  background: linear-gradient(
-    180deg,
-    rgba(5, 16, 24, 1) 30%,
-    rgba(11, 33, 48, 1) 80%
-  );
+  background: linear-gradient(180deg,
+      rgba(5, 16, 24, 1) 30%,
+      rgba(11, 33, 48, 1) 80%);
 }
 
 #footer {
   background: rgb(11, 33, 48);
-  background: linear-gradient(
-    180deg,
-    rgba(11, 33, 48, 1) 30%,
-    rgba(5, 16, 24, 1) 80%
-  );
+  background: linear-gradient(180deg,
+      rgba(11, 33, 48, 1) 30%,
+      rgba(5, 16, 24, 1) 80%);
 }
 
 /* resume styles */
@@ -140,9 +132,11 @@ body {
 .card:nth-child(odd) {
   padding: 30px 0 30px 30px;
 }
+
 .card:nth-child(even) {
   padding: 30px 30px 30px 0;
 }
+
 /* Global ::before */
 .card::before {
   content: "";
@@ -207,21 +201,21 @@ body {
 }
 
 /* text right if the card is even  */
-.card:nth-child(even) > .info > .title {
+.card:nth-child(even)>.info>.title {
   text-align: right;
 }
 
-.card:nth-child(even) > .info > .company {
+.card:nth-child(even)>.info>.company {
   text-align: right;
 }
 
 /* setting dot to the left if the card is odd */
-.card:nth-child(odd) > .info > .title::before {
+.card:nth-child(odd)>.info>.title::before {
   left: -51px;
 }
 
 /* setting dot to the right if the card is odd */
-.card:nth-child(even) > .info > .title::before {
+.card:nth-child(even)>.info>.title::before {
   right: -51px;
 }
 
@@ -247,4 +241,125 @@ body {
 
 .contact-container .contact-content {
   transform: rotateY(90deg);
+}
+
+/* loading css */
+
+/* MAIN STYLES */
+.loading-screen {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 2px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #061118;
+  /* You can adjust based on dark/light mode */
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.loading-text {
+  font-family: 'Open Sans', -apple-system, 'Segoe UI', sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
+}
+
+.dots {
+  display: inline-flex;
+}
+
+.dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  position: relative;
+  margin-left: 6px;
+}
+
+.dot.z {
+  position: absolute;
+  transform: scale(0);
+  animation: scale 0.8s 0.2s forwards;
+}
+
+.dot.f,
+.dot.s {
+  animation: right 0.5s forwards;
+}
+
+.dot.l {
+  margin-left: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: rightDown 0.4s 0.1s forwards linear, drop 2s 0.4s forwards linear;
+}
+
+/* Animations */
+@keyframes scale {
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes right {
+  100% {
+    transform: translateX(16px);
+  }
+}
+
+@keyframes rightDown {
+  50% {
+    top: 4px;
+    left: 16px;
+  }
+
+  100% {
+    top: 12px;
+    left: 24px;
+  }
+}
+
+@keyframes drop {
+  100% {
+    transform: translate(70px, calc(35px + (100vh / 2)));
+  }
+}
+
+/* Twitter icon */
+.abs-twitter {
+  position: fixed;
+  right: calc(24px + 0.6vw);
+  top: calc(22px + 0.6vw);
+  transform: translate(-8px, 4px);
+  opacity: 0;
+  transition: 0.3s ease-in;
+}
+
+.abs-twitter--show {
+  transform: translate(0, 0);
+  opacity: 1;
+  animation: birdie 1s 0.8s linear infinite;
+}
+
+@keyframes birdie {
+  13% {
+    transform: rotate(14deg);
+  }
+
+  26% {
+    transform: rotate(28deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
 }

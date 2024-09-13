@@ -7,6 +7,7 @@ import Work from "./Components/Work";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import Resume from "./Components/Resume";
+import withLoading from "./Components/WithLoading";
 
 function App() {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
@@ -55,4 +56,4 @@ function App() {
   );
 }
 
-export default App;
+export default withLoading(App);
