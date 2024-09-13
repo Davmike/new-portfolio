@@ -3,7 +3,7 @@
 const Loading = () => {
     return (
         <div className="loading-screen">
-            <h1 className="loading-text">Loading</h1>
+            <h1 className="loading-text text-[25px] md:text-[50px]">Loading</h1>
             <div className="dots">
                 <span className="dot z"></span>
                 <span className="dot f"></span>
