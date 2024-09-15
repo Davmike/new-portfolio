@@ -130,6 +130,8 @@ function Contact() {
     );
   }, []);
 
+{/* contact main div start here */}
+
   return (
     <div
       className="contact-container min-h-screen flex items-center justify-center bg-[#122b43] text-white p-4"
