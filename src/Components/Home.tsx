@@ -225,7 +225,7 @@ function Home() {
         WORLD
       </div>
 
-      {/* clock section */}
+      {/* time clock section */}
       <div className="relative flex justify-center items-center flex-col text-white mb-[30px]">
         <p className="text-[95px] font-bold lg:text-[140px]" id="time">
           {currentTime}
