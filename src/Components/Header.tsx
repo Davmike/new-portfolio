@@ -120,6 +120,7 @@ function Header() {
     <header
       className={`bg-[#051018] bg-opacity-50 backdrop-blur-md shadow-2xl px-[20px] py-[10px] fixed z-10 w-[100%] flex justify-between items-center transition-transform duration-300 ${scrolled ? "translate-y-0" : "-translate-y-full"} bg-opacity-50 backdrop-blur-md shadow-2xl`}
     >
+//davmikeladze logo and name 
       <div className="flex items-center space-x-4">
         <img
           src={profile}
