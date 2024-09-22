@@ -80,7 +80,7 @@ function Work() {
       className="bg-[#122b43] px-[20px] py-[20px] flex justify-center items-center flex-col"
       id="projects"
     >
-      {/* work section div */}
+      {/* work section main div*/}
       <div className="mt-[30px] flex justify-center items-center flex-col fade-in-effect">
         <h1 className="font-bold text-[white] text-2xl md:text-3xl">WORK</h1>
         <div className="w-5 h-1 bg-[#F04D40] mt-1"></div>
