@@ -15,6 +15,7 @@ body {
   background: #0b2130;
   font-family: "Neuton", serif;
   caret-color: #f04d40;
+  min-height: 100svh;
 }
 
 ::selection {

@@ -130,7 +130,7 @@ function Contact() {
     );
   }, []);
 
-{/* contact main div start here */}
+  {/* contact main div start here */ }
 
   return (
     <div
