@@ -30,7 +30,7 @@ body {
 #home {
   background: #0b2130;
   position: relative;
-  min-height: 100svh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -99,7 +99,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  min-height: 100svh;
+  min-height: 100vh;
 }
 
 #message::placeholder {
