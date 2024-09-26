@@ -11,6 +11,8 @@ const Hamburger = () => {
     setMenuOpen(!menuOpen);
   };
 
+  //hamburger menu is not used
+
   return (
     <div>
       <div id="menu">
