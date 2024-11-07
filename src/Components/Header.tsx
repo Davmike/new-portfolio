@@ -178,7 +178,11 @@ function Header() {
               }`}
           >
             <div
+<<<<<<< HEAD
               className={`transform transition-transform duration-300 ease-in-out ${darkMode ? "rotate-180" : "rotate-360"
+=======
+              className={`transform transition-transform duration-300 ease-in-out ${darkMode ? "rotate-0" : "rotate-180"
+>>>>>>> c9e67ab (feat: add validation)
                 }`}
             >
               {darkMode ? (
